@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 · Technical Analysis</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a class="brand" href="../index.html">📘 Stock Market Notes</a>
+      <a href="../index.html">Home</a>
+      <a href="../how-to/glossary.html">Glossary</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <h1>Module 8 · Technical Analysis</h1>
+    <p class="lead">Technical analysis is the art of reading price charts to guess where a stock might go next — a tool for traders, and an optional topic you can happily skip as a beginner.</p>
+
+    <div class="mini-toc">
+      <strong>In this module</strong>
+      <ol>
+        <li><a href="#what">What technical analysis is</a></li>
+        <li><a href="#candles">Reading a candlestick</a></li>
+        <li><a href="#trends">Trends, support &amp; resistance</a></li>
+        <li><a href="#ma">Moving averages</a></li>
+        <li><a href="#indicators">Popular indicators</a></li>
+        <li><a href="#patterns">Common chart patterns</a></li>
+        <li><a href="#reality">Reality check</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what">1. What technical analysis is</h2>
+    <p><strong>Technical analysis</strong> (often shortened to <strong>TA</strong>) means studying a stock's <strong>price chart</strong> — its past prices and the patterns they form — instead of studying the underlying business. A technical analyst doesn't ask "Is this a good company?" They ask "What is the price doing, and what might it do next?"</p>
+    <p>The idea rests on two beliefs:</p>
+    <ul class="clean">
+      <li><strong>Price already reflects everything known.</strong> Every piece of news, every opinion, every hope and fear is supposedly baked into the current price.</li>
+      <li><strong>Patterns tend to repeat.</strong> Because human emotions (greed and fear) repeat, the shapes they leave on charts are thought to repeat too.</li>
+    </ul>
+    <p>This is the opposite approach to <strong>fundamental analysis</strong>, which digs into a company's earnings and health (we covered that earlier in the course). TA is used mostly by <strong>short-term traders</strong> — people buying and selling over days, hours or minutes — rather than by long-term investors.</p>
+
+    <div class="box note">
+      <p class="label">IN PLAIN WORDS</p>
+      <p>Fundamental analysis asks <em>"what is this business worth?"</em> Technical analysis asks <em>"what is the crowd doing right now?"</em> They are two very different lenses on the same stock.</p>
+    </div>
+
+    <h2 id="candles">2. Reading a candlestick</h2>
+    <p>Most charts in India are drawn as <strong>candlesticks</strong>. Each little "candle" sums up the price action for one period — that could be one day, one hour, or one minute, depending on the chart. A single candle tells you four numbers:</p>
+    <ul class="clean">
+      <li><strong>Open</strong> — the price when the period began.</li>
+      <li><strong>High</strong> — the highest price reached.</li>
+      <li><strong>Low</strong> — the lowest price reached.</li>
+      <li><strong>Close</strong> — the price when the period ended.</li>
+    </ul>
+    <p>The fat part is the <strong>body</strong> (between the open and close). The thin lines poking out the top and bottom are the <strong>wick</strong> or <strong>shadow</strong>, marking the high and the low. Colour tells you the direction at a glance:</p>
+    <table>
+      <thead>
+        <tr><th>Candle colour</th><th>What it means</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Green / white</td><td>Price closed <strong>up</strong> — it ended higher than it opened.</td></tr>
+        <tr><td>Red / black</td><td>Price closed <strong>down</strong> — it ended lower than it opened.</td></tr>
+      </tbody>
+    </table>
+    <p><span class="eg">Eg:</span> a green candle with a long lower wick means the price dropped during the period but buyers pushed it back up before the close — a small clue about who won the tug-of-war.</p>
+
+    <h2 id="trends">3. Trends, support &amp; resistance</h2>
+    <p>The first thing a chart-reader looks for is the <strong>trend</strong> — the general direction:</p>
+    <ul class="clean">
+      <li><strong>Uptrend</strong> — the price keeps making <em>higher highs</em> and higher lows. Stairs going up.</li>
+      <li><strong>Downtrend</strong> — the price keeps making <em>lower lows</em>. Stairs going down.</li>
+      <li><strong>Sideways</strong> — the price drifts in a range, going nowhere in particular.</li>
+    </ul>
+    <p>Two related ideas come up constantly:</p>
+    <ul class="clean">
+      <li><strong>Support</strong> — a price <em>floor</em> where buyers have tended to step in before, stopping the fall. Think of it as a level the price keeps bouncing up from.</li>
+      <li><strong>Resistance</strong> — a price <em>ceiling</em> where sellers have tended to appear, capping the rise. The price keeps getting turned back down here.</li>
+    </ul>
+    <p>There's an old trader's saying: <strong>"the trend is your friend"</strong> — meaning it's usually easier to go along with the prevailing direction than to bet against it. <span class="eg">Eg:</span> if the Nifty keeps bouncing off 22,000 every time it dips, traders start treating 22,000 as support.</p>
+
+    <div class="box tip">
+      <p class="label">TIP</p>
+      <p>Support and resistance are not exact lines drawn by some authority — they are rough zones that different people draw slightly differently. Treat them as fuzzy areas, not precise prices.</p>
+    </div>
+
+    <h2 id="ma">4. Moving averages</h2>
+    <p>A <strong>moving average</strong> is simply the average closing price over the last N days, recalculated each day so it "moves" along with the price. Its job is to <strong>smooth out the daily noise</strong> so the underlying direction is easier to see.</p>
+    <p>Two are especially popular:</p>
+    <ul class="clean">
+      <li><strong>50-day average</strong> — a medium-term view of the trend.</li>
+      <li><strong>200-day average</strong> — a long-term view, watched by big investors.</li>
+    </ul>
+    <p>As a rough rule of thumb, when the price is <strong>above</strong> its moving average, the trend is generally considered healthy; when it slips <strong>below</strong>, traders grow cautious. <span class="eg">Eg:</span> a stock trading comfortably above its 200-day average is often described as being "in an uptrend." It's a gauge, not a guarantee.</p>
+
+    <h2 id="indicators">5. Popular indicators</h2>
+    <p>Indicators are formulas applied to price (and volume) to highlight things the eye might miss. You'll hear these names thrown around — here's the one-line gist of each:</p>
+    <ul class="clean">
+      <li><strong>RSI</strong> (Relative Strength Index) — a gauge from 0 to 100. High readings suggest a stock may be <strong>overbought</strong> (risen too fast); low readings suggest it may be <strong>oversold</strong> (fallen too far).</li>
+      <li><strong>MACD</strong> — a <strong>momentum</strong> tool that tries to show whether buying or selling pressure is building or fading.</li>
+      <li><strong>Volume</strong> — the number of shares traded. A price move backed by <strong>high volume</strong> is seen as more convincing, because more people are behind it.</li>
+    </ul>
+    <div class="box note">
+      <p class="label">DON'T MEMORISE THE MATH</p>
+      <p>You do not need to calculate any of these by hand — charting apps draw them for you. The point is just to recognise the names and roughly what each one is hinting at.</p>
+    </div>
+
+    <h2 id="patterns">6. Common chart patterns</h2>
+    <p>Traders also look for repeating <strong>shapes</strong> in the chart that supposedly hint at what comes next. A few you'll hear about:</p>
+    <ul class="clean">
+      <li><strong>Double top</strong> — the price rises to a high, falls, rises to roughly the same high again, then turns down. Seen as a possible sign the uptrend is tiring.</li>
+      <li><strong>Double bottom</strong> — the mirror image: two dips to a similar low, then a turn upward. Seen as a possible sign the downtrend is ending.</li>
+      <li><strong>Head and shoulders</strong> — three peaks, with the middle one (the "head") highest and two lower "shoulders" on either side. Often read as a warning that a rise may be reversing.</li>
+    </ul>
+    <p>Crucially, these patterns are <strong>hints, not certainties</strong>. A "double top" only counts as a double top in hindsight; in the moment, the price can do anything. Two people can even disagree on whether a pattern is forming at all.</p>
+
+    <h2 id="reality">7. Reality check</h2>
+    <p>Time for some honesty. Technical analysis can be fascinating, but it is easy to overrate.</p>
+    <div class="box warn">
+      <p class="label">PLEASE READ THIS</p>
+      <p>TA is <strong>hard, subjective, and guarantees nothing.</strong> The same chart can look bullish to one person and bearish to another. It is mainly a tool for <strong>active traders</strong> who watch the market closely — long-term investors don't need it at all. And TA without strict <strong>risk management</strong> (knowing your exit before you enter) is genuinely dangerous and a fast way to lose money.</p>
+    </div>
+    <p>For most beginners, patient <strong>long-term investing</strong> — buying solid businesses or index funds and holding for years — tends to work out far better than trying to trade charts. If that sounds more like you, head back to <strong>Module 3</strong> on personal finance and long-term investing rather than chasing candlesticks.</p>
+    <p>There's no shame in skipping this topic entirely. It's an <strong>optional, advanced</strong> corner of the market — interesting to know about, but absolutely not required to be a successful investor.</p>
+
+    <div class="pager">
+      <a href="07-insurance-basics.html">← Insurance Basics</a>
+      <span class="spacer"></span>
+      <a href="09-futures-and-options.html">Next: Futures &amp; Options →</a>
+    </div>
+
+    <footer>
+      <p>These notes are for learning only and are <strong>not financial advice</strong>. Markets carry real risk.</p>
+      <p class="reviewed">Last reviewed: 3 June 2026</p>
+    </footer>
+  </main>
+</body>
+</html>

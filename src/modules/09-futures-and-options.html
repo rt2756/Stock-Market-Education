@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9 · Futures &amp; Options (Derivatives)</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a class="brand" href="../index.html">📘 Stock Market Notes</a>
+      <a href="../index.html">Home</a>
+      <a href="../how-to/glossary.html">Glossary</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <h1>Module 9 · Futures &amp; Options (Derivatives)</h1>
+    <p class="lead">Derivatives let you bet on a stock's price without owning it — and they are the fastest way most beginners lose money, so this page is about understanding them, not trading them.</p>
+
+    <div class="box warn"><p class="label">Read this first</p><p>This is the highest-risk part of the market. A SEBI study found that roughly <strong>9 out of 10</strong> individual traders LOST money trading Futures &amp; Options. This page is here to help you UNDERSTAND derivatives — not a suggestion to trade them.</p></div>
+
+    <div class="mini-toc"><strong>In this module</strong><ol>
+      <li><a href="#what">What a derivative is</a></li>
+      <li><a href="#futures">Futures</a></li>
+      <li><a href="#options">Options — calls &amp; puts</a></li>
+      <li><a href="#leverage">Leverage, the double-edged sword</a></li>
+      <li><a href="#hedging">Legit use vs speculation</a></li>
+      <li><a href="#beginners">Why beginners should stay away</a></li>
+    </ol></div>
+
+    <h2 id="what">1. What a derivative is</h2>
+    <p>A <strong>derivative</strong> is a contract whose value is <em>derived</em> from something else — called the <strong>underlying asset</strong>. The underlying could be a single stock (like Reliance or Infosys) or a whole market index (like the <strong>Nifty 50</strong> or Bank Nifty).</p>
+    <p>The key idea: when you buy a derivative, <strong>you do not own the share</strong>. You are not a part-owner of the company. Instead, you are taking a <strong>position</strong> — a bet — on where the price of that underlying will go.</p>
+    <ul class="clean">
+      <li>Buy a <strong>share</strong> of TCS → you own a tiny slice of TCS. You can hold it for years.</li>
+      <li>Buy a <strong>derivative</strong> on TCS → you own a <em>contract</em> that gains or loses value as the TCS price moves. It has an <strong>expiry date</strong>, after which it ceases to exist.</li>
+    </ul>
+    <p><span class="eg">Eg:</span> You think Nifty will rise. Instead of buying 50 different shares, you buy one Nifty derivative. If Nifty goes up, your contract is worth more; if it falls, your contract is worth less. You never held a single share.</p>
+    <div class="box note"><p class="label">Two main types</p><p>There are two everyday derivatives in India: <strong>Futures</strong> and <strong>Options</strong>. The next sections explain each in plain English.</p></div>
+
+    <h2 id="futures">2. Futures</h2>
+    <p>A <strong>future</strong> (or "futures contract") is an agreement to <strong>buy or sell the underlying at a price set today, on a fixed date in the future</strong> (the expiry). Both sides are locked in.</p>
+    <p>Three things make futures different from buying ordinary shares:</p>
+    <ul class="clean">
+      <li><strong>Lots, not single shares.</strong> You can't trade one share at a time. Futures trade in a fixed bundle called a <strong>lot</strong>. <span class="eg">Eg:</span> a Nifty futures lot is a set number of units decided by the exchange — so each trade is large.</li>
+      <li><strong>Margin (you pay only a fraction upfront).</strong> You don't pay the full value of the contract. You deposit a small slice called the <strong>margin</strong>. This is what creates <strong>leverage</strong> (more on that in section 4).</li>
+      <li><strong>Mark-to-market (settled daily).</strong> Your profit or loss isn't calculated only at the end. Every single trading day, the exchange settles the day's gain or loss to your account. If the price moved against you, money is taken out <em>that day</em>. If your balance runs low, you get a <strong>margin call</strong> asking you to add more cash.</li>
+    </ul>
+    <p><span class="eg">Eg:</span> You buy a futures contract expecting the price to rise. It rises a little today — money is credited to you. Tomorrow it falls — money is debited. This happens daily until you close the position or it expires.</p>
+    <div class="box warn"><p class="label">Why this matters</p><p>Because futures are settled <strong>daily</strong> and you only put up a small margin, a few bad days in a row can wipe out your deposit fast — even before the contract expires.</p></div>
+
+    <h2 id="options">3. Options — calls &amp; puts</h2>
+    <p>An <strong>option</strong> gives you a <em>right</em>, but <strong>not the obligation</strong>, to buy or sell the underlying at a fixed price. You pay a fee for this right, called the <strong>premium</strong>. Every option has a <strong>strike price</strong> (the agreed price) and an <strong>expiry date</strong> (after which it is worthless if unused).</p>
+    <p>There are two kinds:</p>
+    <ul class="clean">
+      <li><strong>Call option</strong> — the right to <strong>BUY</strong> the underlying at the strike price. You'd want a call if you expect the price to <em>rise</em>.</li>
+      <li><strong>Put option</strong> — the right to <strong>SELL</strong> the underlying at the strike price. You'd want a put if you expect the price to <em>fall</em>.</li>
+    </ul>
+    <p><span class="eg">Eg:</span> You pay a small premium for a call on a stock with a strike of ₹100. If the stock climbs to ₹120, your right to buy at ₹100 is valuable. If it stays below ₹100 until expiry, your call expires worthless and you lose only the premium you paid.</p>
+    <div class="box warn"><p class="label">Buyer vs seller — a crucial difference</p><p>An option <strong>buyer</strong> can lose at most the <strong>premium</strong> paid — the loss is capped. But an option <strong>seller</strong> (also called a <strong>writer</strong>) collects the small premium and in exchange takes on the obligation — and can face <strong>very large, sometimes unlimited, losses</strong> if the market moves sharply against them. Many beginners are lured into selling options for the steady premium and are badly burned by one big move.</p></div>
+    <div class="box note"><p class="label">Time is against the buyer</p><p>Options lose value as expiry approaches — this is called <strong>time decay</strong>. Even if the price doesn't move, a bought option can quietly bleed value every day and end up worthless.</p></div>
+
+    <h2 id="leverage">4. Leverage, the double-edged sword</h2>
+    <p><strong>Leverage</strong> is the heart of why derivatives are so dangerous. Because you put up only a small margin to control a much larger position, every price move is <strong>magnified</strong> — your gains <em>and</em> your losses are multiplied. You can make or lose money very fast, and in some cases lose <strong>more than you put in</strong>.</p>
+    <p><span class="eg">Eg:</span> Suppose a futures position is worth ₹5,00,000 but you only deposit ₹50,000 as margin. That's roughly <strong>10× leverage</strong>.</p>
+    <ul class="clean">
+      <li>The price moves just <strong>2% up</strong> → the position gains ₹10,000 → that's a <strong>+20%</strong> return on your ₹50,000. Feels amazing.</li>
+      <li>The price moves just <strong>2% down</strong> → the position loses ₹10,000 → that's a <strong>−20%</strong> hit to your ₹50,000. Painful.</li>
+      <li>A <strong>10% fall</strong> → a ₹50,000 loss → your <strong>entire margin is gone</strong>, and you may owe more.</li>
+    </ul>
+    <p>A tiny 2% wobble in the stock became a 20% swing in your money. The same leverage that makes the wins exciting is exactly what makes the losses devastating. The market doesn't have to crash to ruin you — a small move is enough.</p>
+
+    <h2 id="hedging">5. Legit use vs speculation</h2>
+    <p>Derivatives are not evil — they exist for a sensible reason. The problem is <em>how</em> most retail traders use them.</p>
+    <ul class="clean">
+      <li><strong>Hedging</strong> — using a derivative as <strong>insurance</strong> to protect something you already own. <span class="eg">Eg:</span> a long-term investor holding a large share portfolio buys put options so that if the market drops, gains on the puts cushion the loss on the shares. This is a real, careful, defensive use.</li>
+      <li><strong>Speculation</strong> — a pure <strong>bet on direction</strong>, with no underlying holding to protect. You buy a contract simply hoping the price goes the way you guessed. This is where <strong>most retail traders operate — and where most of them lose</strong>.</li>
+    </ul>
+    <div class="box tip"><p class="label">The honest line</p><p>Hedging is using derivatives to <em>reduce</em> risk on assets you hold. Speculation is using them to <em>take on</em> risk for a quick profit. Most beginners think they're doing the clever thing — but they're almost always speculating.</p></div>
+
+    <h2 id="beginners">6. Why beginners should stay away</h2>
+    <div class="box warn"><p class="label">The odds are stacked against you</p><p>Futures &amp; Options combine four things that quietly work against a beginner: <strong>complexity</strong> (the products are genuinely hard to fully understand), <strong>leverage</strong> (small moves cause big losses, fast), <strong>time-decay</strong> (bought options lose value as expiry nears, even if you're "right" eventually), and <strong>high trading costs</strong> (brokerage, taxes and fees pile up and eat into every trade). Put together, these stack the odds heavily against you.</p><p>Remember the SEBI finding: roughly <strong>9 out of 10</strong> individual F&amp;O traders <strong>lost money</strong>. That is not bad luck — it is the structure of the game.</p></div>
+    <p>If you are genuinely curious and want to learn:</p>
+    <ul class="clean">
+      <li><strong>Learn deeply first.</strong> Understand margins, expiry, strikes, premiums and time-decay thoroughly before risking a single rupee.</li>
+      <li><strong>Practise on paper.</strong> "Paper trading" means tracking imaginary trades on paper or in a simulator — you learn the mechanics with <em>zero</em> real money at stake.</li>
+      <li><strong>Never risk money you can't afford to lose.</strong> Not your savings, not your emergency fund, not borrowed money. Ever.</li>
+    </ul>
+    <p>For most beginners, the smartest move with derivatives is simply: <strong>understand them, then leave them alone.</strong> There is no shame in skipping the riskiest table in the room.</p>
+
+    <div class="pager">
+      <a href="08-technical-analysis.html">← Technical Analysis</a>
+      <span class="spacer"></span>
+      <a href="10-trading-systems.html">Next: Trading Systems →</a>
+    </div>
+
+    <footer>
+      <p>These notes are for learning only and are <strong>not financial advice</strong>. Derivatives are very high risk. Markets carry real risk.</p>
+      <p class="reviewed">Last reviewed: 3 June 2026</p>
+    </footer>
+  </main>
+</body>
+</html>

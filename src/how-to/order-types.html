@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Types Explained</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a class="brand" href="../index.html">📘 Stock Market Notes</a>
+      <a href="../index.html">Home</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <h1>Order Types Explained</h1>
+    <p class="lead">When you buy or sell a share, you also choose <em>how</em> the order is placed — and that choice decides whether you control the price or just get filled fast.</p>
+
+    <div class="mini-toc">
+      <strong>On this page</strong>
+      <ol>
+        <li><a href="#why">Why order types matter</a></li>
+        <li><a href="#market">Market order</a></li>
+        <li><a href="#limit">Limit order</a></li>
+        <li><a href="#stop-loss">Stop-loss order</a></li>
+        <li><a href="#more">A couple more (GTT &amp; AMO)</a></li>
+        <li><a href="#compare">Quick comparison</a></li>
+      </ol>
+    </div>
+
+    <h2 id="why">1. Why order types matter</h2>
+    <p>Most beginners think trading is just two buttons: <strong>Buy</strong> and <strong>Sell</strong>. But there's a second decision hiding behind those buttons — <em>how</em> you want the order placed. That's the <strong>order type</strong>.</p>
+    <p>Every order type is really about one trade-off:</p>
+    <ul class="clean">
+      <li><strong>Do you want to get filled for sure</strong> — even if the exact price is a little uncertain?</li>
+      <li><strong>Or do you want to control the price</strong> — even if that means the trade might not happen at all?</li>
+    </ul>
+    <p>You usually can't have both at once. Understanding the main order types lets you pick the right one for the situation, instead of clicking blindly and getting a nasty surprise.</p>
+
+    <h2 id="market">2. Market order</h2>
+    <p>A <strong>market order</strong> says: "Buy (or sell) this <em>right now</em>, at whatever the best available price is." It doesn't wait. It grabs the best price currently on offer in the market and executes almost instantly.</p>
+    <p>The upside is speed and certainty of getting done — a market order <strong>almost always fills</strong>. The catch is that the <strong>exact price isn't guaranteed</strong>. By the time your order reaches the exchange, the price may have moved a touch. This little gap between the price you saw and the price you got is called <strong>slippage</strong>, and it's worst in fast-moving or thinly traded (low-volume) stocks.</p>
+    <div class="box note">
+      <p class="label"><span class="eg">Eg:</span></p>
+      <p>You see a share quoted at ₹500 and place a <strong>market</strong> buy order. The market is busy and by the time it executes you actually pay ₹501.50. You got filled instantly — but slightly above the price you spotted.</p>
+    </div>
+
+    <h2 id="limit">3. Limit order</h2>
+    <p>A <strong>limit order</strong> flips the priority. Here <em>you</em> set the exact price you're willing to accept, and the order only executes <strong>at that price or better</strong> — never worse.</p>
+    <ul class="clean">
+      <li>A <strong>buy limit</strong> at ₹495 means: buy only at ₹495 or lower.</li>
+      <li>A <strong>sell limit</strong> at ₹510 means: sell only at ₹510 or higher.</li>
+    </ul>
+    <p>So the <strong>price is guaranteed</strong>, but the <strong>fill is not</strong> — if the share never reaches your price, the order simply waits, and may not execute at all. That's a fair trade for the control you get, which is why a limit order is the <strong>best default for beginners</strong>.</p>
+    <div class="box tip">
+      <p class="label"><span class="eg">Eg:</span></p>
+      <p>A share is at ₹500 but you only want it at ₹495. You place a <strong>limit</strong> buy at ₹495. If the price dips to ₹495 (or lower), you're filled at ₹495 or better. If it never falls that far, nothing happens — and you've avoided overpaying.</p>
+    </div>
+
+    <h2 id="stop-loss">4. Stop-loss order</h2>
+    <p>A <strong>stop-loss order</strong> is your safety net. It automatically sells (or buys) once the price hits a level you set in advance — called the <strong>trigger</strong> — so a small loss doesn't quietly grow into a big one while you're not watching.</p>
+    <p>You'll usually see two flavours:</p>
+    <table>
+      <tr><th>Type</th><th>What it does</th></tr>
+      <tr><td><strong>SL</strong> (stop-loss limit)</td><td>Once the trigger is hit, it places a <em>limit</em> order at a price you set. Price is controlled, but the fill isn't guaranteed.</td></tr>
+      <tr><td><strong>SL-M</strong> (stop-loss market)</td><td>Once the trigger is hit, it places a <em>market</em> order. The fill is near-certain, but the exact exit price isn't.</td></tr>
+    </table>
+    <div class="box note">
+      <p class="label"><span class="eg">Eg:</span></p>
+      <p>You bought a share at ₹100. To cap your downside, you place a <strong>stop-loss with a trigger at ₹90</strong>. If the price falls to ₹90, the stop-loss fires and sells automatically — limiting your loss to roughly ₹10 a share instead of letting it slide further.</p>
+    </div>
+
+    <h2 id="more">5. A couple more</h2>
+    <p>Two others you'll bump into on most Indian broker apps:</p>
+    <ul class="clean">
+      <li><strong>GTT (Good-Till-Triggered):</strong> a long-standing order that patiently waits <em>days or even months</em> for the price you want, instead of expiring at the end of the day.</li>
+      <li><strong>AMO (After-Market Order):</strong> an order you place when the market is <em>closed</em>; it simply queues up and is sent to the exchange when trading opens next.</li>
+    </ul>
+
+    <h2 id="compare">6. Quick comparison</h2>
+    <p>Here's the whole thing on one page:</p>
+    <table>
+      <tr><th>Order type</th><th>You get…</th><th>You give up…</th></tr>
+      <tr><td><strong>Market</strong></td><td>A certain fill (fast)</td><td>Control of the exact price</td></tr>
+      <tr><td><strong>Limit</strong></td><td>A certain price (or better)</td><td>Certainty that it fills</td></tr>
+      <tr><td><strong>Stop-loss</strong></td><td>Automatic protection on a position</td><td>(It only acts once your trigger is hit)</td></tr>
+    </table>
+    <div class="box tip">
+      <p class="label">Beginner default</p>
+      <p>When in doubt, use a <strong>limit order</strong>. It guarantees the price you pay or receive, so you're never blindsided by slippage. Reach for market orders only when getting filled <em>right now</em> matters more than the exact price.</p>
+    </div>
+
+    <div class="pager">
+      <a href="../modules/10-trading-systems.html">← Trading Systems</a>
+      <span class="spacer"></span>
+      <a href="glossary.html">Next: Glossary →</a>
+    </div>
+
+    <footer>
+      <p>These notes are for learning only and are <strong>not financial advice</strong>. Markets carry real risk.</p>
+      <p class="reviewed">Last reviewed: 3 June 2026</p>
+    </footer>
+  </main>
+</body>
+</html>
