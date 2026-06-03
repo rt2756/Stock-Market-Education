@@ -184,3 +184,31 @@ ul.clean li { margin: .3em 0; }
 ol.steps li { margin: .5em 0; }
 
 hr { border: none; border-top: 1px solid var(--line); margin: 2em 0; }
+
+/* ---------------------------------------------------------------------------
+   Diagrams & charts (inline SVG)
+   Hand-drawn explanatory figures that match the site palette. The SVGs use
+   the page font and a small set of shared classes for text; shape colours are
+   set inline. Figures scale fluidly with the column width.
+--------------------------------------------------------------------------- */
+figure.diagram {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px 6px;
+  margin: 1.7em 0;
+}
+figure.diagram svg { display: block; width: 100%; height: auto; }
+figure.diagram figcaption {
+  font-size: .85rem;
+  color: var(--soft);
+  text-align: center;
+  line-height: 1.5;
+  margin: .7em 6px 10px;
+}
+
+/* Shared text styling inside diagrams (inherits the page font) */
+.dg-t  { font-family: inherit; fill: var(--ink);  font-size: 13px; font-weight: 600; }
+.dg-s  { font-family: inherit; fill: var(--soft); font-size: 12px; }
+.dg-xs { font-family: inherit; fill: var(--soft); font-size: 11px; }
+.dg-b  { font-weight: 700; }

@@ -72,6 +72,26 @@
         <td>The <strong>price you're aiming for</strong> — the profit level that would make the trade a success.</td>
       </tr>
     </table>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="A price chart marking three levels set in advance: a target above, the entry in the middle, and a stop-loss below">
+        <rect x="40" y="70" width="375" height="70" fill="#f0f7f1"/>
+        <rect x="40" y="140" width="375" height="60" fill="#faf0ee"/>
+        <line x1="40" y1="70" x2="415" y2="70" stroke="#1a7f37" stroke-width="2" stroke-dasharray="6 5"/>
+        <line x1="40" y1="140" x2="415" y2="140" stroke="#0b6e6e" stroke-width="2"/>
+        <line x1="40" y1="200" x2="415" y2="200" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 5"/>
+        <polyline points="55,140 110,150 165,126 220,133 275,112 330,95 400,73" fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="55" cy="140" r="4.5" fill="#0b6e6e"/>
+        <text class="dg-t" x="428" y="66" style="fill:#1a7f37">Target</text>
+        <text class="dg-xs" x="428" y="83">take profit</text>
+        <text class="dg-t" x="428" y="136" style="fill:#0b6e6e">Entry</text>
+        <text class="dg-xs" x="428" y="153">you buy here</text>
+        <text class="dg-t" x="428" y="196" style="fill:#c0392b">Stop-loss</text>
+        <text class="dg-xs" x="428" y="213">cut the loss</text>
+      </svg>
+      <figcaption>Before clicking buy, a disciplined trader fixes all three levels in advance: where to get in, where to take profit (<strong>target</strong>), and where to bail out (<strong>stop-loss</strong>).</figcaption>
+    </figure>
+
     <p>Beginners obsess over the entry rule — the "secret" of when to buy. But experienced traders will tell you the entry is the <em>least</em> important part. The rules that decide how much you risk and when you cut losses (the next section) are what actually keep you in the game.</p>
 
     <h2 id="risk">3. Stop-loss &amp; position sizing — the heart of survival</h2>
@@ -83,6 +103,30 @@
       <p class="label">THE MATH IS BRUTAL ON BIG LOSSES</p>
       <p>Losses hurt more than equal-sized gains help. If you lose <strong>50%</strong> of your money, you then need a <strong>100% gain</strong> just to get back to where you started. This is exactly why protecting your capital matters more than chasing the next big win — a wiped-out account can't trade at all.</p>
     </div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 210" role="img" aria-label="₹100 falling 50% to ₹50, then needing a 100% gain to climb back to ₹100">
+        <defs>
+          <marker id="m10r" markerWidth="10" markerHeight="10" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+          <marker id="m10g" markerWidth="10" markerHeight="10" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1a7f37"/></marker>
+        </defs>
+        <line x1="60" y1="170" x2="575" y2="170" stroke="#cfc9ba" stroke-width="1.5"/>
+        <rect x="80" y="50" width="80" height="120" fill="#cfe6e6" stroke="#0b6e6e" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="120" y="42">₹100</text>
+        <text class="dg-xs" text-anchor="middle" x="120" y="188">you start</text>
+        <line x1="178" y1="110" x2="272" y2="110" stroke="#c0392b" stroke-width="2.2" marker-end="url(#m10r)"/>
+        <text class="dg-t" text-anchor="middle" x="222" y="98" style="fill:#c0392b">−50%</text>
+        <rect x="280" y="110" width="80" height="60" fill="#f0d8d2" stroke="#c0392b" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="320" y="102">₹50</text>
+        <line x1="378" y1="110" x2="472" y2="110" stroke="#1a7f37" stroke-width="2.2" marker-end="url(#m10g)"/>
+        <text class="dg-t" text-anchor="middle" x="425" y="98" style="fill:#1a7f37">+100% needed</text>
+        <rect x="480" y="50" width="80" height="120" fill="#cfe6e6" stroke="#0b6e6e" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="520" y="42">₹100</text>
+        <text class="dg-xs" text-anchor="middle" x="520" y="188">back to even</text>
+      </svg>
+      <figcaption>A 50% loss isn't undone by a 50% gain — it takes a <strong>100% gain</strong> just to break even. Losses bite harder than equal gains, which is why protecting capital beats chasing wins.</figcaption>
+    </figure>
+
     <p>The mindset shift is this: a good trader's first question is never "how much could I make?" It's "<strong>how much could I lose, and can I survive it?</strong>" Defence comes before offence.</p>
 
     <h2 id="backtest">4. Backtesting</h2>

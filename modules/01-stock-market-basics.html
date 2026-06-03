@@ -84,6 +84,32 @@
       <tr><td><strong>Trading account</strong></td><td>The remote control — you use it to place buy and sell orders.</td></tr>
       <tr><td><strong>Demat account</strong></td><td>The locker — it holds the shares you own, electronically. ("Demat" = dematerialised, i.e. no paper.)</td></tr>
     </table>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="Three linked accounts — bank, trading and demat — with money flowing out to buy shares and back when you sell">
+        <defs>
+          <marker id="m1-g" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1a7f37"/></marker>
+          <marker id="m1-r" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+        </defs>
+        <path d="M95,82 L95,54 L505,54 L505,80" fill="none" stroke="#1a7f37" stroke-width="2" marker-end="url(#m1-g)"/>
+        <text class="dg-t" text-anchor="middle" x="300" y="44" style="fill:#1a7f37">BUY → money out of the bank, shares into Demat</text>
+        <rect x="20" y="86" width="150" height="74" rx="10" fill="#ffffff" stroke="#0b6e6e" stroke-width="2"/>
+        <rect x="225" y="86" width="150" height="74" rx="10" fill="#ffffff" stroke="#0b6e6e" stroke-width="2"/>
+        <rect x="430" y="86" width="150" height="74" rx="10" fill="#ffffff" stroke="#0b6e6e" stroke-width="2"/>
+        <g text-anchor="middle">
+          <text class="dg-t" x="95" y="118">Bank</text>
+          <text class="dg-xs" x="95" y="138">your wallet</text>
+          <text class="dg-t" x="300" y="118">Trading</text>
+          <text class="dg-xs" x="300" y="138">the remote</text>
+          <text class="dg-t" x="505" y="118">Demat</text>
+          <text class="dg-xs" x="505" y="138">the locker</text>
+        </g>
+        <path d="M505,166 L505,192 L95,192 L95,166" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#m1-r)"/>
+        <text class="dg-t" text-anchor="middle" x="300" y="212" style="fill:#c0392b">SELL → shares out of Demat, money back to the bank</text>
+      </svg>
+      <figcaption>Your broker links all three. You place orders through the <strong>trading</strong> account; cash moves via your <strong>bank</strong>, and the shares themselves live in your <strong>demat</strong>.</figcaption>
+    </figure>
+
     <p>When you buy, money leaves your bank account and shares appear in your Demat account. When you sell, shares leave the Demat account and money comes back to your bank. A <strong>broker</strong> (for example Zerodha, Groww, ICICI Direct, and many others) ties these together through an app or website.</p>
 
     <h2 id="ipo">6. How a company gets listed (the IPO)</h2>

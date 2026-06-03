@@ -26,6 +26,7 @@
       <li><a href="#what">What a derivative is</a></li>
       <li><a href="#futures">Futures</a></li>
       <li><a href="#options">Options — calls &amp; puts</a></li>
+      <li><a href="#cricket">How option prices move (a cricket match)</a></li>
       <li><a href="#leverage">Leverage, the double-edged sword</a></li>
       <li><a href="#hedging">Legit use vs speculation</a></li>
       <li><a href="#beginners">Why beginners should stay away</a></li>
@@ -46,7 +47,7 @@
     <p>Three things make futures different from buying ordinary shares:</p>
     <ul class="clean">
       <li><strong>Lots, not single shares.</strong> You can't trade one share at a time. Futures trade in a fixed bundle called a <strong>lot</strong>. <span class="eg">Eg:</span> a Nifty futures lot is a set number of units decided by the exchange — so each trade is large.</li>
-      <li><strong>Margin (you pay only a fraction upfront).</strong> You don't pay the full value of the contract. You deposit a small slice called the <strong>margin</strong>. This is what creates <strong>leverage</strong> (more on that in section 4).</li>
+      <li><strong>Margin (you pay only a fraction upfront).</strong> You don't pay the full value of the contract. You deposit a small slice called the <strong>margin</strong>. This is what creates <strong>leverage</strong> (more on that in section 5).</li>
       <li><strong>Mark-to-market (settled daily).</strong> Your profit or loss isn't calculated only at the end. Every single trading day, the exchange settles the day's gain or loss to your account. If the price moved against you, money is taken out <em>that day</em>. If your balance runs low, you get a <strong>margin call</strong> asking you to add more cash.</li>
     </ul>
     <p><span class="eg">Eg:</span> You buy a futures contract expecting the price to rise. It rises a little today — money is credited to you. Tomorrow it falls — money is debited. This happens daily until you close the position or it expires.</p>
@@ -59,11 +60,62 @@
       <li><strong>Call option</strong> — the right to <strong>BUY</strong> the underlying at the strike price. You'd want a call if you expect the price to <em>rise</em>.</li>
       <li><strong>Put option</strong> — the right to <strong>SELL</strong> the underlying at the strike price. You'd want a put if you expect the price to <em>fall</em>.</li>
     </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="Payoff diagrams for a call option (profit rises as price rises) and a put option (profit rises as price falls), each with loss capped at the premium">
+        <line x1="300" y1="36" x2="300" y2="210" stroke="#e7e3d8" stroke-width="1"/>
+        <text class="dg-t" text-anchor="middle" x="155" y="40">Call — bet on a rise</text>
+        <line x1="45" y1="60" x2="45" y2="200" stroke="#cfc9ba" stroke-width="1.5"/>
+        <line x1="45" y1="140" x2="278" y2="140" stroke="#cfc9ba" stroke-width="1.5"/>
+        <line x1="155" y1="126" x2="155" y2="178" stroke="#57606a" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <polyline points="48,172 155,172 193,140" fill="none" stroke="#c0392b" stroke-width="2.6" stroke-linejoin="round"/>
+        <polyline points="193,140 278,74" fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linejoin="round"/>
+        <text class="dg-xs" x="52" y="72" style="fill:#1a7f37">profit</text>
+        <text class="dg-xs" x="52" y="196" style="fill:#c0392b">loss</text>
+        <text class="dg-xs" text-anchor="middle" x="155" y="196">strike</text>
+        <text class="dg-t" text-anchor="middle" x="450" y="40">Put — bet on a fall</text>
+        <line x1="335" y1="60" x2="335" y2="200" stroke="#cfc9ba" stroke-width="1.5"/>
+        <line x1="335" y1="140" x2="568" y2="140" stroke="#cfc9ba" stroke-width="1.5"/>
+        <line x1="445" y1="126" x2="445" y2="178" stroke="#57606a" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <polyline points="338,74 423,140" fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linejoin="round"/>
+        <polyline points="423,140 445,172 565,172" fill="none" stroke="#c0392b" stroke-width="2.6" stroke-linejoin="round"/>
+        <text class="dg-xs" x="342" y="72" style="fill:#1a7f37">profit</text>
+        <text class="dg-xs" x="342" y="196" style="fill:#c0392b">loss</text>
+        <text class="dg-xs" text-anchor="middle" x="445" y="196">strike</text>
+      </svg>
+      <figcaption>For the <strong>buyer</strong>, the loss is capped at the premium (the flat part), while the upside grows as the price moves your way — a <strong>call</strong> profits on a rise, a <strong>put</strong> on a fall.</figcaption>
+    </figure>
+
     <p><span class="eg">Eg:</span> You pay a small premium for a call on a stock with a strike of ₹100. If the stock climbs to ₹120, your right to buy at ₹100 is valuable. If it stays below ₹100 until expiry, your call expires worthless and you lose only the premium you paid.</p>
     <div class="box warn"><p class="label">Buyer vs seller — a crucial difference</p><p>An option <strong>buyer</strong> can lose at most the <strong>premium</strong> paid — the loss is capped. But an option <strong>seller</strong> (also called a <strong>writer</strong>) collects the small premium and in exchange takes on the obligation — and can face <strong>very large, sometimes unlimited, losses</strong> if the market moves sharply against them. Many beginners are lured into selling options for the steady premium and are badly burned by one big move.</p></div>
     <div class="box note"><p class="label">Time is against the buyer</p><p>Options lose value as expiry approaches — this is called <strong>time decay</strong>. Even if the price doesn't move, a bought option can quietly bleed value every day and end up worthless.</p></div>
 
-    <h2 id="leverage">4. Leverage, the double-edged sword</h2>
+    <h2 id="cricket">4. What moves an option's price — a cricket match</h2>
+    <p>Knowing what a call and a put <em>are</em> is the easy part. The hard part — and where beginners get blindsided — is why the <strong>premium</strong> (the option's price) leaps around the way it does. The clearest way to feel it is to imagine holding a <strong>call or put option on a live T20 run chase</strong> and watching its price flicker up and down after every single ball.</p>
+    <ul class="clean">
+      <li>A <strong>call option</strong> pays out if the chasing team <strong>wins</strong> — it is the bet that the price will <em>rise</em>, so it gets dearer as the chase goes well.</li>
+      <li>A <strong>put option</strong> pays out if the chase <strong>collapses</strong> — it is the bet that the price will <em>fall</em>, so it gets dearer as wickets tumble.</li>
+    </ul>
+    <p>Now watch the option's price as the match unfolds. <strong>Three different forces</strong> tug on it at once — and only the first is the one beginners think about:</p>
+    <ul class="clean">
+      <li><strong>1 · Which way the game is swinging (the score).</strong> Every ball shifts who is likely to win. A boundary or a flurry of runs makes the chase look easy, so the <strong>call</strong> gets dearer and the <strong>put</strong> gets cheaper. A wicket or a run of dot balls makes a collapse look likely, so the <strong>put</strong> gets dearer and the <strong>call</strong> gets cheaper. <span class="eg">Eg:</span> 40 needed off 30 balls with wickets in hand, then a flat six sails over — instantly the call (betting they win) jumps and the put (betting they collapse) sinks. The two move as mirror images.</li>
+      <li><strong>2 · How many overs are left (time decay).</strong> The option is priced not just on the score but on how much <em>time remains for things to change</em>. An option backing an outcome that hasn't happened yet quietly loses value with every over that passes — <strong>even if the score doesn't move at all</strong>. <span class="eg">Eg:</span> you hold the call and the team needs 50 off 24 balls. An over goes by with just three singles — no wicket, no boundary, nothing — yet your call is now <strong>cheaper</strong>, because six balls of opportunity just disappeared. The clock alone drained it, and it drains fastest in the closing overs.</li>
+      <li><strong>3 · How wild the finish is expected to be (volatility).</strong> The market also prices in how much <em>drama</em> it expects from the balls still to come. When fireworks look likely — a famous big-hitter on strike, dew making the ball skid, a short boundary — <strong>both</strong> the call and the put get more expensive, because a violent swing either way is on the cards. When the game goes quiet — two cautious batsmen blocking on a dead pitch — <strong>both</strong> get cheaper. <span class="eg">Eg:</span> the dangerous hitter everyone feared gets out and two blockers walk in; the finish suddenly feels predictable, so both get cheaper <em>even though the score hasn't changed</em>.</li>
+    </ul>
+    <p>Lined up on a scoreboard, the same event pushes the two options in tell-tale ways:</p>
+    <table>
+      <tr><th>What just happened (and the price parallel)</th><th>Call option</th><th>Put option</th></tr>
+      <tr><td>Runs flow — boundary, quick singles <em>(price rises)</em></td><td>↑ dearer</td><td>↓ cheaper</td></tr>
+      <tr><td>Wicket falls — a collapse looks on <em>(price falls)</em></td><td>↓ cheaper</td><td>↑ dearer</td></tr>
+      <tr><td>An over passes, score barely moves <em>(time ticks away)</em></td><td>↓ bleeds</td><td>↓ bleeds</td></tr>
+      <tr><td>Chaos expected — big-hitter in, dew, short ground <em>(volatility up)</em></td><td>↑ dearer</td><td>↑ dearer</td></tr>
+      <tr><td>Game goes quiet — blockers in, dead pitch <em>(volatility down)</em></td><td>↓ cheaper</td><td>↓ cheaper</td></tr>
+    </table>
+    <p>The scoreboard reveals the whole trick: the <strong>score</strong> moves the call and the put in <em>opposite</em> directions, but the <strong>clock</strong> drains <em>both</em> bought options, and a change in <strong>expected drama</strong> lifts or sinks <em>both</em> together.</p>
+    <div class="box warn"><p class="label">Why "I was right and still lost" happens</p><p>Here is the trap that catches beginners: you can pick the right side of the match and <strong>still</strong> watch your option lose money. The overs running out (time decay) and the expected drama fading (traders call it a <strong>"volatility crush"</strong>) can drain the premium faster than a slow-building score adds to it. Buy the right side but too early, or buy when everyone expects fireworks that then fizzle, and you lose anyway. Guessing the <em>direction</em> right is only one of the three forces — the other two work quietly against the buyer the whole time.</p></div>
+    <div class="box note"><p class="label">And whoever sold you the option?</p><p>The person on the other side is the <strong>bookmaker</strong> — the option <strong>writer</strong> from the last section. They pocket your premium the instant you buy, and they keep it every time an option expires worthless — which long-shot options usually do, with time decay quietly on their side. But if a miracle finish lands, the bookmaker is the one who must pay out big. That is the capped-gain, large-risk bargain an option seller signs up for.</p></div>
+
+    <h2 id="leverage">5. Leverage, the double-edged sword</h2>
     <p><strong>Leverage</strong> is the heart of why derivatives are so dangerous. Because you put up only a small margin to control a much larger position, every price move is <strong>magnified</strong> — your gains <em>and</em> your losses are multiplied. You can make or lose money very fast, and in some cases lose <strong>more than you put in</strong>.</p>
     <p><span class="eg">Eg:</span> Suppose a futures position is worth ₹5,00,000 but you only deposit ₹50,000 as margin. That's roughly <strong>10× leverage</strong>.</p>
     <ul class="clean">
@@ -71,9 +123,26 @@
       <li>The price moves just <strong>2% down</strong> → the position loses ₹10,000 → that's a <strong>−20%</strong> hit to your ₹50,000. Painful.</li>
       <li>A <strong>10% fall</strong> → a ₹50,000 loss → your <strong>entire margin is gone</strong>, and you may owe more.</li>
     </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 220" role="img" aria-label="A small 2 percent move in the stock magnified by 10x leverage into a 20 percent swing in your money">
+        <defs><marker id="m9-a" markerWidth="10" markerHeight="10" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b6e6e"/></marker></defs>
+        <line x1="90" y1="110" x2="512" y2="110" stroke="#e7e3d8" stroke-width="1"/>
+        <rect x="110" y="80" width="40" height="30" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.6"/>
+        <rect x="110" y="110" width="40" height="30" fill="#f7e2de" stroke="#c0392b" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="130" y="166">Stock moves ±2%</text>
+        <line x1="178" y1="110" x2="372" y2="110" stroke="#0b6e6e" stroke-width="2.5" marker-end="url(#m9-a)"/>
+        <text class="dg-t" text-anchor="middle" x="275" y="98" style="fill:#0b6e6e">× 10 leverage</text>
+        <rect x="450" y="30" width="40" height="80" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.8"/>
+        <rect x="450" y="110" width="40" height="80" fill="#f7e2de" stroke="#c0392b" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="470" y="210">Your money swings ±20%</text>
+      </svg>
+      <figcaption>Because a small margin controls a position ten times larger, a gentle 2% move in the stock becomes a 20% swing in your money — magnified the same way whether you win or lose.</figcaption>
+    </figure>
+
     <p>A tiny 2% wobble in the stock became a 20% swing in your money. The same leverage that makes the wins exciting is exactly what makes the losses devastating. The market doesn't have to crash to ruin you — a small move is enough.</p>
 
-    <h2 id="hedging">5. Legit use vs speculation</h2>
+    <h2 id="hedging">6. Legit use vs speculation</h2>
     <p>Derivatives are not evil — they exist for a sensible reason. The problem is <em>how</em> most retail traders use them.</p>
     <ul class="clean">
       <li><strong>Hedging</strong> — using a derivative as <strong>insurance</strong> to protect something you already own. <span class="eg">Eg:</span> a long-term investor holding a large share portfolio buys put options so that if the market drops, gains on the puts cushion the loss on the shares. This is a real, careful, defensive use.</li>
@@ -81,8 +150,32 @@
     </ul>
     <div class="box tip"><p class="label">The honest line</p><p>Hedging is using derivatives to <em>reduce</em> risk on assets you hold. Speculation is using them to <em>take on</em> risk for a quick profit. Most beginners think they're doing the clever thing — but they're almost always speculating.</p></div>
 
-    <h2 id="beginners">6. Why beginners should stay away</h2>
+    <h2 id="beginners">7. Why beginners should stay away</h2>
     <div class="box warn"><p class="label">The odds are stacked against you</p><p>Futures &amp; Options combine four things that quietly work against a beginner: <strong>complexity</strong> (the products are genuinely hard to fully understand), <strong>leverage</strong> (small moves cause big losses, fast), <strong>time-decay</strong> (bought options lose value as expiry nears, even if you're "right" eventually), and <strong>high trading costs</strong> (brokerage, taxes and fees pile up and eat into every trade). Put together, these stack the odds heavily against you.</p><p>Remember the SEBI finding: roughly <strong>9 out of 10</strong> individual F&amp;O traders <strong>lost money</strong>. That is not bad luck — it is the structure of the game.</p></div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 152" role="img" aria-label="Ten trader figures: nine red ones who lost money and one green one who came out ahead">
+        <text class="dg-t" text-anchor="middle" x="300" y="26">Out of every 10 F&amp;O traders…</text>
+        <g>
+          <circle cx="48" cy="52" r="9" fill="#c0392b"/><path d="M33,94 C33,66 63,66 63,94 Z" fill="#c0392b"/>
+          <circle cx="102" cy="52" r="9" fill="#c0392b"/><path d="M87,94 C87,66 117,66 117,94 Z" fill="#c0392b"/>
+          <circle cx="156" cy="52" r="9" fill="#c0392b"/><path d="M141,94 C141,66 171,66 171,94 Z" fill="#c0392b"/>
+          <circle cx="210" cy="52" r="9" fill="#c0392b"/><path d="M195,94 C195,66 225,66 225,94 Z" fill="#c0392b"/>
+          <circle cx="264" cy="52" r="9" fill="#c0392b"/><path d="M249,94 C249,66 279,66 279,94 Z" fill="#c0392b"/>
+          <circle cx="318" cy="52" r="9" fill="#c0392b"/><path d="M303,94 C303,66 333,66 333,94 Z" fill="#c0392b"/>
+          <circle cx="372" cy="52" r="9" fill="#c0392b"/><path d="M357,94 C357,66 387,66 387,94 Z" fill="#c0392b"/>
+          <circle cx="426" cy="52" r="9" fill="#c0392b"/><path d="M411,94 C411,66 441,66 441,94 Z" fill="#c0392b"/>
+          <circle cx="480" cy="52" r="9" fill="#c0392b"/><path d="M465,94 C465,66 495,66 495,94 Z" fill="#c0392b"/>
+          <circle cx="534" cy="52" r="9" fill="#1a7f37"/><path d="M519,94 C519,66 549,66 549,94 Z" fill="#1a7f37"/>
+        </g>
+        <circle cx="200" cy="128" r="6" fill="#c0392b"/>
+        <text class="dg-s" x="214" y="133">lost money</text>
+        <circle cx="372" cy="128" r="6" fill="#1a7f37"/>
+        <text class="dg-s" x="386" y="133">came out ahead</text>
+      </svg>
+      <figcaption>It isn't bad luck — a SEBI study found roughly <strong>9 in 10</strong> individual F&amp;O traders lost money. That's the structure of the game, not a run of misfortune.</figcaption>
+    </figure>
+
     <p>If you are genuinely curious and want to learn:</p>
     <ul class="clean">
       <li><strong>Learn deeply first.</strong> Understand margins, expiry, strikes, premiums and time-decay thoroughly before risking a single rupee.</li>

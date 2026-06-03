@@ -89,6 +89,29 @@
       <tr><td><strong>Limit</strong></td><td>A certain price (or better)</td><td>Certainty that it fills</td></tr>
       <tr><td><strong>Stop-loss</strong></td><td>Automatic protection on a position</td><td>(It only acts once your trigger is hit)</td></tr>
     </table>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="A price ladder showing where a market order, a limit buy and a stop-loss each sit relative to the current price">
+        <text class="dg-t" text-anchor="middle" x="300" y="28">One share, three ways to order it</text>
+        <line x1="160" y1="54" x2="160" y2="200" stroke="#cfc9ba" stroke-width="1.5"/>
+        <text class="dg-xs" text-anchor="middle" x="160" y="48" style="fill:#57606a">higher</text>
+        <text class="dg-xs" text-anchor="middle" x="160" y="216" style="fill:#57606a">lower</text>
+        <line x1="92" y1="100" x2="228" y2="100" stroke="#0b6e6e" stroke-width="2"/>
+        <circle cx="160" cy="100" r="5" fill="#0b6e6e"/>
+        <text class="dg-t" x="240" y="96" style="fill:#0b6e6e">Market — fills now, ~₹500</text>
+        <text class="dg-xs" x="240" y="112">takes whatever price is available</text>
+        <line x1="92" y1="150" x2="228" y2="150" stroke="#1a7f37" stroke-width="2" stroke-dasharray="6 5"/>
+        <circle cx="160" cy="150" r="5" fill="#1a7f37"/>
+        <text class="dg-t" x="240" y="146" style="fill:#1a7f37">Limit buy ₹495 — waits below</text>
+        <text class="dg-xs" x="240" y="162">fills only at your price or better</text>
+        <line x1="92" y1="192" x2="228" y2="192" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 5"/>
+        <circle cx="160" cy="192" r="5" fill="#c0392b"/>
+        <text class="dg-t" x="240" y="188" style="fill:#c0392b">Stop-loss ₹490 — auto-sell</text>
+        <text class="dg-xs" x="240" y="204">triggers to cap a falling loss</text>
+      </svg>
+      <figcaption>Same share, three orders: a <strong>market</strong> order takes the price available now, a <strong>limit</strong> waits for the exact price you set, and a <strong>stop-loss</strong> fires automatically to limit a loss.</figcaption>
+    </figure>
+
     <div class="box tip">
       <p class="label">Beginner default</p>
       <p>When in doubt, use a <strong>limit order</strong>. It guarantees the price you pay or receive, so you're never blindsided by slippage. Reach for market orders only when getting filled <em>right now</em> matters more than the exact price.</p>
