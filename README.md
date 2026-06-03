@@ -4,35 +4,40 @@ A simple, local website with beginner-friendly notes for learning the **stock ma
 
 Inspired by the structure of [Zerodha Varsity](https://zerodha.com/varsity/modules/), but written as original, simplified notes focused on the India context (NSE/BSE, SEBI, Demat, SIP, ₹).
 
-## How to open it
+## Live website
 
-Just double-click **`src/index.html`** — it opens in any web browser. That's it.
+Published with GitHub Pages — anyone can open it in a browser, no install needed:
 
-(Or from the terminal: `open src/index.html` on macOS.)
+**<https://rt2756.github.io/Stock-Market-Education/>**
+
+## How to open it locally
+
+Just double-click **`index.html`** — it opens in any web browser. That's it.
+
+(Or from the terminal: `open index.html` on macOS.)
 
 ## Project structure
 
 ```
-src/
-├── index.html              # Home page + table of contents
-├── assets/
-│   └── css/
-│       └── style.css       # Shared minimal stylesheet
-├── modules/                # The learning modules, in order
-│   ├── 01-stock-market-basics.html
-│   ├── 02-analysing-stocks.html
-│   ├── 03-personal-finance.html
-│   ├── 04-risk-and-mindset.html
-│   ├── 05-mutual-funds.html
-│   ├── 06-taxes-on-investing.html
-│   ├── 07-insurance-basics.html
-│   ├── 08-technical-analysis.html
-│   ├── 09-futures-and-options.html
-│   └── 10-trading-systems.html
-└── how-to/                 # Short practical guides
-    ├── order-types.html
-    ├── glossary.html
-    └── scam-safety.html
+index.html                  # Home page + table of contents
+assets/
+└── css/
+    └── style.css           # Shared minimal stylesheet
+modules/                    # The learning modules, in order
+├── 01-stock-market-basics.html
+├── 02-analysing-stocks.html
+├── 03-personal-finance.html
+├── 04-risk-and-mindset.html
+├── 05-mutual-funds.html
+├── 06-taxes-on-investing.html
+├── 07-insurance-basics.html
+├── 08-technical-analysis.html
+├── 09-futures-and-options.html
+└── 10-trading-systems.html
+how-to/                     # Short practical guides
+├── order-types.html
+├── glossary.html
+└── scam-safety.html
 ```
 
 ## What's inside
