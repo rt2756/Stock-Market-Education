@@ -29,6 +29,7 @@
         <li><a href="#ma">Moving averages</a></li>
         <li><a href="#indicators">Popular indicators</a></li>
         <li><a href="#patterns">Common chart patterns</a></li>
+        <li><a href="#example">A real month of Nifty</a></li>
         <li><a href="#reality">Reality check</a></li>
       </ol>
     </div>
@@ -285,7 +286,117 @@
 
     <p>Crucially, these patterns are <strong>hints, not certainties</strong>. A "double top" only counts as a double top in hindsight; in the moment, the price can do anything. Two people can even disagree on whether a pattern is forming at all.</p>
 
-    <h2 id="reality">7. Reality check</h2>
+    <h2 id="example">7. A real month of Nifty, decoded</h2>
+    <p>Enough theory — here is an <strong>actual chart</strong>. Below is the <strong>Nifty 50</strong> (India's benchmark index of 50 large companies) drawn as daily candlesticks for roughly one month, from <strong>4 May to 2 June 2026</strong>. Each candle is one trading day, built from that day's real open, high, low and close. This one picture quietly uses almost everything in this module at once.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 640 356" role="img" aria-label="Candlestick chart of the Nifty 50 index, one daily candle per trading day from 4 May to 2 June 2026, drifting sideways-to-lower in a choppy range with a support zone near 23,300 that is tested repeatedly before a bounce on 2 June">
+        <!-- header -->
+        <text class="dg-t" x="66" y="22">Nifty 50 — daily candles</text>
+        <text class="dg-xs" text-anchor="end" x="606" y="22">4 May – 2 Jun 2026</text>
+        <!-- axes -->
+        <line x1="66" y1="34" x2="66" y2="320" stroke="#cfc9ba" stroke-width="1"/>
+        <line x1="66" y1="320" x2="606" y2="320" stroke="#cfc9ba" stroke-width="1"/>
+        <!-- price gridlines + labels -->
+        <g>
+          <line x1="66" y1="304.5" x2="606" y2="304.5" stroke="#e7e3d8" stroke-width="1"/>
+          <text class="dg-xs" text-anchor="end" x="60" y="308.5">23,200</text>
+          <line x1="66" y1="227.2" x2="606" y2="227.2" stroke="#e7e3d8" stroke-width="1"/>
+          <text class="dg-xs" text-anchor="end" x="60" y="231.2">23,600</text>
+          <line x1="66" y1="149.9" x2="606" y2="149.9" stroke="#e7e3d8" stroke-width="1"/>
+          <text class="dg-xs" text-anchor="end" x="60" y="153.9">24,000</text>
+          <line x1="66" y1="72.6" x2="606" y2="72.6" stroke="#e7e3d8" stroke-width="1"/>
+          <text class="dg-xs" text-anchor="end" x="60" y="76.6">24,400</text>
+        </g>
+        <!-- support zone (drawn behind the candles) -->
+        <rect x="66" y="269.8" width="540" height="28.9" fill="#e9f3ed"/>
+        <line x1="66" y1="284.2" x2="606" y2="284.2" stroke="#1a7f37" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <!-- candles: one per trading day -->
+        <g>
+          <line x1="78.9" y1="93.9" x2="78.9" y2="149.0" stroke="#1a7f37" stroke-width="1.4"/><rect x="71.7" y="126.9" width="14.4" height="10.8" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="104.6" y1="134.2" x2="104.6" y2="172.7" stroke="#c0392b" stroke-width="1.4"/><rect x="97.4" y="139.8" width="14.4" height="3.8" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="130.3" y1="81.1" x2="130.3" y2="150.4" stroke="#1a7f37" stroke-width="1.4"/><rect x="123.1" y="86.0" width="14.4" height="30.9" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="156.0" y1="56.8" x2="156.0" y2="95.1" stroke="#c0392b" stroke-width="1.4"/><rect x="148.8" y="72.9" width="14.4" height="13.9" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="181.7" y1="100.9" x2="181.7" y2="125.5" stroke="#c0392b" stroke-width="1.4"/><rect x="174.5" y="104.8" width="14.4" height="11.1" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="207.4" y1="150.4" x2="207.4" y2="188.8" stroke="#c0392b" stroke-width="1.4"/><rect x="200.2" y="155.7" width="14.4" height="29.8" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="233.1" y1="196.8" x2="233.1" y2="275.9" stroke="#c0392b" stroke-width="1.4"/><rect x="225.9" y="203.6" width="14.4" height="66.2" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="258.9" y1="230.5" x2="258.9" y2="292.5" stroke="#1a7f37" stroke-width="1.4"/><rect x="251.7" y="263.5" width="14.4" height="9.6" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="284.6" y1="193.0" x2="284.6" y2="260.8" stroke="#1a7f37" stroke-width="1.4"/><rect x="277.4" y="209.9" width="14.4" height="30.8" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="310.3" y1="181.0" x2="310.3" y2="225.3" stroke="#c0392b" stroke-width="1.4"/><rect x="303.1" y="201.9" width="14.4" height="16.9" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="336.0" y1="208.8" x2="336.0" y2="281.9" stroke="#1a7f37" stroke-width="1.4"/><rect x="328.8" y="217.6" width="14.4" height="32.4" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="361.7" y1="192.0" x2="361.7" y2="229.7" stroke="#c0392b" stroke-width="1.4"/><rect x="354.5" y="212.7" width="14.4" height="11.1" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="387.4" y1="209.7" x2="387.4" y2="266.4" stroke="#1a7f37" stroke-width="1.4"/><rect x="380.2" y="215.8" width="14.4" height="39.0" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="413.1" y1="177.0" x2="413.1" y2="227.9" stroke="#c0392b" stroke-width="1.4"/><rect x="405.9" y="182.8" width="14.4" height="33.9" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="438.9" y1="181.7" x2="438.9" y2="213.5" stroke="#1a7f37" stroke-width="1.4"/><rect x="431.7" y="204.2" width="14.4" height="9.3" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="464.6" y1="139.4" x2="464.6" y2="164.9" stroke="#1a7f37" stroke-width="1.4"/><rect x="457.4" y="143.8" width="14.4" height="17.7" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="490.3" y1="132.6" x2="490.3" y2="172.1" stroke="#c0392b" stroke-width="1.4"/><rect x="483.1" y="149.2" width="14.4" height="17.4" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="516.0" y1="153.2" x2="516.0" y2="177.3" stroke="#1a7f37" stroke-width="1.4"/><rect x="508.8" y="167.9" width="14.4" height="5.2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+          <line x1="541.7" y1="149.4" x2="541.7" y2="249.5" stroke="#c0392b" stroke-width="1.4"/><rect x="534.5" y="168.9" width="14.4" height="68.4" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="567.4" y1="201.4" x2="567.4" y2="274.0" stroke="#c0392b" stroke-width="1.4"/><rect x="560.2" y="216.7" width="14.4" height="52.6" fill="#f7e2de" stroke="#c0392b" stroke-width="1.4"/>
+          <line x1="593.1" y1="235.6" x2="593.1" y2="298.9" stroke="#1a7f37" stroke-width="1.4"/><rect x="585.9" y="249.7" width="14.4" height="49.2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.4"/>
+        </g>
+        <!-- support touch points (the lows that were defended) -->
+        <g fill="#1a7f37">
+          <circle cx="233.1" cy="275.9" r="3.6"/>
+          <circle cx="258.9" cy="292.5" r="3.6"/>
+          <circle cx="336.0" cy="281.9" r="3.6"/>
+          <circle cx="567.4" cy="274.0" r="3.6"/>
+          <circle cx="593.1" cy="298.9" r="3.6"/>
+        </g>
+        <!-- month's-high marker -->
+        <circle cx="156.0" cy="56.8" r="3.4" fill="#c0392b"/>
+        <text class="dg-xs" x="166" y="61">Month's high 24,482</text>
+        <!-- support label -->
+        <text class="dg-t" x="74" y="252" style="fill:#1a7f37">Support ≈ 23,300</text>
+        <text class="dg-xs" x="74" y="266">defended again &amp; again</text>
+        <!-- date labels -->
+        <g>
+          <text class="dg-xs" text-anchor="middle" x="78.9" y="338">4 May</text>
+          <text class="dg-xs" text-anchor="middle" x="207.4" y="338">11 May</text>
+          <text class="dg-xs" text-anchor="middle" x="336.0" y="338">18 May</text>
+          <text class="dg-xs" text-anchor="middle" x="464.6" y="338">25 May</text>
+          <text class="dg-xs" text-anchor="middle" x="567.4" y="338">1 Jun</text>
+        </g>
+      </svg>
+      <figcaption>An <strong>actual month of the Nifty 50</strong> — one candle per trading day (4 May–2 June 2026). Green candles closed up, red closed down; the dotted line marks the <strong>support zone</strong> near 23,300 that buyers defended five times (green dots) before the 2 June bounce.</figcaption>
+    </figure>
+
+    <p>Take a moment to just <em>read</em> it, the way the earlier sections taught:</p>
+    <ul class="clean">
+      <li><strong>Green vs red.</strong> Green days closed higher than they opened; red days closed lower. Skim the colours alone and you can feel the mood swing from day to day.</li>
+      <li><strong>Bodies vs wicks.</strong> A tall body (like 6 or 12 May) means the open and close were far apart — a decisive, one-sided day. A thin tail sticking out is a wick: a price the market briefly touched but didn't want to hold.</li>
+      <li><strong>The trend.</strong> This was <em>not</em> a clean one-way move. The index drifted broadly <strong>sideways-to-lower</strong> — from about 24,100 down to 23,480 — bouncing around inside a range of roughly <strong>23,230 to 24,480</strong>. A textbook <em>range-bound</em> month, not a trending one.</li>
+    </ul>
+
+    <h3>Two sharp falls and a floor that held</h3>
+    <p>Two days jump out as <strong>tall red candles</strong>: <strong>12 May</strong> and <strong>29 May</strong>. On each, the index opened, sold off hard all day, and closed near its low — the unmistakable shape of a session where sellers were firmly in charge. Together they mark the month's two down-legs.</p>
+    <p>Now look along the bottom of the chart. <strong>Five times</strong> the price was dragged down toward <strong>~23,300</strong> (the dotted line and the green dots), and five times the dip was bought back up. That repeatedly-defended floor is a <strong>support zone</strong> — the exact idea from section 3, now in live data instead of a sketch. The thin <strong>lower wicks</strong> stabbing down to those dots are the fingerprints of buyers stepping in: on 18 May, for instance, sellers forced the price down to 23,317 during the day, but buyers won it all the way back to close at 23,650 — leaving a long tail behind. The final candle, <strong>2 June</strong>, opened right at the month's low (23,229) and closed firmly higher: a green <strong>bounce</strong> off that same floor.</p>
+
+    <h3>Four candles, decoded</h3>
+    <p>Reading one candle at a time is the core skill. Here are four real ones from the chart above, each a different "shape" worth being able to recognise on sight:</p>
+    <table>
+      <thead>
+        <tr><th>Day</th><th>Open · High · Low · Close</th><th>Shape</th><th>What it's telling you</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>6 May</td><td>24,171 · 24,357 · 23,998 · 24,331</td><td>Tall green body</td><td>Strong buying — it closed right near the top of the day's range.</td></tr>
+        <tr><td>12 May</td><td>23,723 · 23,758 · 23,348 · 23,380</td><td>Tall red body, close near the low</td><td>Heavy, one-sided selling — the day the index broke lower.</td></tr>
+        <tr><td>18 May</td><td>23,482 · 23,696 · 23,317 · 23,650</td><td>Green with a long lower wick</td><td>Sellers pushed it to 23,317, buyers fought it back to 23,650 — a floor being defended.</td></tr>
+        <tr><td>2 Jun</td><td>23,229 · 23,557 · 23,229 · 23,484</td><td>Green, opens at its low</td><td>A bounce — it opened at the month's low and rallied for the rest of the day.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box note">
+      <p class="label">WHERE ARE THE MOVING AVERAGES?</p>
+      <p>The 50- and 200-day averages from section 4 need <em>months</em> of past closes to calculate, so they simply can't be drawn on a single month of candles. On a real charting app you'd switch to a 6-month or 1-year view to see them ride through the price.</p>
+    </div>
+
+    <div class="box warn">
+      <p class="label">THIS IS A FROZEN SNAPSHOT</p>
+      <p>These are real prices from <strong>May–June 2026</strong>, captured here as a teaching example — <strong>not</strong> a prediction, and not a live feed. By the time you read this, the Nifty is somewhere else entirely. The skill to carry away isn't <em>these</em> numbers; it's being able to pull up <em>any</em> live chart and read its colours, bodies, wicks, trend and support in just the same way. <span style="color:var(--soft)">(Prices: Yahoo Finance / NSE.)</span></p>
+    </div>
+
+    <h2 id="reality">8. Reality check</h2>
     <p>Time for some honesty. Technical analysis can be fascinating, but it is easy to overrate.</p>
     <div class="box warn">
       <p class="label">PLEASE READ THIS</p>
