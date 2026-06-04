@@ -25,11 +25,15 @@
       <ol>
         <li><a href="#what">What technical analysis is</a></li>
         <li><a href="#candles">Reading a candlestick</a></li>
+        <li><a href="#cpatterns">Named candlestick patterns</a></li>
         <li><a href="#trends">Trends, support &amp; resistance</a></li>
         <li><a href="#ma">Moving averages</a></li>
+        <li><a href="#volume">Volume</a></li>
         <li><a href="#indicators">Popular indicators</a></li>
+        <li><a href="#fib">Fibonacci retracements</a></li>
         <li><a href="#patterns">Common chart patterns</a></li>
         <li><a href="#example">A real month of Nifty</a></li>
+        <li><a href="#discipline">If you really want to try</a></li>
         <li><a href="#reality">Reality check</a></li>
       </ol>
     </div>
@@ -123,7 +127,115 @@
 
     <p><span class="eg">Eg:</span> a green candle with a long lower wick means the price dropped during the period but buyers pushed it back up before the close — a small clue about who won the tug-of-war.</p>
 
-    <h2 id="trends">3. Trends, support &amp; resistance</h2>
+    <h2 id="cpatterns">3. Named candlestick patterns</h2>
+    <p>Once you can read a single candle, the next thing you'll hear traders talk about is <strong>patterns</strong> — particular candle shapes, and short sequences of candles, thought to hint at what comes next. Zerodha Varsity spends six whole chapters on these; here are the famous few you'll bump into most, boiled down to the gist.</p>
+
+    <h3>Single candles</h3>
+    <ul class="clean">
+      <li><strong>Marubozu</strong> — a candle that is almost <em>all body</em>, with little or no wick. The price opened at one end and marched straight to the other. A green Marubozu (opens at its low, closes at its high) shouts one-sided <strong>buying</strong>; a red one, one-sided <strong>selling</strong>.</li>
+      <li><strong>Doji</strong> — the open and close land in almost the same spot, so the body shrinks to a sliver and the candle looks like a <strong>cross</strong>. The classic sign of <strong>indecision</strong>: buyers and sellers fought to a draw.</li>
+      <li><strong>Spinning top</strong> — a small body with wicks poking out both sides. Also indecision, but with more visible back-and-forth than a doji.</li>
+      <li><strong>Hammer</strong> — a small body sitting up top with a long <em>lower</em> wick, appearing <strong>after a fall</strong>. Sellers dragged the price right down, but buyers hauled it back up by the close — a possible sign the drop is running out of steam. (The 18 May candle later in this module is hammer-shaped.)</li>
+      <li><strong>Hanging man</strong> — the <em>exact same shape</em> as a hammer, but appearing <strong>after a rise</strong>, where it's read as a warning that the climb may be tiring.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="Four named single candlesticks: a Marubozu with a full body and no wicks, a Doji shaped like a cross, a Spinning top with a small body and two wicks, and a Hammer with a small body and a long lower wick">
+        <!-- Marubozu (bullish) -->
+        <rect x="66" y="50" width="48" height="116" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="90" y="192" style="fill:#1a7f37">Marubozu</text>
+        <text class="dg-xs" text-anchor="middle" x="90" y="210">all body, no wick —</text>
+        <text class="dg-xs" text-anchor="middle" x="90" y="225">one decisive side</text>
+        <!-- Doji -->
+        <line x1="230" y1="46" x2="230" y2="170" stroke="#57606a" stroke-width="2"/>
+        <rect x="206" y="104" width="48" height="8" rx="1" fill="#f1efe8" stroke="#57606a" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="230" y="192">Doji</text>
+        <text class="dg-xs" text-anchor="middle" x="230" y="210">open ≈ close —</text>
+        <text class="dg-xs" text-anchor="middle" x="230" y="225">pure indecision</text>
+        <!-- Spinning top -->
+        <line x1="370" y1="58" x2="370" y2="158" stroke="#57606a" stroke-width="2"/>
+        <rect x="346" y="92" width="48" height="32" rx="2" fill="#f1efe8" stroke="#57606a" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="370" y="192">Spinning top</text>
+        <text class="dg-xs" text-anchor="middle" x="370" y="210">small body, two wicks —</text>
+        <text class="dg-xs" text-anchor="middle" x="370" y="225">a tug of war</text>
+        <!-- Hammer (bullish) -->
+        <line x1="510" y1="92" x2="510" y2="166" stroke="#57606a" stroke-width="2"/>
+        <rect x="486" y="58" width="48" height="34" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="510" y="192" style="fill:#1a7f37">Hammer</text>
+        <text class="dg-xs" text-anchor="middle" x="510" y="210">long lower wick —</text>
+        <text class="dg-xs" text-anchor="middle" x="510" y="225">a fall rejected</text>
+      </svg>
+      <figcaption>Four candles traders gave names to. The first three read the same whatever their colour; the <strong>hammer</strong>'s message flips with <em>where</em> it appears — see the note below.</figcaption>
+    </figure>
+
+    <div class="box tip">
+      <p class="label">SAME SHAPE, OPPOSITE MEANING</p>
+      <p>The hammer and the hanging man are the <em>identical</em> candle — what changes the message is <strong>where it appears</strong>. After a fall (hammer) it hints "bottom"; after a rise (hanging man) it hints "top". With candlesticks, <strong>location is everything</strong>.</p>
+    </div>
+
+    <h3>Short sequences</h3>
+    <p>Some patterns need two or three candles read together:</p>
+    <ul class="clean">
+      <li><strong>Bullish engulfing</strong> — a small red candle is followed by a big green one whose body <em>completely swallows</em> it. After a downtrend, it's read as buyers wrestling control away from sellers.</li>
+      <li><strong>Bearish engulfing</strong> — the mirror image: a small green candle engulfed by a big red one after a rise.</li>
+      <li><strong>Harami</strong> — the reverse of an engulfing: a big candle followed by a small one tucked <em>inside</em> its body. The prior trend losing its grip — a hint of a possible pause or turn.</li>
+      <li><strong>Morning star &amp; evening star</strong> — three-candle reversals. A <strong>morning star</strong> (big red → a small "pause" candle → big green) hints a <em>bottom</em>; an <strong>evening star</strong> is the upside-down warning at a <em>top</em>.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 210" role="img" aria-label="Two engulfing patterns: on the left a small red candle is swallowed by a big green candle (bullish engulfing); on the right a small green candle is swallowed by a big red candle (bearish engulfing)">
+        <line x1="300" y1="30" x2="300" y2="150" stroke="#e7e3d8" stroke-width="1"/>
+        <!-- Bullish engulfing -->
+        <line x1="120" y1="84" x2="120" y2="128" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="106" y="96" width="28" height="22" rx="2" fill="#f7e2de" stroke="#c0392b" stroke-width="2"/>
+        <line x1="178" y1="60" x2="178" y2="150" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="160" y="78" width="36" height="58" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="150" y="176" style="fill:#1a7f37">Bullish engulfing</text>
+        <text class="dg-xs" text-anchor="middle" x="150" y="194">a big green swallows a red — buyers seize control</text>
+        <!-- Bearish engulfing -->
+        <line x1="420" y1="58" x2="420" y2="102" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="406" y="72" width="28" height="22" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2"/>
+        <line x1="478" y1="56" x2="478" y2="150" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="460" y="70" width="36" height="60" rx="2" fill="#f7e2de" stroke="#c0392b" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="450" y="176" style="fill:#c0392b">Bearish engulfing</text>
+        <text class="dg-xs" text-anchor="middle" x="450" y="194">a big red swallows a green — sellers seize control</text>
+      </svg>
+      <figcaption>In an <strong>engulfing</strong> pair the second candle's body completely covers the first — a visible handover of control from one side to the other.</figcaption>
+    </figure>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 220" role="img" aria-label="Two three-candle star patterns: a morning star (big red, small pause candle, big green) forming a valley, and an evening star (big green, small pause candle, big red) forming a peak">
+        <line x1="300" y1="28" x2="300" y2="150" stroke="#e7e3d8" stroke-width="1"/>
+        <polyline fill="none" stroke="#9aa3ad" stroke-width="1.5" stroke-dasharray="4 4" points="90,98 150,122 210,60"/>
+        <polyline fill="none" stroke="#9aa3ad" stroke-width="1.5" stroke-dasharray="4 4" points="390,60 450,50 510,104"/>
+        <!-- Morning star -->
+        <line x1="90" y1="46" x2="90" y2="104" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="78" y="52" width="24" height="46" rx="2" fill="#f7e2de" stroke="#c0392b" stroke-width="2.2"/>
+        <line x1="150" y1="110" x2="150" y2="134" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="138" y="116" width="24" height="12" rx="2" fill="#f1efe8" stroke="#57606a" stroke-width="2.2"/>
+        <line x1="210" y1="54" x2="210" y2="118" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="198" y="60" width="24" height="52" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.2"/>
+        <text class="dg-t" text-anchor="middle" x="150" y="178" style="fill:#1a7f37">Morning star</text>
+        <text class="dg-xs" text-anchor="middle" x="150" y="196">down → pause → up: a possible bottom</text>
+        <!-- Evening star -->
+        <line x1="390" y1="54" x2="390" y2="118" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="378" y="60" width="24" height="52" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.2"/>
+        <line x1="450" y1="38" x2="450" y2="62" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="438" y="44" width="24" height="12" rx="2" fill="#f1efe8" stroke="#57606a" stroke-width="2.2"/>
+        <line x1="510" y1="46" x2="510" y2="110" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="498" y="52" width="24" height="52" rx="2" fill="#f7e2de" stroke="#c0392b" stroke-width="2.2"/>
+        <text class="dg-t" text-anchor="middle" x="450" y="178" style="fill:#c0392b">Evening star</text>
+        <text class="dg-xs" text-anchor="middle" x="450" y="196">up → pause → down: a possible top</text>
+      </svg>
+      <figcaption>The little middle candle is the "star" — a pause where the prior trend stalls before the third candle swings the other way.</figcaption>
+    </figure>
+
+    <div class="box note">
+      <p class="label">A PATTERN IS A HINT, NOT A TRIGGER</p>
+      <p>None of these guarantee anything. Seasoned chart-readers wait for <strong>confirmation</strong> (the next candle agreeing) and weigh the pattern against the trend, support/resistance and volume — they never act on a shape alone. And two people can genuinely disagree on whether a pattern is even there.</p>
+    </div>
+
+    <h2 id="trends">4. Trends, support &amp; resistance</h2>
     <p>The first thing a chart-reader looks for is the <strong>trend</strong> — the general direction:</p>
     <ul class="clean">
       <li><strong>Uptrend</strong> — the price keeps making <em>higher highs</em> and higher lows. Stairs going up.</li>
@@ -192,7 +304,35 @@
       <p>Support and resistance are not exact lines drawn by some authority — they are rough zones that different people draw slightly differently. Treat them as fuzzy areas, not precise prices.</p>
     </div>
 
-    <h2 id="ma">4. Moving averages</h2>
+    <h3>Trends within trends — a nod to Dow Theory</h3>
+    <p>One of the oldest ideas in charting comes from <strong>Charles Dow</strong> (the same Dow behind the Dow Jones index, around 1900). His insight: a trend is never a straight line — it's built from <em>smaller</em> trends nested inside it. Dow split a market's movement into three:</p>
+    <ul class="clean">
+      <li><strong>Primary trend</strong> — the big tide, lasting months to years: the main up- or down-move everyone talks about.</li>
+      <li><strong>Secondary trend</strong> — the waves against that tide: pullbacks and bounces lasting a few weeks, which retrace part of the primary move before it resumes.</li>
+      <li><strong>Minor trend</strong> — the daily ripples and noise, mostly ignored.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 230" role="img" aria-label="A price line climbing in a staircase of higher highs and higher lows, with three small pullbacks marked as secondary dips, beneath a straight dashed primary-trend line">
+        <line x1="44" y1="180" x2="556" y2="42" stroke="#9a6700" stroke-width="2" stroke-dasharray="7 5"/>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="44,180 110,122 160,152 240,92 300,126 390,58 450,94 556,42"/>
+        <g fill="#c0392b">
+          <circle cx="160" cy="152" r="4"/>
+          <circle cx="300" cy="126" r="4"/>
+          <circle cx="450" cy="94" r="4"/>
+        </g>
+        <text class="dg-t" x="70" y="66" style="fill:#9a6700">Primary trend ↗</text>
+        <text class="dg-xs" x="70" y="83">the big tide — higher highs &amp; lows</text>
+        <circle cx="80" cy="208" r="4" fill="#c0392b"/>
+        <text class="dg-s" x="92" y="212">Secondary dips — pullbacks <tspan style="fill:#1f2328;font-weight:600">within</tspan> the trend, not its end</text>
+      </svg>
+      <figcaption>A trend is never a straight line. Inside one <strong>primary</strong> up-move sit many <strong>secondary</strong> dips — the reason a single red day (or week) needn't mean the rise is over.</figcaption>
+    </figure>
+
+    <p>The practical lesson for a beginner is simple: <strong>don't mistake a secondary dip for the end of the world.</strong> In a healthy uptrend the price pulls back again and again before climbing on — a dip is not automatically a reversal. (Zerodha gives Dow Theory two full chapters if you want the complete set of principles.)</p>
+
+    <h2 id="ma">5. Moving averages</h2>
     <p>A <strong>moving average</strong> is simply the average closing price over the last N days, recalculated each day so it "moves" along with the price. Its job is to <strong>smooth out the daily noise</strong> so the underlying direction is easier to see.</p>
     <p>Two are especially popular:</p>
     <ul class="clean">
@@ -217,12 +357,53 @@
 
     <p>As a rough rule of thumb, when the price is <strong>above</strong> its moving average, the trend is generally considered healthy; when it slips <strong>below</strong>, traders grow cautious. <span class="eg">Eg:</span> a stock trading comfortably above its 200-day average is often described as being "in an uptrend." It's a gauge, not a guarantee.</p>
 
-    <h2 id="indicators">5. Popular indicators</h2>
+    <h2 id="volume">6. Volume</h2>
+    <p><strong>Volume</strong> is simply how many shares changed hands in a period — drawn as <strong>bars along the bottom</strong> of most charts, one bar under each candle. On its own it says nothing about <em>direction</em>; its job is to show how much <strong>conviction</strong> is behind a move.</p>
+    <p>The rule of thumb: a price move on <strong>high volume</strong> is more trustworthy than the same move on thin volume, because more people are putting real money behind it.</p>
+    <ul class="clean">
+      <li>A breakout to new highs on <strong>heavy</strong> volume looks convincing — the crowd is taking part.</li>
+      <li>The same breakout on <strong>feeble</strong> volume is suspect; few are behind it, and it may quietly fizzle.</li>
+      <li>A big volume <strong>spike</strong> often marks the moment something changed — news, results, or big institutions ("smart money") stepping in.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="A row of price candlesticks on top with volume bars beneath each one; a strong green breakout candle is matched by a much taller volume bar than the quiet days around it">
+        <text class="dg-t" x="36" y="44">Price</text>
+        <text class="dg-t" x="36" y="160">Volume</text>
+        <line x1="32" y1="146" x2="568" y2="146" stroke="#e7e3d8" stroke-width="1"/>
+        <!-- candles -->
+        <g>
+          <line x1="92" y1="104" x2="92" y2="132" stroke="#57606a" stroke-width="1.5"/><rect x="81" y="110" width="22" height="16" fill="#f7e2de" stroke="#c0392b" stroke-width="1.8"/>
+          <line x1="162" y1="98" x2="162" y2="126" stroke="#57606a" stroke-width="1.5"/><rect x="151" y="104" width="22" height="16" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.8"/>
+          <line x1="232" y1="102" x2="232" y2="130" stroke="#57606a" stroke-width="1.5"/><rect x="221" y="108" width="22" height="16" fill="#f7e2de" stroke="#c0392b" stroke-width="1.8"/>
+          <line x1="302" y1="94" x2="302" y2="124" stroke="#57606a" stroke-width="1.5"/><rect x="291" y="100" width="22" height="18" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.8"/>
+          <line x1="372" y1="98" x2="372" y2="126" stroke="#57606a" stroke-width="1.5"/><rect x="361" y="104" width="22" height="16" fill="#f7e2de" stroke="#c0392b" stroke-width="1.8"/>
+          <line x1="442" y1="50" x2="442" y2="120" stroke="#57606a" stroke-width="1.5"/><rect x="431" y="58" width="22" height="54" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2"/>
+          <line x1="512" y1="50" x2="512" y2="92" stroke="#57606a" stroke-width="1.5"/><rect x="501" y="56" width="22" height="30" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.8"/>
+        </g>
+        <!-- volume bars (baseline y=222) -->
+        <g fill="#9aa3ad">
+          <rect x="81" y="202" width="22" height="20"/>
+          <rect x="151" y="196" width="22" height="26"/>
+          <rect x="221" y="204" width="22" height="18"/>
+          <rect x="291" y="198" width="22" height="24"/>
+          <rect x="361" y="206" width="22" height="16"/>
+          <rect x="501" y="188" width="22" height="34"/>
+        </g>
+        <rect x="431" y="164" width="22" height="58" fill="#0b6e6e"/>
+        <line x1="32" y1="222" x2="568" y2="222" stroke="#cfc9ba" stroke-width="1"/>
+      </svg>
+      <figcaption>Quiet days draw stubby grey volume bars. The breakout candle is matched by one <strong style="color:#0b6e6e">tall teal bar</strong> — heavy volume that says the crowd showed up, which is what makes the move more believable.</figcaption>
+    </figure>
+
+    <p><span class="eg">Eg:</span> if a stock jumps 5% but on its lowest volume in weeks, a chart-reader treats the move with suspicion — a rise nobody turned up for rarely lasts.</p>
+
+    <h2 id="indicators">7. Popular indicators</h2>
     <p>Indicators are formulas applied to price (and volume) to highlight things the eye might miss. You'll hear these names thrown around — here's the one-line gist of each:</p>
     <ul class="clean">
       <li><strong>RSI</strong> (Relative Strength Index) — a gauge from 0 to 100. High readings suggest a stock may be <strong>overbought</strong> (risen too fast); low readings suggest it may be <strong>oversold</strong> (fallen too far).</li>
       <li><strong>MACD</strong> — a <strong>momentum</strong> tool that tries to show whether buying or selling pressure is building or fading.</li>
-      <li><strong>Volume</strong> — the number of shares traded. A price move backed by <strong>high volume</strong> is seen as more convincing, because more people are behind it.</li>
+      <li><strong>Bollinger Bands</strong> — a pair of bands drawn above and below the price that <strong>widen</strong> when the market turns volatile and <strong>squeeze</strong> tight when it's calm. Price pushing the upper band is read as strong (or stretched); hugging the lower band, weak. A tight "squeeze" is watched as a hint that a big move may be brewing.</li>
     </ul>
 
     <figure class="diagram">
@@ -253,7 +434,50 @@
       <p>You do not need to calculate any of these by hand — charting apps draw them for you. The point is just to recognise the names and roughly what each one is hinting at.</p>
     </div>
 
-    <h2 id="patterns">6. Common chart patterns</h2>
+    <h2 id="fib">8. Fibonacci retracements</h2>
+    <p>You'll bump into "Fibonacci" (or just "the Fibs") constantly. It starts from a famous number sequence — <strong>0, 1, 1, 2, 3, 5, 8, 13, 21, 34…</strong> where each number is the sum of the two before it. Divide any number by the next one and you keep landing near <strong>0.618</strong> — a proportion (the "golden ratio") that crops up oddly often in nature and art, and which traders believe shows up in markets too.</p>
+    <p>In charting, the idea is used for <strong>retracements</strong>. After a strong move, price rarely travels in a straight line — it <em>pulls back</em> part of the way before, often, resuming. Traders draw horizontal lines at the classic Fibonacci levels — <strong>23.6%, 38.2%, 50% and 61.8%</strong> of the prior move — and watch them as possible support zones where the pullback might run out of steam.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="A price rally from a swing low to a swing high, then a pullback that falls back toward the 61.8 percent Fibonacci retracement line and bounces; horizontal lines mark the 23.6, 38.2, 50 and 61.8 percent levels of the rally">
+        <g stroke-dasharray="6 5">
+          <line x1="300" y1="50" x2="540" y2="50" stroke="#cfc9ba" stroke-width="1.5" stroke-dasharray="0"/>
+          <line x1="300" y1="87.8" x2="540" y2="87.8" stroke="#9aa3ad" stroke-width="1.3"/>
+          <line x1="300" y1="111.1" x2="540" y2="111.1" stroke="#9aa3ad" stroke-width="1.3"/>
+          <line x1="300" y1="130" x2="540" y2="130" stroke="#9aa3ad" stroke-width="1.3"/>
+          <line x1="300" y1="148.9" x2="540" y2="148.9" stroke="#9a6700" stroke-width="1.8"/>
+          <line x1="300" y1="210" x2="540" y2="210" stroke="#cfc9ba" stroke-width="1.5" stroke-dasharray="0"/>
+        </g>
+        <g class="dg-xs">
+          <text x="546" y="54">0%</text>
+          <text x="546" y="91.8">23.6%</text>
+          <text x="546" y="115.1">38.2%</text>
+          <text x="546" y="134">50%</text>
+          <text x="546" y="152.9" style="fill:#9a6700">61.8%</text>
+          <text x="546" y="214">100%</text>
+        </g>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="70,210 130,172 190,128 250,82 300,50"/>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"
+          points="300,50 410,148.9 470,106"/>
+        <circle cx="410" cy="148.9" r="4" fill="#9a6700"/>
+        <circle cx="70" cy="210" r="3.5" fill="#0b6e6e"/>
+        <circle cx="300" cy="50" r="3.5" fill="#0b6e6e"/>
+        <text class="dg-s" text-anchor="end" x="64" y="206">Low</text>
+        <text class="dg-s" x="306" y="44">High</text>
+        <text class="dg-xs" x="416" y="170" style="fill:#9a6700">bounce near 61.8%</text>
+      </svg>
+      <figcaption>After the rally from <strong>Low</strong> to <strong>High</strong>, the Fibonacci levels fan out across the pullback. Here the dip steadies right at the <strong style="color:#9a6700">61.8%</strong> line — the golden ratio — and bounces.</figcaption>
+    </figure>
+
+    <p><span class="eg">Eg:</span> if the Nifty rallies from 23,000 to 24,000 (a 1,000-point move) and then dips, the 38.2% line (~23,618) and the 61.8% line (~23,382) are the spots Fib traders watch for a bounce.</p>
+
+    <div class="box note">
+      <p class="label">A SELF-FULFILLING TOOL</p>
+      <p>Fibonacci levels "work" partly because <em>enough traders watch the same lines</em> — a level can become support simply because everyone treats it as one. (And the 50% level isn't even a true Fibonacci ratio; it's kept because round-number pullbacks are common.) Useful, but hardly the magic some claim.</p>
+    </div>
+
+    <h2 id="patterns">9. Common chart patterns</h2>
     <p>Traders also look for repeating <strong>shapes</strong> in the chart that supposedly hint at what comes next. A few you'll hear about:</p>
     <ul class="clean">
       <li><strong>Double top</strong> — the price rises to a high, falls, rises to roughly the same high again, then turns down. Seen as a possible sign the uptrend is tiring.</li>
@@ -286,7 +510,7 @@
 
     <p>Crucially, these patterns are <strong>hints, not certainties</strong>. A "double top" only counts as a double top in hindsight; in the moment, the price can do anything. Two people can even disagree on whether a pattern is forming at all.</p>
 
-    <h2 id="example">7. A real month of Nifty, decoded</h2>
+    <h2 id="example">10. A real month of Nifty, decoded</h2>
     <p>Enough theory — here is an <strong>actual chart</strong>. Below is the <strong>Nifty 50</strong> (India's benchmark index of 50 large companies) drawn as daily candlesticks for roughly one month, from <strong>4 May to 2 June 2026</strong>. Each candle is one trading day, built from that day's real open, high, low and close. This one picture quietly uses almost everything in this module at once.</p>
 
     <figure class="diagram">
@@ -396,7 +620,53 @@
       <p>These are real prices from <strong>May–June 2026</strong>, captured here as a teaching example — <strong>not</strong> a prediction, and not a live feed. By the time you read this, the Nifty is somewhere else entirely. The skill to carry away isn't <em>these</em> numbers; it's being able to pull up <em>any</em> live chart and read its colours, bodies, wicks, trend and support in just the same way. <span style="color:var(--soft)">(Prices: Yahoo Finance / NSE.)</span></p>
     </div>
 
-    <h2 id="reality">8. Reality check</h2>
+    <h2 id="discipline">11. If you really want to try</h2>
+    <p>If, after all the caveats, you still want to experiment, the most important thing isn't a clever indicator — it's <strong>discipline</strong>. Two habits matter more than any pattern on this page.</p>
+
+    <h3>Risk-reward: know your exit before your entry</h3>
+    <p>Before you ever click buy, fix three prices in your mind: your <strong>entry</strong>, your <strong>stop-loss</strong> (the price at which you'll admit you're wrong and get out), and your <strong>target</strong> (where you'll take profit). The gap from entry to stop is your <strong>risk</strong>; the gap from entry to target is your <strong>reward</strong>. The ratio between them is the heart of trading.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="A risk-reward diagram: an entry price in the middle, a stop-loss below it marking a small risk band, and a target above marking a reward band twice as tall, illustrating a one-to-two risk-reward ratio">
+        <rect x="120" y="70" width="300" height="80" fill="#e3f3e8"/>
+        <rect x="120" y="150" width="300" height="40" fill="#f7e2de"/>
+        <line x1="120" y1="70" x2="420" y2="70" stroke="#1a7f37" stroke-width="2" stroke-dasharray="6 5"/>
+        <line x1="120" y1="150" x2="420" y2="150" stroke="#1f2328" stroke-width="2.5"/>
+        <line x1="120" y1="190" x2="420" y2="190" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 5"/>
+        <text class="dg-t" text-anchor="middle" x="270" y="104" style="fill:#1a7f37">REWARD</text>
+        <text class="dg-xs" text-anchor="middle" x="270" y="122">₹10 — entry to target</text>
+        <text class="dg-xs" text-anchor="middle" x="270" y="174" style="fill:#c0392b">RISK ₹5 — entry to stop</text>
+        <text class="dg-s" x="428" y="74" style="fill:#1a7f37">Target ₹110</text>
+        <text class="dg-s" x="428" y="154">Entry ₹100</text>
+        <text class="dg-s" x="428" y="194" style="fill:#c0392b">Stop ₹95</text>
+        <text class="dg-t" text-anchor="middle" x="270" y="226" style="fill:#0b6e6e">Risk ₹5 : Reward ₹10  =  1 : 2</text>
+      </svg>
+      <figcaption>Decide all three prices <em>before</em> you enter. Here the reward band is twice the height of the risk band — a <strong>1:2</strong> trade, where you can be wrong more often than right and still finish ahead.</figcaption>
+    </figure>
+
+    <ul class="clean">
+      <li><span class="eg">Eg:</span> buy at ₹100, stop at ₹95 (risk ₹5), target ₹110 (reward ₹10) → a <strong>1:2</strong> ratio. You're risking ₹1 to make ₹2.</li>
+      <li><strong>Why it matters:</strong> with a 1:2 ratio you can be <em>wrong more than half the time</em> and still come out ahead. Good traders obsess over this far more than over being "right".</li>
+    </ul>
+
+    <h3>A starter checklist</h3>
+    <p>If you must trade, do it the careful way:</p>
+    <ul class="clean">
+      <li>Practise first with a <strong>tiny amount</strong> you can afford to lose — or paper-trade (fake money) until you're consistent.</li>
+      <li>Always set a <strong>stop-loss before you enter</strong> — and actually honour it.</li>
+      <li>Risk only a <strong>small slice</strong> of your capital on any one trade (many use 1–2%).</li>
+      <li><strong>Trade with the trend</strong>, not against it — remember "the trend is your friend".</li>
+      <li>Wait for <strong>confluence</strong> — a few signals agreeing — rather than acting on one shape alone.</li>
+      <li>Keep a <strong>journal</strong> of every trade and why you took it; review it honestly.</li>
+      <li>Avoid <strong>leverage</strong> and F&amp;O until you genuinely understand them (see <a href="09-futures-and-options.html">Module 9</a>).</li>
+    </ul>
+
+    <div class="box note">
+      <p class="label">OTHER NAMES YOU'LL BUMP INTO</p>
+      <p>TA is a deep rabbit hole. Beyond this module you'll hear about the <strong>ADX</strong> (trend strength), <strong>pivot points</strong> and the Central Pivot Range, <strong>VWAP</strong>, <strong>Ichimoku clouds</strong>, <strong>Elliott Waves</strong> and <strong>Supertrend</strong>. None are required to be a good investor — but if you want the full, rigorous tour, the <a href="https://zerodha.com/varsity/module/technical-analysis/">Zerodha Varsity Technical Analysis module</a> is the standard free reference.</p>
+    </div>
+
+    <h2 id="reality">12. Reality check</h2>
     <p>Time for some honesty. Technical analysis can be fascinating, but it is easy to overrate.</p>
     <div class="box warn">
       <p class="label">PLEASE READ THIS</p>
@@ -413,7 +683,7 @@
 
     <footer>
       <p>These notes are for learning only and are <strong>not financial advice</strong>. Markets carry real risk.</p>
-      <p class="reviewed">Last reviewed: 3 June 2026</p>
+      <p class="reviewed">Last reviewed: 4 June 2026</p>
     </footer>
   </main>
 </body>
