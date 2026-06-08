@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Zerodha (Kite)</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a class="brand" href="../index.html">📘 Stock Market Notes</a>
+      <a href="../index.html">Home</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <h1>Using Zerodha (Kite)</h1>
+    <p class="lead">A calm tour of what the screens actually mean — so the app feels familiar <em>before</em> you place a single order.</p>
+
+    <div class="box note">
+      <p class="label">Why Zerodha here?</p>
+      <p>We use <strong>Zerodha</strong> as the example because it's India's most-used discount broker, and this whole site already follows <a href="https://zerodha.com/varsity/">Zerodha Varsity</a>. Other apps — Groww, Upstox, Angel One — work the <em>same</em> way: same ideas, different buttons. Learn it once here and any app will feel familiar.</p>
+    </div>
+
+    <div class="mini-toc">
+      <strong>On this page</strong>
+      <ol>
+        <li><a href="#family">The three Zerodha apps</a></li>
+        <li><a href="#screen">The Kite screen at a glance</a></li>
+        <li><a href="#order">Placing an order — the Buy/Sell window</a></li>
+        <li><a href="#product">Product type — CNC vs MIS vs NRML</a></li>
+        <li><a href="#tabs">Orders, Positions &amp; Holdings</a></li>
+        <li><a href="#first">Funds &amp; your first tiny order</a></li>
+      </ol>
+    </div>
+
+    <h2 id="family">1. The three Zerodha apps</h2>
+    <p>Zerodha isn't one app — it's three, each with a different job. Knowing which is which saves a lot of confusion early on.</p>
+    <ul class="clean">
+      <li><strong>Kite</strong> — where you actually <em>trade</em>: see live prices, place orders, and track your holdings. This is the one you'll use most, and the rest of this page is about it.</li>
+      <li><strong>Console</strong> — the back office: detailed <em>reports</em>, your overall profit &amp; loss, and tax statements at year-end. You look here to review, not to trade.</li>
+      <li><strong>Coin</strong> — for buying <em>mutual funds</em> and setting up SIPs (the slow, steady investing from <a href="../modules/05-mutual-funds.html">Module 5</a>), separate from share trading.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 180" role="img" aria-label="Three tiles showing the three Zerodha apps — Kite for trading, Console for reports, Coin for mutual funds">
+        <text class="dg-t" text-anchor="middle" x="300" y="26">Three Zerodha apps, three jobs</text>
+        <rect x="40" y="52" width="160" height="98" rx="12" fill="#ffffff" stroke="#0b6e6e" stroke-width="2"/>
+        <rect x="220" y="52" width="160" height="98" rx="12" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.8"/>
+        <rect x="400" y="52" width="160" height="98" rx="12" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.8"/>
+        <g text-anchor="middle">
+          <text class="dg-t" x="120" y="96" style="fill:#0b6e6e">Kite</text>
+          <text class="dg-xs" x="120" y="118">place &amp; track trades</text>
+          <text class="dg-t" x="300" y="96">Console</text>
+          <text class="dg-xs" x="300" y="118">reports, P&amp;L, tax</text>
+          <text class="dg-t" x="480" y="96">Coin</text>
+          <text class="dg-xs" x="480" y="118">mutual funds &amp; SIPs</text>
+        </g>
+      </svg>
+      <figcaption>Kite is the trading screen, <strong>Console</strong> is where you review reports and taxes, and <strong>Coin</strong> is for mutual funds. Most of your time is spent in <strong>Kite</strong>.</figcaption>
+    </figure>
+
+    <h2 id="screen">2. The Kite screen at a glance</h2>
+    <p>Open Kite and it can look busy, but it's really just a few parts:</p>
+    <ul class="clean">
+      <li><strong>Marketwatch</strong> — your personal watchlist down the left. You <em>search</em> for a stock (say RELIANCE or INFY) and add it here so its live price sits in front of you.</li>
+      <li><strong>The chart</strong> — click any stock to see its price chart (the candlesticks from <a href="../modules/08-technical-analysis.html">Module 8</a>).</li>
+      <li><strong>The order window</strong> — hover or tap a stock and a small <strong>Buy</strong> / <strong>Sell</strong> box pops up. That box is where every trade is placed — so it's worth understanding properly. That's next.</li>
+    </ul>
+    <div class="box note">
+      <p class="label">See it on Zerodha</p>
+      <p>Zerodha's own walkthrough has real annotated screenshots of the terminal: <a href="https://zerodha.com/varsity/chapter/the-trading-terminal/">Varsity — The Trading Terminal</a>.</p>
+    </div>
+
+    <h2 id="order">3. Placing an order — the Buy/Sell window</h2>
+    <p>When you tap <strong>Buy</strong> or <strong>Sell</strong>, a small window opens. It looks like a lot of fields, but each one is just answering a plain question:</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 400" role="img" aria-label="A labelled mock-up of the Kite order window showing the Buy/Sell toggle, product type, order type, quantity and price fields, margin and the place-order button">
+        <text class="dg-t" text-anchor="middle" x="300" y="26">The order window, field by field</text>
+        <!-- order window card -->
+        <rect x="36" y="44" width="300" height="324" rx="12" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.6"/>
+        <text class="dg-t" x="52" y="72" style="fill:#0b6e6e">RELIANCE</text>
+        <text class="dg-xs" x="52" y="89">NSE · ₹2,840.00</text>
+        <line x1="48" y1="100" x2="324" y2="100" stroke="#e7e3d8" stroke-width="1"/>
+        <!-- buy/sell pills -->
+        <rect x="52" y="110" width="126" height="30" rx="15" fill="#0b6e6e"/>
+        <text class="dg-t" text-anchor="middle" x="115" y="130" style="fill:#ffffff">BUY</text>
+        <rect x="190" y="110" width="126" height="30" rx="15" fill="#ffffff" stroke="#c0392b" stroke-width="1.5"/>
+        <text class="dg-t" text-anchor="middle" x="253" y="130" style="fill:#c0392b">SELL</text>
+        <!-- product -->
+        <text class="dg-xs" x="52" y="166" style="fill:#1f2328">Product</text>
+        <circle cx="58" cy="184" r="5" fill="#0b6e6e"/><text class="dg-xs" x="70" y="188">CNC</text>
+        <circle cx="140" cy="184" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="152" y="188">MIS</text>
+        <circle cx="214" cy="184" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="226" y="188">NRML</text>
+        <!-- order type -->
+        <text class="dg-xs" x="52" y="216" style="fill:#1f2328">Order type</text>
+        <circle cx="58" cy="234" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="70" y="238">Market</text>
+        <circle cx="150" cy="234" r="5" fill="#0b6e6e"/><text class="dg-xs" x="162" y="238">Limit</text>
+        <circle cx="220" cy="234" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="232" y="238">SL</text>
+        <circle cx="268" cy="234" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="280" y="238">SL-M</text>
+        <!-- qty / price -->
+        <text class="dg-xs" x="52" y="266">Qty</text>
+        <rect x="52" y="272" width="120" height="34" rx="6" fill="#fcfbf7" stroke="#cfc9ba" stroke-width="1.3"/>
+        <text class="dg-t" x="66" y="294">1</text>
+        <text class="dg-xs" x="190" y="266">Price</text>
+        <rect x="190" y="272" width="134" height="34" rx="6" fill="#fcfbf7" stroke="#cfc9ba" stroke-width="1.3"/>
+        <text class="dg-t" x="204" y="294">2,840.00</text>
+        <!-- margin -->
+        <text class="dg-xs" x="52" y="328">Margin required · ₹2,840</text>
+        <!-- button -->
+        <rect x="52" y="336" width="272" height="32" rx="8" fill="#0b6e6e"/>
+        <text class="dg-t" text-anchor="middle" x="188" y="357" style="fill:#ffffff">BUY</text>
+        <!-- callouts -->
+        <g stroke="#cfc9ba" stroke-width="1.2">
+          <line x1="336" y1="125" x2="352" y2="125"/>
+          <line x1="336" y1="184" x2="352" y2="184"/>
+          <line x1="336" y1="234" x2="352" y2="234"/>
+          <line x1="336" y1="289" x2="352" y2="289"/>
+          <line x1="336" y1="324" x2="352" y2="324"/>
+          <line x1="336" y1="352" x2="352" y2="352"/>
+        </g>
+        <text class="dg-t" x="357" y="122">① Buy or Sell</text>
+        <text class="dg-t" x="357" y="181">② Product type</text>
+        <text class="dg-xs" x="357" y="196">CNC / MIS / NRML</text>
+        <text class="dg-t" x="357" y="231">③ Order type</text>
+        <text class="dg-xs" x="357" y="246">Market / Limit / SL</text>
+        <text class="dg-t" x="357" y="286">④ Quantity &amp; price</text>
+        <text class="dg-t" x="357" y="321">⑤ Margin it needs</text>
+        <text class="dg-t" x="357" y="349">⑥ Place the order</text>
+      </svg>
+      <figcaption>Every field answers a plain question: buy or sell, what kind of trade (<strong>product</strong>), how it should fill (<strong>order type</strong>), how much and at what price. In Kite the <strong>Buy</strong> side is blue and <strong>Sell</strong> is red.</figcaption>
+    </figure>
+
+    <p>Reading the window top to bottom:</p>
+    <ul class="clean">
+      <li><strong>① Buy or Sell</strong> — which way you're trading. Buy is shown in blue, Sell in red.</li>
+      <li><strong>② Product type</strong> — is this a trade you'll <em>keep</em>, or close the same day? This is the box beginners most often get wrong, so it has its own section below.</li>
+      <li><strong>③ Order type</strong> — <em>how</em> the order fills: Market, Limit, SL or SL-M. This site already explains these in full — see <a href="order-types.html">Order Types Explained</a>. (Beginner default: a <strong>Limit</strong> order.)</li>
+      <li><strong>④ Quantity &amp; price</strong> — how many shares, and (for a Limit order) the price you're willing to pay or accept.</li>
+      <li><strong>⑤ Margin required</strong> — the money the trade needs right now. For a normal delivery buy that's the full amount; for intraday or F&amp;O it's a smaller slice (that's <a href="../modules/09-futures-and-options.html#leverage">leverage</a> — handle with care).</li>
+      <li><strong>⑥ The Buy/Sell button</strong> — swipe or tap to send the order to the exchange.</li>
+    </ul>
+    <div class="box note">
+      <p class="label">See it on Zerodha</p>
+      <p>Real screenshots of the live order window: <a href="https://support.zerodha.com/category/trading-and-markets/charts-and-orders/order/articles/placing-orders-on-kite">How to place orders on Kite</a> and <a href="https://support.zerodha.com/category/trading-and-markets/charts-and-orders/order/articles/kite-app-order-window">the order window explained</a>.</p>
+    </div>
+
+    <h2 id="product">4. Product type — CNC vs MIS vs NRML</h2>
+    <p>These three little tags decide what <em>kind</em> of trade you're making. Picking the wrong one is the classic beginner mistake — so go slowly here.</p>
+    <table>
+      <tr><th>Tag</th><th>Means</th><th>Use it when…</th></tr>
+      <tr><td><strong>CNC</strong><br><span class="dg-xs">CashNCarry</span></td><td><strong>Delivery</strong> — you buy shares and <em>keep</em> them (a day, a year, forever). They sit in your demat.</td><td>You're investing in shares to hold. <strong>This is the beginner's setting.</strong></td></tr>
+      <tr><td><strong>MIS</strong><br><span class="dg-xs">Margin Intraday Square-off</span></td><td><strong>Intraday</strong> — the position is automatically closed the <em>same day</em> (around 3:20 pm). Gives extra margin (leverage).</td><td>Day-trading only. The leverage cuts both ways — risky for beginners.</td></tr>
+      <tr><td><strong>NRML</strong><br><span class="dg-xs">Normal</span></td><td><strong>Carry-forward</strong> for Futures &amp; Options — hold a derivatives position overnight, up to expiry.</td><td>F&amp;O trading. See <a href="../modules/09-futures-and-options.html">Module 9</a> first — and the warnings in it.</td></tr>
+    </table>
+    <div class="box warn">
+      <p class="label">The MIS trap</p>
+      <p>If you buy with <strong>MIS</strong> by mistake, your broker will <strong>auto-sell it the same afternoon</strong>, whether you wanted to keep it or not — and you'll have paid intraday costs for nothing. When you just want to <em>own</em> a share, always choose <strong>CNC</strong>. (You can convert a position from MIS to CNC during the day if you catch it in time.)</p>
+    </div>
+    <div class="box note">
+      <p class="label">See it on Zerodha</p>
+      <p><a href="https://support.zerodha.com/category/trading-and-markets/charts-and-orders/order/articles/what-does-cnc-mis-and-nrml-mean">What CNC, MIS &amp; NRML mean</a> · <a href="https://support.zerodha.com/category/trading-and-markets/product-and-order-types/product/articles/how-to-convert-mis-to-cnc-nrml-and-vice-versa">how to convert MIS ↔ CNC / NRML</a>.</p>
+    </div>
+
+    <h2 id="tabs">5. Orders, Positions &amp; Holdings</h2>
+    <p>Along the bottom of Kite are three tabs that confuse almost everyone at first. Here's what each one really shows.</p>
+
+    <h3>Orders — today's instruction log</h3>
+    <p>The <strong>Orders</strong> tab is the record of orders you placed <em>today</em> and what became of them. An order moves through a few states:</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 172" role="img" aria-label="An order's lifecycle: placed, then open or pending, then executed and it becomes a position or holding — or it is rejected or cancelled">
+        <defs>
+          <marker id="kt-a" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b6e6e"/></marker>
+          <marker id="kt-r" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+        </defs>
+        <g text-anchor="middle">
+          <rect x="24" y="50" width="104" height="42" rx="8" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.5"/>
+          <text class="dg-t" x="76" y="76">Placed</text>
+          <rect x="170" y="50" width="128" height="42" rx="8" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.5"/>
+          <text class="dg-t" x="234" y="76">Open / Pending</text>
+          <rect x="340" y="50" width="116" height="42" rx="8" fill="#eaf6ec" stroke="#1a7f37" stroke-width="1.6"/>
+          <text class="dg-t" x="398" y="76" style="fill:#1a7f37">Executed</text>
+          <rect x="476" y="50" width="108" height="42" rx="8" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.5"/>
+          <text class="dg-xs" x="530" y="68">becomes a</text>
+          <text class="dg-t" x="530" y="84">Position</text>
+          <rect x="170" y="118" width="128" height="36" rx="8" fill="#f7e2de" stroke="#c0392b" stroke-width="1.5"/>
+          <text class="dg-xs" x="234" y="140" style="fill:#c0392b">Rejected / Cancelled</text>
+        </g>
+        <line x1="130" y1="71" x2="166" y2="71" stroke="#0b6e6e" stroke-width="2" marker-end="url(#kt-a)"/>
+        <line x1="300" y1="71" x2="336" y2="71" stroke="#0b6e6e" stroke-width="2" marker-end="url(#kt-a)"/>
+        <line x1="458" y1="71" x2="472" y2="71" stroke="#0b6e6e" stroke-width="2" marker-end="url(#kt-a)"/>
+        <line x1="234" y1="94" x2="234" y2="116" stroke="#c0392b" stroke-width="2" marker-end="url(#kt-r)"/>
+      </svg>
+      <figcaption>You <strong>place</strong> an order; it sits <strong>open</strong> until the market meets your price, then it's <strong>executed</strong> and becomes a holding or position — or it's <strong>rejected/cancelled</strong> and nothing happens.</figcaption>
+    </figure>
+    <p>A <strong>Limit</strong> order can sit as <em>Open</em> for a while (it's waiting for your price). A <strong>Market</strong> order usually fills at once. If something's wrong — not enough funds, market closed — it shows as <em>Rejected</em>, with the reason.</p>
+
+    <h3>Positions vs Holdings — the big one</h3>
+    <p>This is the distinction worth getting straight, because the two look similar but mean different things:</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="Positions are open, unsettled trades like intraday and F&O; Holdings are settled shares resting in your demat. Delivery shares move from Positions to Holdings after T plus one day settlement.">
+        <defs>
+          <marker id="kt-g" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1a7f37"/></marker>
+        </defs>
+        <text class="dg-t" text-anchor="middle" x="300" y="26">Positions vs Holdings</text>
+        <rect x="36" y="48" width="236" height="150" rx="12" fill="#fbf3e0" stroke="#9a6700" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="154" y="78" style="fill:#9a6700">POSITIONS</text>
+        <text class="dg-xs" text-anchor="middle" x="154" y="98">open · not yet settled</text>
+        <text class="dg-xs" x="60" y="124">• today's intraday (MIS)</text>
+        <text class="dg-xs" x="60" y="146">• open F&amp;O contracts</text>
+        <text class="dg-xs" x="60" y="168">• delivery, before it settles</text>
+        <rect x="328" y="48" width="236" height="150" rx="12" fill="#eaf6ec" stroke="#1a7f37" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="446" y="78" style="fill:#1a7f37">HOLDINGS</text>
+        <text class="dg-xs" text-anchor="middle" x="446" y="98">settled · yours to keep</text>
+        <text class="dg-xs" x="352" y="124">• shares in your demat</text>
+        <text class="dg-xs" x="352" y="146">• bought as delivery (CNC)</text>
+        <text class="dg-xs" x="352" y="168">• sit there until you sell</text>
+        <line x1="274" y1="123" x2="326" y2="123" stroke="#1a7f37" stroke-width="2" marker-end="url(#kt-g)"/>
+        <text class="dg-xs" text-anchor="middle" x="300" y="115" style="fill:#1a7f37">T+1</text>
+        <text class="dg-xs" text-anchor="middle" x="300" y="228">Intraday (MIS) trades close the same day — they never reach Holdings.</text>
+      </svg>
+      <figcaption><strong>Positions</strong> are live, unsettled trades (intraday and F&amp;O). <strong>Holdings</strong> are settled shares resting in your demat. A delivery (CNC) buy shows in Positions today and quietly moves to Holdings after <strong>T+1</strong> settlement.</figcaption>
+    </figure>
+    <ul class="clean">
+      <li><strong>Positions</strong> = trades still in motion — today's intraday trades and any open Futures &amp; Options. They show a live, wobbling profit/loss (called <strong>M2M</strong>) and need watching.</li>
+      <li><strong>Holdings</strong> = shares that have settled and are simply <em>yours</em>. They rest in your demat account until you decide to sell — no daily action needed.</li>
+    </ul>
+    <div class="box note">
+      <p class="label">See it on Zerodha</p>
+      <p>Zerodha's guide to the Orders, Positions and Holdings pages (with screenshots): <a href="https://support.zerodha.com/category/trading-and-markets/general-kite/others-kite/articles/kite-positions-update">Updates to the orders, holdings &amp; positions page</a>.</p>
+    </div>
+
+    <h2 id="first">6. Funds &amp; your first tiny order</h2>
+    <p>Before any order goes through, your trading account needs money in it. In Kite that's the <strong>Funds</strong> section — you <em>add funds</em> from your linked bank account, and they're available to trade almost instantly. (When you sell, money flows back the other way, reaching your bank in a day or two.)</p>
+    <p>Once funded, placing your very first trade — exactly as <a href="../modules/01-stock-market-basics.html#getting-started">Module 1</a> suggested, just to see how it works — looks like this:</p>
+    <ol class="steps">
+      <li><strong>Search</strong> for a company you know in the Marketwatch search bar and add it.</li>
+      <li>Tap it and choose <strong>Buy</strong>.</li>
+      <li>Set <strong>Product = CNC</strong> (you want to keep the share), and <strong>Order type = Limit</strong>.</li>
+      <li>Enter <strong>Qty = 1</strong> and a <strong>Price</strong> at or near the current price, then place the order.</li>
+      <li>Check the <strong>Orders</strong> tab — once it's <em>Executed</em>, the share appears in <strong>Positions</strong> today and in <strong>Holdings</strong> from the next day.</li>
+    </ol>
+    <div class="box tip">
+      <p class="label">Start tiny</p>
+      <p>One share is plenty for a first go. Watching a real ₹500 move teaches more than ten articles — and keeps the stakes near zero while the buttons are still new. There's no rush. ☕</p>
+    </div>
+    <div class="box note">
+      <p class="label">See it on Zerodha</p>
+      <p>Setting up and funding the account, step by step: <a href="https://support.zerodha.com/category/trading-and-markets/trading-faqs/general/articles/everything-you-need-to-know-to-get-started-with-your-zerodha-account">Everything you need to get started with your Zerodha account</a>.</p>
+    </div>
+
+    <div class="pager">
+      <a href="order-types.html">← Order Types</a>
+      <span class="spacer"></span>
+      <a href="expiry-explained.html">Next: Expiry Explained →</a>
+    </div>
+
+    <footer>
+      <p>These notes are for learning only and are <strong>not financial advice</strong>, and are not affiliated with or endorsed by Zerodha. App screens change over time — check Zerodha's official pages for the current layout. Markets carry real risk.</p>
+      <p class="reviewed">Last reviewed: 8 June 2026</p>
+    </footer>
+  </main>
+</body>
+</html>

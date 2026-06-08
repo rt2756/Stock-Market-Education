@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expiry Explained</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a class="brand" href="../index.html">📘 Stock Market Notes</a>
+      <a href="../index.html">Home</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <h1>Expiry Explained</h1>
+    <p class="lead">Only derivatives expire — here's what that means, and which day Nifty, Sensex and Bank Nifty settle.</p>
+
+    <div class="box note">
+      <p class="label">First, a relief</p>
+      <p>The ordinary shares you buy and hold (delivery / <a href="using-zerodha.html#product">CNC</a>) <strong>never expire</strong> — they're yours until you sell. "Expiry" belongs only to <strong>Futures &amp; Options</strong>, so this page is the companion to <a href="../modules/09-futures-and-options.html">Module 9</a>. If you're not trading F&amp;O, this is just useful background.</p>
+    </div>
+
+    <div class="mini-toc">
+      <strong>On this page</strong>
+      <ol>
+        <li><a href="#what">What "expiry" means</a></li>
+        <li><a href="#weekly-monthly">Weekly, monthly &amp; quarterly</a></li>
+        <li><a href="#which-day">Which day does what expire?</a></li>
+        <li><a href="#holiday">The holiday rule</a></li>
+        <li><a href="#why">Why expiry matters to a beginner</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what">1. What "expiry" means</h2>
+    <p>Every Futures &amp; Options contract is a <strong>dated agreement</strong>. Unlike a share — which can sit in your demat forever — a derivative has a built-in end date called the <strong>expiry</strong>. On that day the contract is <strong>settled</strong> (any profit or loss is finalised) and then it simply <strong>ceases to exist</strong>.</p>
+    <ul class="clean">
+      <li>Indian <strong>index</strong> options and futures (Nifty, Sensex, Bank Nifty) are <strong>cash-settled</strong> — no shares change hands, just the cash difference is paid.</li>
+      <li>After expiry, an option that ended up worthless is gone, and you keep nothing. An option that finished "in the money" pays out its value. Either way, the contract is over.</li>
+    </ul>
+    <p><span class="eg">Eg:</span> You buy a weekly Nifty call. Whatever happens, on its expiry day it's settled and removed from your account — you can't "hold it a bit longer" the way you can a share.</p>
+
+    <h2 id="weekly-monthly">2. Weekly, monthly &amp; quarterly</h2>
+    <p>Contracts come in different lengths. The three you'll hear about:</p>
+    <ul class="clean">
+      <li><strong>Weekly</strong> — index <em>options</em> expire every week. A fresh weekly contract starts as the old one dies, so there's an expiry to trade almost constantly.</li>
+      <li><strong>Monthly</strong> — the <em>last</em> weekly of a month <em>is</em> the monthly contract. Stock options, and all <em>futures</em>, settle monthly (in that last week). The monthly is usually the most heavily traded.</li>
+      <li><strong>Quarterly &amp; beyond</strong> — index <em>futures</em> are also listed a few months out (the "near", "next" and "far" months), so longer-dated positions are possible.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 196" role="img" aria-label="A month timeline with four weekly expiries marked; the last weekly is also the monthly expiry and is the largest">
+        <text class="dg-t" text-anchor="middle" x="300" y="26">A month of expiries</text>
+        <line x1="40" y1="116" x2="560" y2="116" stroke="#cfc9ba" stroke-width="1.5"/>
+        <g text-anchor="middle">
+          <!-- week 1-3 -->
+          <line x1="130" y1="116" x2="130" y2="86" stroke="#0b6e6e" stroke-width="2"/>
+          <circle cx="130" cy="82" r="6" fill="#0b6e6e"/>
+          <text class="dg-xs" x="130" y="68">weekly</text>
+          <text class="dg-xs" x="130" y="136">Week 1</text>
+          <line x1="260" y1="116" x2="260" y2="86" stroke="#0b6e6e" stroke-width="2"/>
+          <circle cx="260" cy="82" r="6" fill="#0b6e6e"/>
+          <text class="dg-xs" x="260" y="68">weekly</text>
+          <text class="dg-xs" x="260" y="136">Week 2</text>
+          <line x1="390" y1="116" x2="390" y2="86" stroke="#0b6e6e" stroke-width="2"/>
+          <circle cx="390" cy="82" r="6" fill="#0b6e6e"/>
+          <text class="dg-xs" x="390" y="68">weekly</text>
+          <text class="dg-xs" x="390" y="136">Week 3</text>
+          <!-- week 4 = monthly -->
+          <line x1="510" y1="116" x2="510" y2="78" stroke="#1a7f37" stroke-width="2.5"/>
+          <circle cx="510" cy="72" r="9" fill="#1a7f37"/>
+          <text class="dg-t" x="510" y="58" style="fill:#1a7f37">monthly</text>
+          <text class="dg-xs" x="510" y="136">Week 4</text>
+        </g>
+        <!-- month bracket -->
+        <path d="M130,158 L130,166 L510,166 L510,158" fill="none" stroke="#57606a" stroke-width="1.3"/>
+        <text class="dg-xs" text-anchor="middle" x="320" y="184">one month — four weekly expiries, the last one also the monthly</text>
+      </svg>
+      <figcaption>An index option expires <strong>every week</strong>. The <strong>last</strong> weekly of the month is also the <strong>monthly</strong> contract — the biggest and most traded.</figcaption>
+    </figure>
+
+    <h2 id="which-day">3. Which day does what expire?</h2>
+    <p>This is the part everyone wants pinned down. After a SEBI rule that lets each exchange hold just <strong>one weekly expiry</strong>, the days settled (as of this page's review date) into a simple split:</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="NSE contracts expire on Tuesday, BSE contracts expire on Thursday, shown as two weekday strips">
+        <text class="dg-t" text-anchor="middle" x="300" y="26">Who expires on which day</text>
+        <!-- NSE box -->
+        <rect x="36" y="44" width="252" height="178" rx="12" fill="#ffffff" stroke="#0b6e6e" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="162" y="70" style="fill:#0b6e6e">NSE → Tuesday</text>
+        <g>
+          <rect x="81"  y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="115" y="84" width="34" height="24" rx="4" fill="#0b6e6e" stroke="#0b6e6e"/>
+          <rect x="149" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="183" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="217" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <g text-anchor="middle">
+            <text class="dg-xs" x="98"  y="100">M</text>
+            <text class="dg-xs" x="132" y="100" style="fill:#ffffff">T</text>
+            <text class="dg-xs" x="166" y="100">W</text>
+            <text class="dg-xs" x="200" y="100">T</text>
+            <text class="dg-xs" x="234" y="100">F</text>
+          </g>
+        </g>
+        <text class="dg-xs" x="60" y="134">• Nifty 50 — weekly &amp; monthly</text>
+        <text class="dg-xs" x="60" y="156">• Bank Nifty — monthly only</text>
+        <text class="dg-xs" x="60" y="178">• stock F&amp;O — monthly</text>
+        <text class="dg-xs" x="60" y="204" style="fill:#57606a">monthly = last Tuesday</text>
+        <!-- BSE box -->
+        <rect x="312" y="44" width="252" height="178" rx="12" fill="#ffffff" stroke="#9a6700" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="438" y="70" style="fill:#9a6700">BSE → Thursday</text>
+        <g>
+          <rect x="357" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="391" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="425" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="459" y="84" width="34" height="24" rx="4" fill="#9a6700" stroke="#9a6700"/>
+          <rect x="493" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <g text-anchor="middle">
+            <text class="dg-xs" x="374" y="100">M</text>
+            <text class="dg-xs" x="408" y="100">T</text>
+            <text class="dg-xs" x="442" y="100">W</text>
+            <text class="dg-xs" x="476" y="100" style="fill:#ffffff">T</text>
+            <text class="dg-xs" x="510" y="100">F</text>
+          </g>
+        </g>
+        <text class="dg-xs" x="336" y="134">• Sensex — weekly &amp; monthly</text>
+        <text class="dg-xs" x="336" y="156">• Bankex — monthly only</text>
+        <text class="dg-xs" x="336" y="178">• Sensex 50 — monthly</text>
+        <text class="dg-xs" x="336" y="204" style="fill:#57606a">monthly = last Thursday</text>
+      </svg>
+      <figcaption>Each exchange keeps <strong>one</strong> weekly contract: <strong>Nifty</strong> on the NSE (Tuesday) and <strong>Sensex</strong> on the BSE (Thursday). Everything else settles monthly on the same weekday.</figcaption>
+    </figure>
+
+    <table>
+      <tr><th>Contract</th><th>Exchange</th><th>Weekly?</th><th>Monthly expiry</th></tr>
+      <tr><td><strong>Nifty 50</strong></td><td>NSE</td><td>Yes — every Tuesday</td><td>last Tuesday</td></tr>
+      <tr><td><strong>Bank Nifty</strong></td><td>NSE</td><td>No (weekly discontinued)</td><td>last Tuesday</td></tr>
+      <tr><td><strong>Stock F&amp;O</strong></td><td>NSE</td><td>No</td><td>last Tuesday</td></tr>
+      <tr><td><strong>Sensex</strong></td><td>BSE</td><td>Yes — every Thursday</td><td>last Thursday</td></tr>
+      <tr><td><strong>Bankex</strong></td><td>BSE</td><td>No</td><td>last Thursday</td></tr>
+    </table>
+
+    <div class="box warn">
+      <p class="label">These days have changed before — always check</p>
+      <p>This Tuesday/Thursday split only began in <strong>September 2025</strong>, ending a 25-year tradition where <em>everything</em> expired on Thursday. The exchanges set these days and <strong>can change them again</strong>. Treat the days above as a dated snapshot, and before trading any contract, confirm the live expiry on the official <a href="https://www.nseindia.com/">NSE</a> / <a href="https://www.bseindia.com/">BSE</a> site or in your broker's contract details.</p>
+    </div>
+
+    <h2 id="holiday">4. The holiday rule</h2>
+    <p>One simple wrinkle: if an expiry day falls on a <strong>market holiday</strong>, the expiry doesn't skip — it moves to the <strong>previous trading day</strong>.</p>
+    <p><span class="eg">Eg:</span> If a Tuesday is a holiday, that week's Nifty contracts expire on the <strong>Monday</strong> instead. Your broker and the exchange calendar will always show the actual date, so when in doubt, check rather than assume.</p>
+
+    <h2 id="why">5. Why expiry matters to a beginner</h2>
+    <p>Even if you never trade F&amp;O, it helps to know <em>why</em> expiry day is so talked about — and so dangerous for newcomers.</p>
+    <ul class="clean">
+      <li><strong>Time decay speeds up.</strong> A bought option loses value every day just from time passing (called <strong>time decay</strong> or <em>theta</em>), and that drain <strong>accelerates</strong> as expiry nears. In the final hours a weekly option's value can melt to almost nothing.</li>
+      <li><strong>Expiry days are wild.</strong> Huge volumes pile into soon-to-die contracts, so prices can swing violently on expiry day — great for stories, brutal for beginners.</li>
+      <li><strong>The lottery-ticket trap.</strong> Far-out-of-the-money weekly options are <em>cheap</em>, which makes them tempting. But cheap usually means unlikely — most expire worthless, and buying them again and again quietly bleeds money.</li>
+    </ul>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 210" role="img" aria-label="A curve showing an option's time value draining slowly at first and then plunging as expiry day approaches">
+        <text class="dg-t" text-anchor="middle" x="300" y="26">An option's time-value drains toward expiry</text>
+        <rect x="452" y="48" width="92" height="128" fill="#f7e2de" opacity="0.55"/>
+        <line x1="60" y1="48" x2="60" y2="176" stroke="#cfc9ba" stroke-width="1.5"/>
+        <line x1="60" y1="176" x2="556" y2="176" stroke="#cfc9ba" stroke-width="1.5"/>
+        <path d="M70,66 C 230,80 330,100 410,126 C 470,146 514,166 544,175" fill="none" stroke="#0b6e6e" stroke-width="2.6" stroke-linecap="round"/>
+        <line x1="544" y1="48" x2="544" y2="176" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 4"/>
+        <text class="dg-xs" x="66" y="60">time value (₹)</text>
+        <text class="dg-xs" text-anchor="middle" x="498" y="44" style="fill:#c0392b">fastest decay</text>
+        <text class="dg-xs" text-anchor="end" x="540" y="196" style="fill:#c0392b">expiry day</text>
+        <text class="dg-xs" x="70" y="196">more time left</text>
+      </svg>
+      <figcaption>Time value leaks out slowly at first, then <strong>plunges</strong> in the last days before expiry. Buy too early or hold too long and the clock alone can wipe out a "correct" bet.</figcaption>
+    </figure>
+
+    <div class="box warn">
+      <p class="label">Keep Module 9's number in mind</p>
+      <p>A SEBI study found roughly <strong>9 out of 10</strong> individual F&amp;O traders lost money — and the expiry-day rush is exactly where a lot of that loss happens. Understanding expiry is worth it; <em>chasing</em> expiry-day options usually isn't. For the full picture, read <a href="../modules/09-futures-and-options.html">Module 9 · Futures &amp; Options</a> and, if you want depth, <a href="https://zerodha.com/varsity/modules/">Zerodha Varsity's F&amp;O modules</a>.</p>
+    </div>
+
+    <p class="reviewed" style="margin-top:1.6em">Source: NSE &amp; BSE official expiry circulars (SEBI expiry-day rationalisation, effective 1 September 2025). Days are a frozen snapshot as of the review date below — not live data.</p>
+
+    <div class="pager">
+      <a href="using-zerodha.html">← Using Zerodha</a>
+      <span class="spacer"></span>
+      <a href="glossary.html">Next: Glossary →</a>
+    </div>
+
+    <footer>
+      <p>These notes are for learning only and are <strong>not financial advice</strong>. Expiry days are set by the exchanges and can change — always confirm on NSE/BSE. Derivatives are very high risk. Markets carry real risk.</p>
+      <p class="reviewed">Last reviewed: 8 June 2026</p>
+    </footer>
+  </main>
+</body>
+</html>
