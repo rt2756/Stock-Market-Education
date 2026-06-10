@@ -22,7 +22,7 @@
 
     <div class="box note">
       <p class="label">First, a relief</p>
-      <p>The ordinary shares you buy and hold (delivery / <a href="using-zerodha.html#product">CNC</a>) <strong>never expire</strong> — they're yours until you sell. "Expiry" belongs only to <strong>Futures &amp; Options</strong>, so this page is the companion to <a href="../modules/09-futures-and-options.html">Module 9</a>. If you're not trading F&amp;O, this is just useful background.</p>
+      <p>The ordinary shares you buy and hold (delivery / <a href="using-zerodha.html#product">CNC</a>) <strong>never expire</strong> — they're yours until you sell. "Expiry" belongs only to <strong>Futures &amp; Options</strong>, so this page is the companion to <a href="../modules/09-futures-and-options.html">Module 9</a> and <a href="options-explained.html">Options Explained</a>. If you're not trading F&amp;O, this is just useful background.</p>
     </div>
 
     <div class="mini-toc">
@@ -32,6 +32,8 @@
         <li><a href="#weekly-monthly">Weekly, monthly &amp; quarterly</a></li>
         <li><a href="#which-day">Which day does what expire?</a></li>
         <li><a href="#holiday">The holiday rule</a></li>
+        <li><a href="#settlement">What actually happens at the bell</a></li>
+        <li><a href="#zero-dte">0DTE — the expiry-day option</a></li>
         <li><a href="#why">Why expiry matters to a beginner</a></li>
       </ol>
     </div>
@@ -40,7 +42,7 @@
     <p>Every Futures &amp; Options contract is a <strong>dated agreement</strong>. Unlike a share — which can sit in your demat forever — a derivative has a built-in end date called the <strong>expiry</strong>. On that day the contract is <strong>settled</strong> (any profit or loss is finalised) and then it simply <strong>ceases to exist</strong>.</p>
     <ul class="clean">
       <li>Indian <strong>index</strong> options and futures (Nifty, Sensex, Bank Nifty) are <strong>cash-settled</strong> — no shares change hands, just the cash difference is paid.</li>
-      <li>After expiry, an option that ended up worthless is gone, and you keep nothing. An option that finished "in the money" pays out its value. Either way, the contract is over.</li>
+      <li>After expiry, an option that ended up worthless is gone, and you keep nothing. An option that finished "in the money" pays out its value. Either way, the contract is over. (The exact mechanics, with numbers, are in <a href="#settlement">section 5</a>.)</li>
     </ul>
     <p><span class="eg">Eg:</span> You buy a weekly Nifty call. Whatever happens, on its expiry day it's settled and removed from your account — you can't "hold it a bit longer" the way you can a share.</p>
 
@@ -49,7 +51,7 @@
     <ul class="clean">
       <li><strong>Weekly</strong> — index <em>options</em> expire every week. A fresh weekly contract starts as the old one dies, so there's an expiry to trade almost constantly.</li>
       <li><strong>Monthly</strong> — the <em>last</em> weekly of a month <em>is</em> the monthly contract. Stock options, and all <em>futures</em>, settle monthly (in that last week). The monthly is usually the most heavily traded.</li>
-      <li><strong>Quarterly &amp; beyond</strong> — index <em>futures</em> are also listed a few months out (the "near", "next" and "far" months), so longer-dated positions are possible.</li>
+      <li><strong>Quarterly &amp; beyond</strong> — index <em>futures</em> are also listed a few months out (the "near", "next" and "far" months). Index <em>options</em> go further still, with quarter-end and half-year expiries stretching years out — thinly traded, but they exist. (How to choose between all these deadlines: <a href="options-explained.html#expiries">Options Explained</a>.)</li>
     </ul>
 
     <figure class="diagram">
@@ -153,7 +155,95 @@
     <p>One simple wrinkle: if an expiry day falls on a <strong>market holiday</strong>, the expiry doesn't skip — it moves to the <strong>previous trading day</strong>.</p>
     <p><span class="eg">Eg:</span> If a Tuesday is a holiday, that week's Nifty contracts expire on the <strong>Monday</strong> instead. Your broker and the exchange calendar will always show the actual date, so when in doubt, check rather than assume.</p>
 
-    <h2 id="why">5. Why expiry matters to a beginner</h2>
+    <h2 id="settlement">5. What actually happens at the bell</h2>
+    <p>Here's the part almost nobody explains plainly. It's <strong>3:30 pm on expiry day</strong> and you still hold an option. What now? Answer: <strong>nothing — the exchange takes over.</strong> Every contract still open is settled automatically against the exchange's official <strong>closing settlement price</strong> (a precise number it computes from the last half-hour of trading — so don't be surprised if it differs a hair from the last tick you saw).</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 248" role="img" aria-label="At 3:30 pm on expiry day the exchange settles every open option: in the money options are auto-exercised and the cash difference is credited minus charges, out of the money options expire worthless and simply vanish">
+        <defs>
+          <marker id="exp2-g" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1a7f37"/></marker>
+          <marker id="exp2-r" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+        </defs>
+        <rect x="170" y="34" width="260" height="48" rx="10" fill="#ffffff" stroke="#57606a" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="300" y="54">3:30 pm on expiry day</text>
+        <text class="dg-xs" text-anchor="middle" x="300" y="72">the exchange takes over — nothing to click</text>
+        <line x1="268" y1="84" x2="170" y2="112" stroke="#1a7f37" stroke-width="2" marker-end="url(#exp2-g)"/>
+        <line x1="332" y1="84" x2="430" y2="112" stroke="#c0392b" stroke-width="2" marker-end="url(#exp2-r)"/>
+        <rect x="40" y="118" width="240" height="92" rx="10" fill="#eaf6ec" stroke="#1a7f37" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="160" y="142" style="fill:#1a7f37">Finished ITM</text>
+        <text class="dg-xs" text-anchor="middle" x="160" y="162">auto-exercised — the cash</text>
+        <text class="dg-xs" text-anchor="middle" x="160" y="178">difference is credited to you</text>
+        <text class="dg-xs" text-anchor="middle" x="160" y="194">(minus STT &amp; charges)</text>
+        <rect x="320" y="118" width="240" height="92" rx="10" fill="#f7e2de" stroke="#c0392b" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="440" y="142" style="fill:#c0392b">Finished OTM</text>
+        <text class="dg-xs" text-anchor="middle" x="440" y="162">expires worthless — the premium</text>
+        <text class="dg-xs" text-anchor="middle" x="440" y="178">is gone; the contract vanishes</text>
+        <text class="dg-xs" text-anchor="middle" x="440" y="194">(nothing further owed)</text>
+        <text class="dg-xs" text-anchor="middle" x="300" y="236" style="fill:#57606a">index options settle in cash · stock options settle in actual shares — see the warning below</text>
+      </svg>
+      <figcaption>Hold to the bell and one of two things happens by itself: an <strong>ITM</strong> option is auto-exercised and pays its cash difference; an <strong>OTM</strong> option becomes zero and disappears. No clicks, no choices.</figcaption>
+    </figure>
+
+    <p><span class="eg">Eg:</span> You hold a weekly Nifty <strong>23,500 call</strong> you'd bought for ₹120 (one lot of 75 = ₹9,000), and you let it expire:</p>
+    <ul class="clean">
+      <li>Nifty's settlement price is <strong>23,800</strong> → ITM by 300 points → auto-exercised → <strong>300 × 75 = ₹22,500</strong> is credited (minus STT and charges) → net profit ≈ ₹13,400.</li>
+      <li>Settlement is <strong>23,560</strong> → ITM by just 60 → <strong>₹4,500</strong> credited → you still <em>lost</em> ₹4,500. Finishing ITM is <strong>not</strong> the same as finishing in profit.</li>
+      <li>Settlement is <strong>anything below 23,500</strong> → OTM → worth ₹0 → the ₹9,000 premium is the loss.</li>
+    </ul>
+    <div class="box note">
+      <p class="label">Why many traders exit before the bell anyway</p>
+      <p>Auto-exercise is convenient, but it has two small stings: <strong>STT</strong> is charged on an exercised option's settled value (a touch more than the tax on simply selling it), and you surrender all control over the final settlement price. That's why most traders <strong>square off</strong> — sell the option back — sometime before the close instead. The three ways out of an option are compared in <a href="options-explained.html#exit">Options Explained</a>.</p>
+    </div>
+    <div class="box warn">
+      <p class="label">Stock F&amp;O settles in actual shares</p>
+      <p>Everything above describes <strong>index</strong> contracts (Nifty, Sensex), which settle in <strong>cash</strong>. A <strong>stock</strong> option or future held ITM to expiry is settled <strong>physically</strong> — real shares change hands, a whole lot's worth, which can run into lakhs. Brokers demand steep extra margins in expiry week for such positions and may square them off themselves. If you ever trade stock F&amp;O, exit before expiry week unless you truly intend to take or give delivery — Zerodha's rules are here: <a href="https://support.zerodha.com/category/trading-and-markets/margins/margin-leverage-and-product-and-order-types/articles/policy-on-physical-settlement">policy on physical settlement</a>.</p>
+    </div>
+
+    <h2 id="zero-dte">6. 0DTE — the expiry-day option</h2>
+    <p>You'll keep meeting the term <strong>0DTE</strong> ("zero days to expiry"). It isn't a special product — it's just an ordinary option <em>on its final day</em>. Every Tuesday, that week's Nifty contracts are 0DTE from the opening bell; every Thursday, Sensex's are. A huge share of all index-option trading happens on these last days, which is exactly why they need their own warning.</p>
+    <p>On its last morning an option has almost no time value left to lose slowly — so what remains behaves like a firecracker:</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 600 232" role="img" aria-label="The premium of an at the money weekly option through its final day: it opens near 95 rupees, nearly doubles on a quick index rally, gives it all back within an hour, and melts to zero by the 3:30 close">
+        <text class="dg-t" text-anchor="middle" x="300" y="22">An ATM weekly option on its own expiry day (0DTE)</text>
+        <rect x="455" y="40" width="105" height="150" fill="#f7e2de" opacity="0.5"/>
+        <text class="dg-xs" text-anchor="middle" x="507" y="54" style="fill:#c0392b">melts by the minute</text>
+        <line x1="60" y1="40" x2="60" y2="190" stroke="#cfc9ba" stroke-width="1.5"/>
+        <line x1="60" y1="190" x2="560" y2="190" stroke="#cfc9ba" stroke-width="1.5"/>
+        <path d="M60,86 C85,80 100,96 122,90 C150,82 165,58 192,52 C212,47 228,46 240,48 C262,54 272,92 295,104 C318,116 332,108 352,124 C375,140 395,148 415,156 C440,166 475,178 505,185 C530,190 548,190 556,190" fill="none" stroke="#0b6e6e" stroke-width="2.4" stroke-linecap="round"/>
+        <text class="dg-xs" x="66" y="54">premium (₹)</text>
+        <text class="dg-xs" x="66" y="78">opens ₹95</text>
+        <text class="dg-xs" text-anchor="middle" x="218" y="36">a quick index pop nearly doubles it…</text>
+        <text class="dg-xs" text-anchor="middle" x="352" y="92">…an hour of drift gives it all back</text>
+        <g stroke="#cfc9ba" stroke-width="1.2">
+          <line x1="185" y1="190" x2="185" y2="196"/>
+          <line x1="310" y1="190" x2="310" y2="196"/>
+          <line x1="435" y1="190" x2="435" y2="196"/>
+        </g>
+        <g text-anchor="middle">
+          <text class="dg-xs" x="60" y="212">9:15</text>
+          <text class="dg-xs" x="185" y="212">11:00</text>
+          <text class="dg-xs" x="310" y="212">1:00</text>
+          <text class="dg-xs" x="435" y="212">2:30</text>
+          <text class="dg-xs" x="548" y="212">3:30</text>
+        </g>
+      </svg>
+      <figcaption>A 0DTE premium is nearly all reaction and no cushion: it can double on a 60-point pop, give everything back in a quiet hour, and — unless the market finishes past its strike — it <strong>will</strong> be zero by 3:30.</figcaption>
+    </figure>
+
+    <p>Why it behaves this way, in plain words:</p>
+    <ul class="clean">
+      <li><strong>No cushion.</strong> With hours left instead of days, there's no time value to absorb mistakes — the premium is a raw, magnified bet on the next move.</li>
+      <li><strong>Violent percentages.</strong> A ₹40 option swinging to ₹80 and back to ₹15 within a day is normal 0DTE behaviour. The rupee amounts look small; the percentage swings are wild.</li>
+      <li><strong>The clock always wins by 3:30.</strong> Whatever drama happens in between, every 0DTE option ends the day at exactly its intrinsic value — for most strikes, zero.</li>
+      <li><strong>It looks cheap.</strong> Morning-of-expiry options cost the least they ever will — which is precisely the lottery-ticket lure from the list below.</li>
+    </ul>
+    <div class="box warn">
+      <p class="label">Watch, don't trade</p>
+      <p>Expiry-day options are where beginners lose money fastest — small tickets, instant feedback, casino feel. The genuinely useful version of 0DTE for a learner costs nothing: open the <a href="options-explained.html#chain">option chain</a> on a Tuesday after lunch and just <em>watch</em> the premiums melt and snap around until close. One watched expiry teaches more than ten articles — and it charges no tuition.</p>
+    </div>
+
+    <h2 id="why">7. Why expiry matters to a beginner</h2>
     <p>Even if you never trade F&amp;O, it helps to know <em>why</em> expiry day is so talked about — and so dangerous for newcomers.</p>
     <ul class="clean">
       <li><strong>Time decay speeds up.</strong> A bought option loses value every day just from time passing (called <strong>time decay</strong> or <em>theta</em>), and that drain <strong>accelerates</strong> as expiry nears. In the final hours a weekly option's value can melt to almost nothing.</li>
@@ -179,7 +269,7 @@
 
     <div class="box warn">
       <p class="label">Keep Module 9's number in mind</p>
-      <p>A SEBI study found roughly <strong>9 out of 10</strong> individual F&amp;O traders lost money — and the expiry-day rush is exactly where a lot of that loss happens. Understanding expiry is worth it; <em>chasing</em> expiry-day options usually isn't. For the full picture, read <a href="../modules/09-futures-and-options.html">Module 9 · Futures &amp; Options</a> and, if you want depth, <a href="https://zerodha.com/varsity/modules/">Zerodha Varsity's F&amp;O modules</a>.</p>
+      <p>A SEBI study found roughly <strong>9 out of 10</strong> individual F&amp;O traders lost money — and the expiry-day rush is exactly where a lot of that loss happens. Understanding expiry is worth it; <em>chasing</em> expiry-day options usually isn't. For the full picture, read <a href="../modules/09-futures-and-options.html">Module 9 · Futures &amp; Options</a>, then the practical walkthrough in <a href="options-explained.html">Options Explained</a> and, if you want depth, <a href="https://zerodha.com/varsity/modules/">Zerodha Varsity's F&amp;O modules</a>.</p>
     </div>
 
     <p class="reviewed" style="margin-top:1.6em">Source: NSE &amp; BSE official expiry circulars (SEBI expiry-day rationalisation, effective 1 September 2025). Days are a frozen snapshot as of the review date below — not live data.</p>
@@ -187,12 +277,12 @@
     <div class="pager">
       <a href="using-zerodha.html">← Using Zerodha</a>
       <span class="spacer"></span>
-      <a href="glossary.html">Next: Glossary →</a>
+      <a href="options-explained.html">Next: Options Explained →</a>
     </div>
 
     <footer>
       <p>These notes are for learning only and are <strong>not financial advice</strong>. Expiry days are set by the exchanges and can change — always confirm on NSE/BSE. Derivatives are very high risk. Markets carry real risk.</p>
-      <p class="reviewed">Last reviewed: 8 June 2026</p>
+      <p class="reviewed">Last reviewed: 10 June 2026</p>
     </footer>
   </main>
 </body>

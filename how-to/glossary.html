@@ -35,6 +35,7 @@
       <tr><td>Bid price</td><td>The highest price a buyer is currently willing to pay for a share.</td></tr>
       <tr><td>Blue-chip</td><td>A large, well-known and financially strong company, such as those in the Nifty 50.</td></tr>
       <tr><td>Bonus shares</td><td>Extra free shares a company gives existing shareholders out of its reserves.</td></tr>
+      <tr><td>Breakeven (options)</td><td>The level the underlying must cross for a bought option to profit: strike + premium for a call, strike − premium for a put. See <a href="options-explained.html#example">Options Explained</a>.</td></tr>
       <tr><td>Broker</td><td>A SEBI-registered firm (like Zerodha or Groww) through which you buy and sell shares.</td></tr>
       <tr><td>Bull market</td><td>A long stretch when share prices are generally rising and investors feel confident.</td></tr>
       <tr><td>Buyback</td><td>When a company buys back its own shares from the market, usually returning cash to shareholders.</td></tr>
@@ -46,6 +47,7 @@
       <tr><td>Call option</td><td>A contract giving you the right (not obligation) to buy a share at a fixed price by a set date.</td></tr>
       <tr><td>Candlestick</td><td>A small chart shape showing a share's open, high, low and close price for a period.</td></tr>
       <tr><td>Capital gain</td><td>The profit you make when you sell an investment for more than you paid for it.</td></tr>
+      <tr><td>Cash settlement</td><td>Settling a derivative by paying the cash difference instead of delivering shares — how index F&amp;O settle at expiry. See <a href="expiry-explained.html#settlement">Expiry Explained</a>.</td></tr>
       <tr><td>CDSL</td><td>One of India's two depositories that hold your shares safely in electronic (demat) form.</td></tr>
       <tr><td>CNC / MIS / NRML</td><td>Zerodha's product tags when you place an order: <strong>CNC</strong> for delivery (shares you keep), <strong>MIS</strong> for intraday (closed the same day), <strong>NRML</strong> for carrying F&amp;O overnight. See <a href="using-zerodha.html#product">Using Zerodha</a>.</td></tr>
       <tr><td>Compounding</td><td>Earning returns on your past returns, so your money grows faster the longer you stay invested.</td></tr>
@@ -92,7 +94,9 @@
       <tr><th>Term</th><th>Meaning</th></tr>
       <tr><td>Index</td><td>A basket of selected shares used to track how the overall market is doing, like the Nifty 50 or Sensex.</td></tr>
       <tr><td>Index fund</td><td>A low-cost mutual fund that simply copies an index instead of trying to beat it.</td></tr>
+      <tr><td>Intrinsic value (options)</td><td>The "real" part of an option's premium — how far it is in the money right now (zero for OTM options).</td></tr>
       <tr><td>IPO</td><td>An Initial Public Offering, when a company sells its shares to the public for the first time.</td></tr>
+      <tr><td>ITM / ATM / OTM</td><td>Moneyness — whether a strike is <strong>I</strong>n, <strong>A</strong>t or <strong>O</strong>ut of <strong>T</strong>he <strong>M</strong>oney versus the current price. See <a href="options-explained.html#moneyness">Options Explained</a>.</td></tr>
     </table>
 
     <h2 id="k">K</h2>
@@ -109,7 +113,8 @@
       <tr><td>Limit order</td><td>An instruction to buy or sell only at a price you set, or better.</td></tr>
       <tr><td>Liquidity</td><td>How easily a share can be bought or sold quickly without moving its price much.</td></tr>
       <tr><td>Lock-in period</td><td>A fixed time during which you cannot sell or withdraw an investment, as with ELSS funds.</td></tr>
-      <tr><td>Lot size</td><td>The fixed number of units you must trade together in futures and options contracts.</td></tr>
+      <tr><td>Long-dated options</td><td>Index options with quarter-end or half-year expiries stretching years out; they exist but trade thinly in India.</td></tr>
+      <tr><td>Lot size</td><td>The fixed number of units you must trade together in futures and options contracts. See <a href="options-explained.html#lots">Options Explained</a>.</td></tr>
       <tr><td>LTCG (Long-Term Capital Gains)</td><td>Tax on profit from shares or equity funds held over one year.</td></tr>
     </table>
 
@@ -134,16 +139,20 @@
     <h2 id="o">O</h2>
     <table>
       <tr><th>Term</th><th>Meaning</th></tr>
+      <tr><td>Open interest (OI)</td><td>The number of F&amp;O contracts currently open at a strike — a gauge of how busy and easy to trade it is.</td></tr>
       <tr><td>Option</td><td>A contract giving the right, but not the duty, to buy or sell a share at a set price by a set date.</td></tr>
+      <tr><td>Option chain</td><td>The table of all strikes for one expiry — calls on one side, puts on the other, strikes down the middle. See <a href="options-explained.html#chain">Options Explained</a>.</td></tr>
+      <tr><td>Option writer</td><td>The seller of an option, who collects the premium and takes on the obligation — a small capped gain against a potentially huge loss.</td></tr>
     </table>
 
     <h2 id="p">P</h2>
     <table>
       <tr><th>Term</th><th>Meaning</th></tr>
       <tr><td>P/E ratio</td><td>The price-to-earnings ratio, showing how much you pay for each ₹1 of a company's yearly profit.</td></tr>
+      <tr><td>Physical settlement</td><td>Settling a stock F&amp;O contract held to expiry with actual shares instead of cash — a whole lot's worth, so it needs serious money. See <a href="expiry-explained.html#settlement">Expiry Explained</a>.</td></tr>
       <tr><td>Positions</td><td>Trades that are open but not yet settled — today's intraday trades and open F&amp;O — shown separately from your settled Holdings. See <a href="using-zerodha.html#tabs">Using Zerodha</a>.</td></tr>
       <tr><td>Portfolio</td><td>The full collection of all the investments you hold.</td></tr>
-      <tr><td>Premium (options)</td><td>The price you pay to buy an option contract.</td></tr>
+      <tr><td>Premium (options)</td><td>The price of an option itself, quoted per unit — you pay premium × lot size. See <a href="options-explained.html#lots">Options Explained</a>.</td></tr>
       <tr><td>Primary market</td><td>Where companies sell brand-new shares to the public, mainly through IPOs.</td></tr>
       <tr><td>Put option</td><td>A contract giving you the right (not obligation) to sell a share at a fixed price by a set date.</td></tr>
     </table>
@@ -162,6 +171,7 @@
       <tr><td>Secondary market</td><td>Where investors buy and sell already-issued shares among themselves, on the NSE and BSE.</td></tr>
       <tr><td>Sensex</td><td>The BSE's index of 30 large, established companies that tracks the Indian market.</td></tr>
       <tr><td>SIP (Systematic Investment Plan)</td><td>Investing a fixed amount in a mutual fund every month to build wealth steadily.</td></tr>
+      <tr><td>Square off</td><td>Closing an open position — selling what you bought, or buying back what you sold.</td></tr>
       <tr><td>STCG (Short-Term Capital Gains)</td><td>Tax on profit from shares or equity funds held for one year or less.</td></tr>
       <tr><td>Stop-loss</td><td>An order that automatically sells a share if its price falls to a level you set, limiting losses.</td></tr>
       <tr><td>STT (Securities Transaction Tax)</td><td>A small tax charged by the government on every buy and sell of shares.</td></tr>
@@ -173,6 +183,8 @@
       <tr><th>Term</th><th>Meaning</th></tr>
       <tr><td>Technical analysis</td><td>Judging a share by studying its price charts and patterns rather than the company itself.</td></tr>
       <tr><td>Term insurance</td><td>Pure life cover that pays your family if you die during the policy term, with no investment mixed in.</td></tr>
+      <tr><td>Time decay (theta)</td><td>The daily loss of an option's time value as expiry approaches — it accelerates sharply near the end.</td></tr>
+      <tr><td>Time value (options)</td><td>The "hope" part of a premium, paid for the time left on the clock; it melts to zero by expiry. See <a href="options-explained.html#inside">Options Explained</a>.</td></tr>
       <tr><td>Trading account</td><td>The account through which you place buy and sell orders, linked to your demat and bank accounts.</td></tr>
     </table>
 
@@ -180,6 +192,7 @@
     <table>
       <tr><th>Term</th><th>Meaning</th></tr>
       <tr><td>ULIP</td><td>A Unit Linked Insurance Plan that mixes life insurance with investment, often with high charges.</td></tr>
+      <tr><td>Underlying</td><td>The asset a derivative's value is based on — a stock, or an index like the Nifty.</td></tr>
     </table>
 
     <h2 id="v">V</h2>
@@ -189,15 +202,21 @@
       <tr><td>Volume</td><td>The number of shares traded in a given period, showing how active a stock is.</td></tr>
     </table>
 
+    <h2 id="z">Z</h2>
+    <table>
+      <tr><th>Term</th><th>Meaning</th></tr>
+      <tr><td>Zero-DTE (0DTE)</td><td>An option on its own expiry day ("zero days to expiry") — the cheapest, fastest and riskiest hours of its life. See <a href="expiry-explained.html#zero-dte">Expiry Explained</a>.</td></tr>
+    </table>
+
     <div class="pager">
-      <a href="expiry-explained.html">← Expiry Explained</a>
+      <a href="options-explained.html">← Options Explained</a>
       <span class="spacer"></span>
       <a href="scam-safety.html">Next: Scam Safety →</a>
     </div>
 
     <footer>
       <p>These notes are for learning only and are <strong>not financial advice</strong>. Markets carry real risk.</p>
-      <p class="reviewed">Last reviewed: 3 June 2026</p>
+      <p class="reviewed">Last reviewed: 10 June 2026</p>
     </footer>
   </main>
 </body>
