@@ -37,6 +37,36 @@ Eg: You buy a futures contract expecting the price to rise. It rises a little to
 >
 > Because futures are settled **daily** and you only put up a small margin, a few bad days in a row can wipe out your deposit fast — even before the contract expires.
 
+## 2.1 Why futures came first, and why options were needed {#why-both}
+
+The simplest reason futures exist is **certainty**.
+
+If you are a buyer who knows you will need something later, or a seller who knows you will have something to deliver later, futures let you **lock the price today** and remove uncertainty. That is useful in the real world because businesses hate being surprised by prices.
+
+Eg:
+
+- A bakery knows it will need wheat next month. A futures contract lets it lock the purchase price now instead of gambling on where wheat will trade later.
+- A farmer knows a crop will be ready in the future. A futures contract lets the farmer lock the selling price now instead of hoping the market is kind on harvest day.
+- In markets, an investor or trader may want to lock in a price on a stock or index because they care more about planning than flexibility.
+
+But futures have a limitation: they are **symmetrical**. Both sides are fully locked in. That is perfect when you want certainty, but bad when you want protection **without giving up upside**.
+
+That is where options were needed.
+
+An option adds **choice**. It says, “I want protection or leverage, but I do **not** want to be forced to act if the market moves against me.” You pay a premium for that freedom.
+
+Eg:
+
+- You own shares at ₹100 and fear a fall. A futures hedge would lock you into a sale or offset position and also cap your upside. A **put option** lets you protect the downside while still enjoying gains if the stock rises.
+- You want to buy a stock only if it becomes attractive later. A futures contract would force you to buy even if the price falls badly. A **call option** lets you cap the purchase price, but you can simply walk away if the market turns out cheaper than expected.
+
+So the clean distinction is:
+
+- **Futures** = “I want certainty, and I accept obligation.”
+- **Options** = “I want flexibility, and I am willing to pay for it.”
+
+That is why options did not replace futures. They solved a different problem.
+
 ## 3. Options — calls & puts {#options}
 
 An **option** gives you a *right*, but **not the obligation**, to buy or sell the underlying at a fixed price. You pay a fee for this right, called the **premium**. Every option has a **strike price** (the agreed price) and an **expiry date** (after which it is worthless if unused).
