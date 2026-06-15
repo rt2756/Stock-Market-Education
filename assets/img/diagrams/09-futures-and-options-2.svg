@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" role="img" aria-label="A small 2 percent move in the stock magnified by 10x leverage into a 20 percent swing in your money">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <defs><marker id="m9-a" markerWidth="10" markerHeight="10" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b6e6e"/></marker></defs>
+        <line x1="90" y1="110" x2="512" y2="110" stroke="#e7e3d8" stroke-width="1"/>
+        <rect x="110" y="80" width="40" height="30" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.6"/>
+        <rect x="110" y="110" width="40" height="30" fill="#f7e2de" stroke="#c0392b" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="130" y="166">Stock moves ±2%</text>
+        <line x1="178" y1="110" x2="372" y2="110" stroke="#0b6e6e" stroke-width="2.5" marker-end="url(#m9-a)"/>
+        <text class="dg-t" text-anchor="middle" x="275" y="98" style="fill:#0b6e6e">× 10 leverage</text>
+        <rect x="450" y="30" width="40" height="80" fill="#e3f3e8" stroke="#1a7f37" stroke-width="1.8"/>
+        <rect x="450" y="110" width="40" height="80" fill="#f7e2de" stroke="#c0392b" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="470" y="210">Your money swings ±20%</text>
+      </svg>

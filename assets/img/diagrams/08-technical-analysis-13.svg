@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 215" role="img" aria-label="Three chart patterns: a double top shaped like an M, a double bottom shaped like a W, and a head and shoulders">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <line x1="200" y1="24" x2="200" y2="150" stroke="#e7e3d8" stroke-width="1"/>
+        <line x1="400" y1="24" x2="400" y2="150" stroke="#e7e3d8" stroke-width="1"/>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="30,150 52,150 75,60 100,108 125,60 148,150 170,150"/>
+        <line x1="40" y1="108" x2="160" y2="108" stroke="#9aa3ad" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <text class="dg-t" text-anchor="middle" x="100" y="178">Double top</text>
+        <text class="dg-xs" text-anchor="middle" x="100" y="195">an uptrend tiring</text>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="230,60 252,60 275,150 300,102 325,150 348,60 370,60"/>
+        <line x1="240" y1="102" x2="360" y2="102" stroke="#9aa3ad" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <text class="dg-t" text-anchor="middle" x="300" y="178">Double bottom</text>
+        <text class="dg-xs" text-anchor="middle" x="300" y="195">a downtrend ending</text>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="415,150 432,108 450,134 485,58 520,134 538,108 555,150"/>
+        <line x1="425" y1="137" x2="545" y2="137" stroke="#9aa3ad" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <text class="dg-t" text-anchor="middle" x="485" y="178">Head &amp; shoulders</text>
+        <text class="dg-xs" text-anchor="middle" x="485" y="195">a rise reversing</text>
+      </svg>

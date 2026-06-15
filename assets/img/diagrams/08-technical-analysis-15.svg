@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" role="img" aria-label="A risk-reward diagram: an entry price in the middle, a stop-loss below it marking a small risk band, and a target above marking a reward band twice as tall, illustrating a one-to-two risk-reward ratio">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <rect x="120" y="70" width="300" height="80" fill="#e3f3e8"/>
+        <rect x="120" y="150" width="300" height="40" fill="#f7e2de"/>
+        <line x1="120" y1="70" x2="420" y2="70" stroke="#1a7f37" stroke-width="2" stroke-dasharray="6 5"/>
+        <line x1="120" y1="150" x2="420" y2="150" stroke="#1f2328" stroke-width="2.5"/>
+        <line x1="120" y1="190" x2="420" y2="190" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 5"/>
+        <text class="dg-t" text-anchor="middle" x="270" y="104" style="fill:#1a7f37">REWARD</text>
+        <text class="dg-xs" text-anchor="middle" x="270" y="122">₹10 — entry to target</text>
+        <text class="dg-xs" text-anchor="middle" x="270" y="174" style="fill:#c0392b">RISK ₹5 — entry to stop</text>
+        <text class="dg-s" x="428" y="74" style="fill:#1a7f37">Target ₹110</text>
+        <text class="dg-s" x="428" y="154">Entry ₹100</text>
+        <text class="dg-s" x="428" y="194" style="fill:#c0392b">Stop ₹95</text>
+        <text class="dg-t" text-anchor="middle" x="270" y="226" style="fill:#0b6e6e">Risk ₹5 : Reward ₹10  =  1 : 2</text>
+      </svg>

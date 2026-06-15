@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="A labelled mock-up of the Kite order window showing the Buy/Sell toggle, product type, order type, quantity and price fields, margin and the place-order button">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <text class="dg-t" text-anchor="middle" x="300" y="26">The order window, field by field</text>
+        <!-- order window card -->
+        <rect x="36" y="44" width="300" height="324" rx="12" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.6"/>
+        <text class="dg-t" x="52" y="72" style="fill:#0b6e6e">RELIANCE</text>
+        <text class="dg-xs" x="52" y="89">NSE · ₹2,840.00</text>
+        <line x1="48" y1="100" x2="324" y2="100" stroke="#e7e3d8" stroke-width="1"/>
+        <!-- buy/sell pills -->
+        <rect x="52" y="110" width="126" height="30" rx="15" fill="#0b6e6e"/>
+        <text class="dg-t" text-anchor="middle" x="115" y="130" style="fill:#ffffff">BUY</text>
+        <rect x="190" y="110" width="126" height="30" rx="15" fill="#ffffff" stroke="#c0392b" stroke-width="1.5"/>
+        <text class="dg-t" text-anchor="middle" x="253" y="130" style="fill:#c0392b">SELL</text>
+        <!-- product -->
+        <text class="dg-xs" x="52" y="166" style="fill:#1f2328">Product</text>
+        <circle cx="58" cy="184" r="5" fill="#0b6e6e"/><text class="dg-xs" x="70" y="188">CNC</text>
+        <circle cx="140" cy="184" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="152" y="188">MIS</text>
+        <circle cx="214" cy="184" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="226" y="188">NRML</text>
+        <!-- order type -->
+        <text class="dg-xs" x="52" y="216" style="fill:#1f2328">Order type</text>
+        <circle cx="58" cy="234" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="70" y="238">Market</text>
+        <circle cx="150" cy="234" r="5" fill="#0b6e6e"/><text class="dg-xs" x="162" y="238">Limit</text>
+        <circle cx="220" cy="234" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="232" y="238">SL</text>
+        <circle cx="268" cy="234" r="5" fill="none" stroke="#57606a"/><text class="dg-xs" x="280" y="238">SL-M</text>
+        <!-- qty / price -->
+        <text class="dg-xs" x="52" y="266">Qty</text>
+        <rect x="52" y="272" width="120" height="34" rx="6" fill="#fcfbf7" stroke="#cfc9ba" stroke-width="1.3"/>
+        <text class="dg-t" x="66" y="294">1</text>
+        <text class="dg-xs" x="190" y="266">Price</text>
+        <rect x="190" y="272" width="134" height="34" rx="6" fill="#fcfbf7" stroke="#cfc9ba" stroke-width="1.3"/>
+        <text class="dg-t" x="204" y="294">2,840.00</text>
+        <!-- margin -->
+        <text class="dg-xs" x="52" y="328">Margin required · ₹2,840</text>
+        <!-- button -->
+        <rect x="52" y="336" width="272" height="32" rx="8" fill="#0b6e6e"/>
+        <text class="dg-t" text-anchor="middle" x="188" y="357" style="fill:#ffffff">BUY</text>
+        <!-- callouts -->
+        <g stroke="#cfc9ba" stroke-width="1.2">
+          <line x1="336" y1="125" x2="352" y2="125"/>
+          <line x1="336" y1="184" x2="352" y2="184"/>
+          <line x1="336" y1="234" x2="352" y2="234"/>
+          <line x1="336" y1="289" x2="352" y2="289"/>
+          <line x1="336" y1="324" x2="352" y2="324"/>
+          <line x1="336" y1="352" x2="352" y2="352"/>
+        </g>
+        <text class="dg-t" x="357" y="122">① Buy or Sell</text>
+        <text class="dg-t" x="357" y="181">② Product type</text>
+        <text class="dg-xs" x="357" y="196">CNC / MIS / NRML</text>
+        <text class="dg-t" x="357" y="231">③ Order type</text>
+        <text class="dg-xs" x="357" y="246">Market / Limit / SL</text>
+        <text class="dg-t" x="357" y="286">④ Quantity &amp; price</text>
+        <text class="dg-t" x="357" y="321">⑤ Margin it needs</text>
+        <text class="dg-t" x="357" y="349">⑥ Place the order</text>
+      </svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" role="img" aria-label="A price line climbing in a staircase of higher highs and higher lows, with three small pullbacks marked as secondary dips, beneath a straight dashed primary-trend line">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <line x1="44" y1="180" x2="556" y2="42" stroke="#9a6700" stroke-width="2" stroke-dasharray="7 5"/>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="44,180 110,122 160,152 240,92 300,126 390,58 450,94 556,42"/>
+        <g fill="#c0392b">
+          <circle cx="160" cy="152" r="4"/>
+          <circle cx="300" cy="126" r="4"/>
+          <circle cx="450" cy="94" r="4"/>
+        </g>
+        <text class="dg-t" x="70" y="66" style="fill:#9a6700">Primary trend ↗</text>
+        <text class="dg-xs" x="70" y="83">the big tide — higher highs &amp; lows</text>
+        <circle cx="80" cy="208" r="4" fill="#c0392b"/>
+        <text class="dg-s" x="92" y="212">Secondary dips — pullbacks <tspan style="fill:#1f2328;font-weight:600">within</tspan> the trend, not its end</text>
+      </svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" role="img" aria-label="Three tiles showing the three Zerodha apps — Kite for trading, Console for reports, Coin for mutual funds">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <text class="dg-t" text-anchor="middle" x="300" y="26">Three Zerodha apps, three jobs</text>
+        <rect x="40" y="52" width="160" height="98" rx="12" fill="#ffffff" stroke="#0b6e6e" stroke-width="2"/>
+        <rect x="220" y="52" width="160" height="98" rx="12" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.8"/>
+        <rect x="400" y="52" width="160" height="98" rx="12" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.8"/>
+        <g text-anchor="middle">
+          <text class="dg-t" x="120" y="96" style="fill:#0b6e6e">Kite</text>
+          <text class="dg-xs" x="120" y="118">place &amp; track trades</text>
+          <text class="dg-t" x="300" y="96">Console</text>
+          <text class="dg-xs" x="300" y="118">reports, P&amp;L, tax</text>
+          <text class="dg-t" x="480" y="96">Coin</text>
+          <text class="dg-xs" x="480" y="118">mutual funds &amp; SIPs</text>
+        </g>
+      </svg>

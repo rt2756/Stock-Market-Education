@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 172" role="img" aria-label="A ₹2,00,000 long-term gain split into a tax-free ₹1.25 lakh and a taxable ₹75,000, with ₹9,375 tax due">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  <text class="dg-t" text-anchor="middle" x="300" y="26">A ₹2,00,000 long-term gain in one year</text>
+  <rect x="40" y="56" width="325" height="52" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2"/>
+  <rect x="365" y="56" width="195" height="52" fill="#fbf3e0" stroke="#9a6700" stroke-width="2"/>
+  <text class="dg-t" text-anchor="middle" x="202" y="80" style="fill:#1a7f37">₹1.25 lakh</text>
+  <text class="dg-xs" text-anchor="middle" x="202" y="98" style="fill:#1a7f37">tax-free</text>
+  <text class="dg-t" text-anchor="middle" x="462" y="80" style="fill:#9a6700">₹75,000</text>
+  <text class="dg-xs" text-anchor="middle" x="462" y="98" style="fill:#9a6700">taxed @ 12.5%</text>
+  <line x1="202" y1="108" x2="202" y2="126" stroke="#1a7f37" stroke-width="1.5"/>
+  <line x1="462" y1="108" x2="462" y2="126" stroke="#9a6700" stroke-width="1.5"/>
+  <text class="dg-t" text-anchor="middle" x="202" y="146" style="fill:#1a7f37">₹0 tax</text>
+  <text class="dg-t" text-anchor="middle" x="462" y="146" style="fill:#9a6700">₹9,375 tax</text>
+</svg>

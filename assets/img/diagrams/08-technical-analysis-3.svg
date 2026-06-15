@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" role="img" aria-label="Four named single candlesticks: a Marubozu with a full body and no wicks, a Doji shaped like a cross, a Spinning top with a small body and two wicks, and a Hammer with a small body and a long lower wick">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <!-- Marubozu (bullish) -->
+        <rect x="66" y="50" width="48" height="116" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="90" y="192" style="fill:#1a7f37">Marubozu</text>
+        <text class="dg-xs" text-anchor="middle" x="90" y="210">all body, no wick —</text>
+        <text class="dg-xs" text-anchor="middle" x="90" y="225">one decisive side</text>
+        <!-- Doji -->
+        <line x1="230" y1="46" x2="230" y2="170" stroke="#57606a" stroke-width="2"/>
+        <rect x="206" y="104" width="48" height="8" rx="1" fill="#f1efe8" stroke="#57606a" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="230" y="192">Doji</text>
+        <text class="dg-xs" text-anchor="middle" x="230" y="210">open ≈ close —</text>
+        <text class="dg-xs" text-anchor="middle" x="230" y="225">pure indecision</text>
+        <!-- Spinning top -->
+        <line x1="370" y1="58" x2="370" y2="158" stroke="#57606a" stroke-width="2"/>
+        <rect x="346" y="92" width="48" height="32" rx="2" fill="#f1efe8" stroke="#57606a" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="370" y="192">Spinning top</text>
+        <text class="dg-xs" text-anchor="middle" x="370" y="210">small body, two wicks —</text>
+        <text class="dg-xs" text-anchor="middle" x="370" y="225">a tug of war</text>
+        <!-- Hammer (bullish) -->
+        <line x1="510" y1="92" x2="510" y2="166" stroke="#57606a" stroke-width="2"/>
+        <rect x="486" y="58" width="48" height="34" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="510" y="192" style="fill:#1a7f37">Hammer</text>
+        <text class="dg-xs" text-anchor="middle" x="510" y="210">long lower wick —</text>
+        <text class="dg-xs" text-anchor="middle" x="510" y="225">a fall rejected</text>
+      </svg>

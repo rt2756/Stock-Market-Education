@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 270" role="img" aria-label="Profit and loss at expiry for one lot of the 23,500 call bought at 120 rupees: below 23,500 the full 9,000 rupee premium is lost, breakeven is at 23,620, and a close at 23,800 makes 13,500 rupees">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <text class="dg-t" text-anchor="middle" x="300" y="22">One lot of the 23,500 call, bought at ₹120 — endings at expiry</text>
+        <line x1="60" y1="150" x2="560" y2="150" stroke="#cfc9ba" stroke-width="1.5"/>
+        <line x1="60" y1="40" x2="60" y2="230" stroke="#cfc9ba" stroke-width="1.5"/>
+        <text class="dg-xs" text-anchor="end" x="556" y="144">break even (₹0)</text>
+        <text class="dg-xs" text-anchor="end" x="556" y="166">Nifty at the bell →</text>
+        <line x1="240" y1="210" x2="240" y2="145" stroke="#57606a" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <line x1="336" y1="215" x2="336" y2="145" stroke="#9a6700" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <polyline points="80,204 240,204 336,150" fill="none" stroke="#c0392b" stroke-width="2.6" stroke-linejoin="round"/>
+        <polyline points="336,150 528,42" fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linejoin="round"/>
+        <circle cx="160" cy="204" r="5" fill="#c0392b"/>
+        <text class="dg-xs" text-anchor="end" x="230" y="192" style="fill:#c0392b">closes 23,400 — ₹9,000 gone</text>
+        <circle cx="288" cy="177" r="5" fill="#9a6700"/>
+        <text class="dg-xs" text-anchor="end" x="326" y="132" style="fill:#9a6700">closes 23,560 — ₹4,500 back, still −₹4,500</text>
+        <circle cx="480" cy="69" r="5" fill="#1a7f37"/>
+        <text class="dg-xs" text-anchor="end" x="472" y="62" style="fill:#1a7f37">closes 23,800 — +₹13,500 before charges</text>
+        <text class="dg-xs" text-anchor="middle" x="228" y="232">strike 23,500</text>
+        <text class="dg-t" text-anchor="middle" x="336" y="238" style="fill:#9a6700">breakeven 23,620</text>
+        <text class="dg-xs" text-anchor="middle" x="336" y="254">strike + premium paid</text>
+      </svg>

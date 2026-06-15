@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 264" role="img" aria-label="A green bullish candle that closed up next to a red bearish candle that closed down">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <!-- green / bullish candle -->
+        <line x1="150" y1="36" x2="150" y2="208" stroke="#57606a" stroke-width="2"/>
+        <rect x="120" y="84" width="60" height="80" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.5"/>
+        <text class="dg-xs" x="186" y="88">Close</text>
+        <text class="dg-xs" x="186" y="168">Open</text>
+        <text class="dg-t" text-anchor="middle" x="150" y="236" style="fill:#1a7f37">Bullish</text>
+        <text class="dg-s" text-anchor="middle" x="150" y="253">closed up &#9650;</text>
+        <!-- red / bearish candle -->
+        <line x1="310" y1="44" x2="310" y2="214" stroke="#57606a" stroke-width="2"/>
+        <rect x="280" y="86" width="60" height="80" rx="2" fill="#f7e2de" stroke="#c0392b" stroke-width="2.5"/>
+        <text class="dg-xs" x="346" y="90">Open</text>
+        <text class="dg-xs" x="346" y="170">Close</text>
+        <text class="dg-t" text-anchor="middle" x="310" y="236" style="fill:#c0392b">Bearish</text>
+        <text class="dg-s" text-anchor="middle" x="310" y="253">closed down &#9660;</text>
+      </svg>

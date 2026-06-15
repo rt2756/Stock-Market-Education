@@ -198,7 +198,8 @@ figure.diagram {
   padding: 16px 18px 6px;
   margin: 1.7em 0;
 }
-figure.diagram svg { display: block; width: 100%; height: auto; }
+figure.diagram svg,
+figure.diagram img { display: block; width: 100%; height: auto; }
 figure.diagram figcaption {
   font-size: .85rem;
   color: var(--soft);
@@ -212,3 +213,24 @@ figure.diagram figcaption {
 .dg-s  { font-family: inherit; fill: var(--soft); font-size: 12px; }
 .dg-xs { font-family: inherit; fill: var(--soft); font-size: 11px; }
 .dg-b  { font-weight: 700; }
+
+/* ---------------------------------------------------------------------------
+   Markdown-rendered pages (output of assets/js/site.js)
+   The engine emits the same class names used above, so almost everything is
+   already styled. These few rules cover the small extras.
+--------------------------------------------------------------------------- */
+/* Inline code / monospace used in some notes */
+code {
+  background: #f0ede4;
+  color: var(--accent);
+  padding: .05em .35em;
+  border-radius: 5px;
+  font-size: .92em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+/* Callout label is injected as a <span> by the engine (was a <p class="label">) */
+.box .label { display: block; margin-bottom: 2px; }
+/* Breathing room for Markdown-generated lists (matches the old .clean/.steps);
+   the more specific rule keeps the mini-toc tight. */
+main.wrap li { margin: .4em 0; }
+main.wrap .mini-toc li { margin: .1em 0; }

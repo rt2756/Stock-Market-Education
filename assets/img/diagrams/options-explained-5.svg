@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" role="img" aria-label="A timeline from today showing several expiry dates trading at once: two weekly expiries, the month-end monthly expiry, a quarter-end expiry and long-dated contracts a year or more away">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <defs><marker id="op-a" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#57606a"/></marker></defs>
+        <text class="dg-t" text-anchor="middle" x="300" y="24">Pick your deadline — many expiries trade at once</text>
+        <line x1="40" y1="110" x2="552" y2="110" stroke="#57606a" stroke-width="1.6" marker-end="url(#op-a)"/>
+        <circle cx="60" cy="110" r="5" fill="#1f2328"/>
+        <text class="dg-xs" text-anchor="middle" x="60" y="134">today</text>
+        <line x1="140" y1="110" x2="140" y2="86" stroke="#0b6e6e" stroke-width="2"/>
+        <circle cx="140" cy="82" r="5" fill="#0b6e6e"/>
+        <text class="dg-xs" text-anchor="middle" x="140" y="68">Tue 16 Jun</text>
+        <line x1="205" y1="110" x2="205" y2="86" stroke="#0b6e6e" stroke-width="2"/>
+        <circle cx="205" cy="82" r="5" fill="#0b6e6e"/>
+        <text class="dg-xs" text-anchor="middle" x="205" y="68">Tue 23 Jun</text>
+        <text class="dg-xs" text-anchor="middle" x="166" y="134" style="fill:#0b6e6e">weeklies · melt fast</text>
+        <line x1="290" y1="110" x2="290" y2="80" stroke="#1a7f37" stroke-width="2.5"/>
+        <circle cx="290" cy="74" r="7" fill="#1a7f37"/>
+        <text class="dg-t" text-anchor="middle" x="290" y="58" style="fill:#1a7f37">Tue 30 Jun</text>
+        <text class="dg-xs" text-anchor="middle" x="302" y="134" style="fill:#1a7f37">monthly · the busiest</text>
+        <line x1="420" y1="110" x2="420" y2="86" stroke="#9a6700" stroke-width="2"/>
+        <circle cx="420" cy="82" r="6" fill="#9a6700"/>
+        <text class="dg-xs" text-anchor="middle" x="420" y="68">quarter-end</text>
+        <text class="dg-xs" text-anchor="middle" x="420" y="134" style="fill:#9a6700">quieter</text>
+        <line x1="515" y1="110" x2="515" y2="86" stroke="#57606a" stroke-width="2"/>
+        <circle cx="515" cy="82" r="6" fill="#cfc9ba" stroke="#57606a" stroke-width="1.5"/>
+        <text class="dg-xs" text-anchor="middle" x="515" y="68">next year +</text>
+        <text class="dg-xs" text-anchor="middle" x="515" y="134">thin trading</text>
+        <text class="dg-xs" text-anchor="middle" x="300" y="174" style="fill:#57606a">nearer = smaller premium but faster decay · further = dearer but more time to be right</text>
+      </svg>

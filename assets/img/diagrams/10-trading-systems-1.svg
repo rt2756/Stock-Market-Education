@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" role="img" aria-label="A price chart marking three levels set in advance: a target above, the entry in the middle, and a stop-loss below">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <rect x="40" y="70" width="375" height="70" fill="#f0f7f1"/>
+        <rect x="40" y="140" width="375" height="60" fill="#faf0ee"/>
+        <line x1="40" y1="70" x2="415" y2="70" stroke="#1a7f37" stroke-width="2" stroke-dasharray="6 5"/>
+        <line x1="40" y1="140" x2="415" y2="140" stroke="#0b6e6e" stroke-width="2"/>
+        <line x1="40" y1="200" x2="415" y2="200" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 5"/>
+        <polyline points="55,140 110,150 165,126 220,133 275,112 330,95 400,73" fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="55" cy="140" r="4.5" fill="#0b6e6e"/>
+        <text class="dg-t" x="428" y="66" style="fill:#1a7f37">Target</text>
+        <text class="dg-xs" x="428" y="83">take profit</text>
+        <text class="dg-t" x="428" y="136" style="fill:#0b6e6e">Entry</text>
+        <text class="dg-xs" x="428" y="153">you buy here</text>
+        <text class="dg-t" x="428" y="196" style="fill:#c0392b">Stop-loss</text>
+        <text class="dg-xs" x="428" y="213">cut the loss</text>
+      </svg>

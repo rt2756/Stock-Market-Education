@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" role="img" aria-label="A price line bouncing up from a support floor and turning back down from a resistance ceiling">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <line x1="40" y1="70" x2="560" y2="70" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 5"/>
+        <line x1="40" y1="195" x2="560" y2="195" stroke="#1a7f37" stroke-width="2" stroke-dasharray="6 5"/>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="40,160 120,72 200,192 280,74 360,193 440,72 520,150"/>
+        <g>
+          <circle cx="120" cy="72" r="4.5" fill="#c0392b"/>
+          <circle cx="280" cy="74" r="4.5" fill="#c0392b"/>
+          <circle cx="440" cy="72" r="4.5" fill="#c0392b"/>
+          <circle cx="200" cy="192" r="4.5" fill="#1a7f37"/>
+          <circle cx="360" cy="193" r="4.5" fill="#1a7f37"/>
+        </g>
+        <text class="dg-t" x="44" y="58" style="fill:#c0392b">Resistance — a ceiling sellers defend</text>
+        <text class="dg-t" x="44" y="222" style="fill:#1a7f37">Support — a floor buyers defend</text>
+      </svg>

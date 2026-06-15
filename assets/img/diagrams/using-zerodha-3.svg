@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 172" role="img" aria-label="An order's lifecycle: placed, then open or pending, then executed and it becomes a position or holding — or it is rejected or cancelled">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <defs>
+          <marker id="kt-a" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b6e6e"/></marker>
+          <marker id="kt-r" markerWidth="9" markerHeight="9" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+        </defs>
+        <g text-anchor="middle">
+          <rect x="24" y="50" width="104" height="42" rx="8" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.5"/>
+          <text class="dg-t" x="76" y="76">Placed</text>
+          <rect x="170" y="50" width="128" height="42" rx="8" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.5"/>
+          <text class="dg-t" x="234" y="76">Open / Pending</text>
+          <rect x="340" y="50" width="116" height="42" rx="8" fill="#eaf6ec" stroke="#1a7f37" stroke-width="1.6"/>
+          <text class="dg-t" x="398" y="76" style="fill:#1a7f37">Executed</text>
+          <rect x="476" y="50" width="108" height="42" rx="8" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.5"/>
+          <text class="dg-xs" x="530" y="68">becomes a</text>
+          <text class="dg-t" x="530" y="84">Position</text>
+          <rect x="170" y="118" width="128" height="36" rx="8" fill="#f7e2de" stroke="#c0392b" stroke-width="1.5"/>
+          <text class="dg-xs" x="234" y="140" style="fill:#c0392b">Rejected / Cancelled</text>
+        </g>
+        <line x1="130" y1="71" x2="166" y2="71" stroke="#0b6e6e" stroke-width="2" marker-end="url(#kt-a)"/>
+        <line x1="300" y1="71" x2="336" y2="71" stroke="#0b6e6e" stroke-width="2" marker-end="url(#kt-a)"/>
+        <line x1="458" y1="71" x2="472" y2="71" stroke="#0b6e6e" stroke-width="2" marker-end="url(#kt-a)"/>
+        <line x1="234" y1="94" x2="234" y2="116" stroke="#c0392b" stroke-width="2" marker-end="url(#kt-r)"/>
+      </svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 210" role="img" aria-label="₹100 falling 50% to ₹50, then needing a 100% gain to climb back to ₹100">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <defs>
+          <marker id="m10r" markerWidth="10" markerHeight="10" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+          <marker id="m10g" markerWidth="10" markerHeight="10" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1a7f37"/></marker>
+        </defs>
+        <line x1="60" y1="170" x2="575" y2="170" stroke="#cfc9ba" stroke-width="1.5"/>
+        <rect x="80" y="50" width="80" height="120" fill="#cfe6e6" stroke="#0b6e6e" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="120" y="42">₹100</text>
+        <text class="dg-xs" text-anchor="middle" x="120" y="188">you start</text>
+        <line x1="178" y1="110" x2="272" y2="110" stroke="#c0392b" stroke-width="2.2" marker-end="url(#m10r)"/>
+        <text class="dg-t" text-anchor="middle" x="222" y="98" style="fill:#c0392b">−50%</text>
+        <rect x="280" y="110" width="80" height="60" fill="#f0d8d2" stroke="#c0392b" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="320" y="102">₹50</text>
+        <line x1="378" y1="110" x2="472" y2="110" stroke="#1a7f37" stroke-width="2.2" marker-end="url(#m10g)"/>
+        <text class="dg-t" text-anchor="middle" x="425" y="98" style="fill:#1a7f37">+100% needed</text>
+        <rect x="480" y="50" width="80" height="120" fill="#cfe6e6" stroke="#0b6e6e" stroke-width="1.6"/>
+        <text class="dg-t" text-anchor="middle" x="520" y="42">₹100</text>
+        <text class="dg-xs" text-anchor="middle" x="520" y="188">back to even</text>
+      </svg>

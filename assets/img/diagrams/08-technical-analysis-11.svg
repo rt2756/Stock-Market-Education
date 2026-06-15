@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" role="img" aria-label="An RSI scale from 0 to 100 with an oversold zone below 30 and an overbought zone above 70">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <rect x="60" y="54" width="144" height="40" fill="#e3f3e8"/>
+        <rect x="204" y="54" width="192" height="40" fill="#f1efe8"/>
+        <rect x="396" y="54" width="144" height="40" fill="#f7e2de"/>
+        <rect x="60" y="54" width="480" height="40" fill="none" stroke="#cfc9ba" stroke-width="1"/>
+        <line x1="204" y1="48" x2="204" y2="100" stroke="#57606a" stroke-width="1.5"/>
+        <line x1="396" y1="48" x2="396" y2="100" stroke="#57606a" stroke-width="1.5"/>
+        <g text-anchor="middle" class="dg-xs">
+          <text x="60" y="116">0</text>
+          <text x="204" y="116">30</text>
+          <text x="396" y="116">70</text>
+          <text x="540" y="116">100</text>
+        </g>
+        <text class="dg-t" text-anchor="middle" x="132" y="79" style="fill:#1a7f37">Oversold</text>
+        <text class="dg-s" text-anchor="middle" x="300" y="79">Neutral</text>
+        <text class="dg-t" text-anchor="middle" x="468" y="79" style="fill:#c0392b">Overbought</text>
+        <text class="dg-xs" text-anchor="middle" x="132" y="140">may have fallen too far</text>
+        <text class="dg-xs" text-anchor="middle" x="468" y="140">may have risen too fast</text>
+      </svg>

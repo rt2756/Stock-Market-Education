@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" role="img" aria-label="NSE contracts expire on Tuesday, BSE contracts expire on Thursday, shown as two weekday strips">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <text class="dg-t" text-anchor="middle" x="300" y="26">Who expires on which day</text>
+        <!-- NSE box -->
+        <rect x="36" y="44" width="252" height="178" rx="12" fill="#ffffff" stroke="#0b6e6e" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="162" y="70" style="fill:#0b6e6e">NSE → Tuesday</text>
+        <g>
+          <rect x="81"  y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="115" y="84" width="34" height="24" rx="4" fill="#0b6e6e" stroke="#0b6e6e"/>
+          <rect x="149" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="183" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="217" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <g text-anchor="middle">
+            <text class="dg-xs" x="98"  y="100">M</text>
+            <text class="dg-xs" x="132" y="100" style="fill:#ffffff">T</text>
+            <text class="dg-xs" x="166" y="100">W</text>
+            <text class="dg-xs" x="200" y="100">T</text>
+            <text class="dg-xs" x="234" y="100">F</text>
+          </g>
+        </g>
+        <text class="dg-xs" x="60" y="134">• Nifty 50 — weekly &amp; monthly</text>
+        <text class="dg-xs" x="60" y="156">• Bank Nifty — monthly only</text>
+        <text class="dg-xs" x="60" y="178">• stock F&amp;O — monthly</text>
+        <text class="dg-xs" x="60" y="204" style="fill:#57606a">monthly = last Tuesday</text>
+        <!-- BSE box -->
+        <rect x="312" y="44" width="252" height="178" rx="12" fill="#ffffff" stroke="#9a6700" stroke-width="1.8"/>
+        <text class="dg-t" text-anchor="middle" x="438" y="70" style="fill:#9a6700">BSE → Thursday</text>
+        <g>
+          <rect x="357" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="391" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="425" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <rect x="459" y="84" width="34" height="24" rx="4" fill="#9a6700" stroke="#9a6700"/>
+          <rect x="493" y="84" width="34" height="24" rx="4" fill="#ffffff" stroke="#cfc9ba"/>
+          <g text-anchor="middle">
+            <text class="dg-xs" x="374" y="100">M</text>
+            <text class="dg-xs" x="408" y="100">T</text>
+            <text class="dg-xs" x="442" y="100">W</text>
+            <text class="dg-xs" x="476" y="100" style="fill:#ffffff">T</text>
+            <text class="dg-xs" x="510" y="100">F</text>
+          </g>
+        </g>
+        <text class="dg-xs" x="336" y="134">• Sensex — weekly &amp; monthly</text>
+        <text class="dg-xs" x="336" y="156">• Bankex — monthly only</text>
+        <text class="dg-xs" x="336" y="178">• Sensex 50 — monthly</text>
+        <text class="dg-xs" x="336" y="204" style="fill:#57606a">monthly = last Thursday</text>
+      </svg>

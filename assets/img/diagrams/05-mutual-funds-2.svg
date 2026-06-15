@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 270" role="img" aria-label="A SIP invests the same amount each month, buying more units when the price is low and fewer when the price is high">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <text class="dg-t" text-anchor="middle" x="300" y="28">The same ₹5,000 invested every month</text>
+        <text class="dg-xs" x="40" y="74" style="fill:#57606a">price</text>
+        <polyline points="100,92 200,140 300,70 400,134 500,98" fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <g fill="#0b6e6e">
+          <circle cx="100" cy="92" r="4"/><circle cx="200" cy="140" r="4"/><circle cx="300" cy="70" r="4"/><circle cx="400" cy="134" r="4"/><circle cx="500" cy="98" r="4"/>
+        </g>
+        <text class="dg-xs" text-anchor="middle" x="200" y="160" style="fill:#1a7f37">cheap</text>
+        <text class="dg-xs" text-anchor="middle" x="300" y="58" style="fill:#c0392b">pricey</text>
+        <text class="dg-xs" text-anchor="middle" x="400" y="154" style="fill:#1a7f37">cheap</text>
+        <line x1="70" y1="248" x2="540" y2="248" stroke="#cfc9ba" stroke-width="1.5"/>
+        <text class="dg-xs" x="40" y="214" style="fill:#57606a">units</text>
+        <g>
+          <rect x="81" y="196" width="38" height="52" fill="#cfe6e6" stroke="#0b6e6e" stroke-width="1.3"/>
+          <rect x="181" y="166" width="38" height="82" fill="#bfe0d0" stroke="#1a7f37" stroke-width="1.3"/>
+          <rect x="281" y="212" width="38" height="36" fill="#f0d8d2" stroke="#c0392b" stroke-width="1.3"/>
+          <rect x="381" y="170" width="38" height="78" fill="#bfe0d0" stroke="#1a7f37" stroke-width="1.3"/>
+          <rect x="481" y="192" width="38" height="56" fill="#cfe6e6" stroke="#0b6e6e" stroke-width="1.3"/>
+        </g>
+      </svg>

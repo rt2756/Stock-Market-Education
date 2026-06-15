@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 210" role="img" aria-label="Three small charts: an uptrend rising, a downtrend falling, and a sideways range">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <line x1="200" y1="24" x2="200" y2="150" stroke="#e7e3d8" stroke-width="1"/>
+        <line x1="400" y1="24" x2="400" y2="150" stroke="#e7e3d8" stroke-width="1"/>
+        <g stroke="#e7e3d8" stroke-width="1">
+          <line x1="30" y1="150" x2="170" y2="150"/>
+          <line x1="230" y1="150" x2="370" y2="150"/>
+          <line x1="430" y1="150" x2="570" y2="150"/>
+        </g>
+        <polyline fill="none" stroke="#1a7f37" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="30,140 60,112 85,126 112,86 138,100 168,54"/>
+        <circle cx="168" cy="54" r="4.5" fill="#1a7f37"/>
+        <polyline fill="none" stroke="#c0392b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="232,54 262,92 288,78 314,116 340,104 370,142"/>
+        <circle cx="370" cy="142" r="4.5" fill="#c0392b"/>
+        <polyline fill="none" stroke="#0b6e6e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+          points="430,100 460,74 490,108 520,76 550,106 570,90"/>
+        <g text-anchor="middle">
+          <text class="dg-t" x="100" y="178" style="fill:#1a7f37">Uptrend</text>
+          <text class="dg-xs" x="100" y="195">higher highs &amp; lows</text>
+          <text class="dg-t" x="300" y="178" style="fill:#c0392b">Downtrend</text>
+          <text class="dg-xs" x="300" y="195">lower highs &amp; lows</text>
+          <text class="dg-t" x="500" y="178" style="fill:#0b6e6e">Sideways</text>
+          <text class="dg-xs" x="500" y="195">drifting in a range</text>
+        </g>
+      </svg>

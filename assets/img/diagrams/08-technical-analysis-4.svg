@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 210" role="img" aria-label="Two engulfing patterns: on the left a small red candle is swallowed by a big green candle (bullish engulfing); on the right a small green candle is swallowed by a big red candle (bearish engulfing)">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .dg-b  { font-weight: 700; }
+  </style>
+  
+        <line x1="300" y1="30" x2="300" y2="150" stroke="#e7e3d8" stroke-width="1"/>
+        <!-- Bullish engulfing -->
+        <line x1="120" y1="84" x2="120" y2="128" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="106" y="96" width="28" height="22" rx="2" fill="#f7e2de" stroke="#c0392b" stroke-width="2"/>
+        <line x1="178" y1="60" x2="178" y2="150" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="160" y="78" width="36" height="58" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="150" y="176" style="fill:#1a7f37">Bullish engulfing</text>
+        <text class="dg-xs" text-anchor="middle" x="150" y="194">a big green swallows a red — buyers seize control</text>
+        <!-- Bearish engulfing -->
+        <line x1="420" y1="58" x2="420" y2="102" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="406" y="72" width="28" height="22" rx="2" fill="#e3f3e8" stroke="#1a7f37" stroke-width="2"/>
+        <line x1="478" y1="56" x2="478" y2="150" stroke="#57606a" stroke-width="1.8"/>
+        <rect x="460" y="70" width="36" height="60" rx="2" fill="#f7e2de" stroke="#c0392b" stroke-width="2.5"/>
+        <text class="dg-t" text-anchor="middle" x="450" y="176" style="fill:#c0392b">Bearish engulfing</text>
+        <text class="dg-xs" text-anchor="middle" x="450" y="194">a big red swallows a green — sellers seize control</text>
+      </svg>
