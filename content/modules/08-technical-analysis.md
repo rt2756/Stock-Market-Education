@@ -74,7 +74,31 @@ Some patterns need two or three candles read together:
 >
 > None of these guarantee anything. Seasoned chart-readers wait for **confirmation** (the next candle agreeing) and weigh the pattern against the trend, support/resistance and volume — they never act on a shape alone. And two people can genuinely disagree on whether a pattern is even there.
 
-## 4. Trends, support & resistance {#trends}
+## 4. Gap up & gap down openings {#gaps}
+
+The Indian market is only open from **9:15 AM to 3:30 PM** — but the world doesn't stop overnight. Results get announced, global markets move, news breaks. So a stock often **opens at a very different price from where it closed the day before**, jumping straight there without trading at the levels in between. That jump leaves a visible **gap** on the chart: an empty band of prices where no candle exists. Because the market is shut overnight, gaps almost always show up right at the **open**.
+
+There are two kinds:
+
+- **Gap up opening** — today's candle **opens *above* yesterday's close** (often above yesterday's whole range), leaving an empty space *below* it. It usually means good news landed overnight — strong results, an upgrade, positive global cues — and buyers were willing to pay up the instant the market opened.
+- **Gap down opening** — today's candle **opens *below* yesterday's close**, leaving an empty space *above* it. It usually points the other way — weak results, a downgrade, or a global sell-off.
+
+![A gap up opens above yesterday's close, leaving an empty band below today's candle; a gap down opens below it, leaving the empty band above. That blank band — a price range where no trading happened — is the "gap".](../assets/img/diagrams/08-technical-analysis-16.svg)
+
+### How to spot one
+
+You don't need any tool — just compare **two numbers**: today's **open** and yesterday's **close**.
+
+- Today opens clearly **higher**, with a blank space beneath the new candle → **gap up**.
+- Today opens clearly **lower**, with a blank space above the new candle → **gap down**.
+
+Eg: a stock closes at **₹500** on Monday. Overnight it posts strong results, and on Tuesday it **opens at ₹530** — it never traded between ₹500 and ₹530, so the chart shows a ₹30 **gap up**. Had bad news hit instead and it opened at **₹470**, the empty space *above* Tuesday's candle would be a ₹30 **gap down**.
+
+> [!NOTE] Gaps often "fill" — and carry extra risk
+>
+> Traders watch whether a gap gets **filled** — the price later drifting back to cover the empty space (back toward ₹500 in the example). Many gaps do fill, but plenty don't, so it's a tendency, never a rule. And a gap is, by definition, an overnight move you *couldn't react to* while the market was shut — which is exactly why holding a position through results or big news is riskier than it looks.
+
+## 5. Trends, support & resistance {#trends}
 
 The first thing a chart-reader looks for is the **trend** — the general direction:
 
@@ -109,7 +133,7 @@ One of the oldest ideas in charting comes from **Charles Dow** (the same Dow beh
 
 The practical lesson for a beginner is simple: **don't mistake a secondary dip for the end of the world.** In a healthy uptrend the price pulls back again and again before climbing on — a dip is not automatically a reversal. (Zerodha gives Dow Theory two full chapters if you want the complete set of principles.)
 
-## 5. Moving averages {#ma}
+## 6. Moving averages {#ma}
 
 A **moving average** is simply the average closing price over the last N days, recalculated each day so it "moves" along with the price. Its job is to **smooth out the daily noise** so the underlying direction is easier to see.
 
@@ -122,7 +146,7 @@ Two are especially popular:
 
 As a rough rule of thumb, when the price is **above** its moving average, the trend is generally considered healthy; when it slips **below**, traders grow cautious. Eg: a stock trading comfortably above its 200-day average is often described as being "in an uptrend." It's a gauge, not a guarantee.
 
-## 6. Volume {#volume}
+## 7. Volume {#volume}
 
 **Volume** is simply how many shares changed hands in a period — drawn as **bars along the bottom** of most charts, one bar under each candle. On its own it says nothing about *direction*; its job is to show how much **conviction** is behind a move.
 
@@ -136,7 +160,7 @@ The rule of thumb: a price move on **high volume** is more trustworthy than the 
 
 Eg: if a stock jumps 5% but on its lowest volume in weeks, a chart-reader treats the move with suspicion — a rise nobody turned up for rarely lasts.
 
-## 7. Popular indicators {#indicators}
+## 8. Popular indicators {#indicators}
 
 Indicators are formulas applied to price (and volume) to highlight things the eye might miss. You'll hear these names thrown around — here's the one-line gist of each:
 
@@ -150,7 +174,7 @@ Indicators are formulas applied to price (and volume) to highlight things the ey
 >
 > You do not need to calculate any of these by hand — charting apps draw them for you. The point is just to recognise the names and roughly what each one is hinting at.
 
-## 8. Fibonacci retracements {#fib}
+## 9. Fibonacci retracements {#fib}
 
 You'll bump into "Fibonacci" (or just "the Fibs") constantly. It starts from a famous number sequence — **0, 1, 1, 2, 3, 5, 8, 13, 21, 34…** where each number is the sum of the two before it. Divide any number by the next one and you keep landing near **0.618** — a proportion (the "golden ratio") that crops up oddly often in nature and art, and which traders believe shows up in markets too.
 
@@ -164,7 +188,7 @@ Eg: if the Nifty rallies from 23,000 to 24,000 (a 1,000-point move) and then dip
 >
 > Fibonacci levels "work" partly because *enough traders watch the same lines* — a level can become support simply because everyone treats it as one. (And the 50% level isn't even a true Fibonacci ratio; it's kept because round-number pullbacks are common.) Useful, but hardly the magic some claim.
 
-## 9. Common chart patterns {#patterns}
+## 10. Common chart patterns {#patterns}
 
 Traders also look for repeating **shapes** in the chart that supposedly hint at what comes next. A few you'll hear about:
 
@@ -176,7 +200,7 @@ Traders also look for repeating **shapes** in the chart that supposedly hint at 
 
 Crucially, these patterns are **hints, not certainties**. A "double top" only counts as a double top in hindsight; in the moment, the price can do anything. Two people can even disagree on whether a pattern is forming at all.
 
-## 10. A real month of Nifty, decoded {#example}
+## 11. A real month of Nifty, decoded {#example}
 
 Enough theory — here is an **actual chart**. Below is the **Nifty 50** (India's benchmark index of 50 large companies) drawn as daily candlesticks for roughly one month, from **4 May to 2 June 2026**. Each candle is one trading day, built from that day's real open, high, low and close. This one picture quietly uses almost everything in this module at once.
 
@@ -192,7 +216,7 @@ Take a moment to just *read* it, the way the earlier sections taught:
 
 Two days jump out as **tall red candles**: **12 May** and **29 May**. On each, the index opened, sold off hard all day, and closed near its low — the unmistakable shape of a session where sellers were firmly in charge. Together they mark the month's two down-legs.
 
-Now look along the bottom of the chart. **Five times** the price was dragged down toward **~23,300** (the dotted line and the green dots), and five times the dip was bought back up. That repeatedly-defended floor is a **support zone** — the exact idea from section 3, now in live data instead of a sketch. The thin **lower wicks** stabbing down to those dots are the fingerprints of buyers stepping in: on 18 May, for instance, sellers forced the price down to 23,317 during the day, but buyers won it all the way back to close at 23,650 — leaving a long tail behind. The final candle, **2 June**, opened right at the month's low (23,229) and closed firmly higher: a green **bounce** off that same floor.
+Now look along the bottom of the chart. **Five times** the price was dragged down toward **~23,300** (the dotted line and the green dots), and five times the dip was bought back up. That repeatedly-defended floor is a **support zone** — the exact idea from earlier in this module, now in live data instead of a sketch. The thin **lower wicks** stabbing down to those dots are the fingerprints of buyers stepping in: on 18 May, for instance, sellers forced the price down to 23,317 during the day, but buyers won it all the way back to close at 23,650 — leaving a long tail behind. The final candle, **2 June**, opened right at the month's low (23,229) and closed firmly higher: a green **bounce** off that same floor.
 
 ### Four candles, decoded
 
@@ -207,13 +231,13 @@ Reading one candle at a time is the core skill. Here are four real ones from the
 
 > [!NOTE] WHERE ARE THE MOVING AVERAGES?
 >
-> The 50- and 200-day averages from section 4 need *months* of past closes to calculate, so they simply can't be drawn on a single month of candles. On a real charting app you'd switch to a 6-month or 1-year view to see them ride through the price.
+> The 50- and 200-day averages from the moving-averages section need *months* of past closes to calculate, so they simply can't be drawn on a single month of candles. On a real charting app you'd switch to a 6-month or 1-year view to see them ride through the price.
 
 > [!WARNING] THIS IS A FROZEN SNAPSHOT
 >
 > These are real prices from **May–June 2026**, captured here as a teaching example — **not** a prediction, and not a live feed. By the time you read this, the Nifty is somewhere else entirely. The skill to carry away isn't *these* numbers; it's being able to pull up *any* live chart and read its colours, bodies, wicks, trend and support in just the same way. (Prices: Yahoo Finance / NSE.)
 
-## 11. If you really want to try {#discipline}
+## 12. If you really want to try {#discipline}
 
 If, after all the caveats, you still want to experiment, the most important thing isn't a clever indicator — it's **discipline**. Two habits matter more than any pattern on this page.
 
@@ -242,7 +266,7 @@ If you must trade, do it the careful way:
 >
 > TA is a deep rabbit hole. Beyond this module you'll hear about the **ADX** (trend strength), **pivot points** and the Central Pivot Range, **VWAP**, **Ichimoku clouds**, **Elliott Waves** and **Supertrend**. None are required to be a good investor — but if you want the full, rigorous tour, the [Zerodha Varsity Technical Analysis module](https://zerodha.com/varsity/module/technical-analysis/) is the standard free reference.
 
-## 12. Reality check {#reality}
+## 13. Reality check {#reality}
 
 Time for some honesty. Technical analysis can be fascinating, but it is easy to overrate.
 
