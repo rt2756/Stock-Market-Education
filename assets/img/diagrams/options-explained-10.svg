@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 612" role="img" aria-label="An option chain map with the spot at expiry of 203. Strikes run 140 to 260 down the middle. For calls, strikes below the spot are in the money, the 200 strike is at the money, strikes above are out of the money; the value at expiry counts down 63, 53, 43, 33, 23, 13, 3 then zero. Puts mirror it: out of the money below, in the money above, value at expiry 7, 17, 27, 37, 47, 57. All out-of-the-money contracts expire at zero. Option price equals intrinsic value plus time value, and intrinsic value equals the value at expiry.">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+    .v0    { fill: #b0a99a; font-size: 12px; }
+    .vN    { fill: #1a7f37; font-size: 12px; font-weight: 700; }
+  </style>
+
+        <text class="dg-t"  text-anchor="middle" x="300" y="26">The option chain at a glance</text>
+        <text class="dg-xs" text-anchor="middle" x="300" y="46">moneyness &amp; value at expiry  ·  simple round numbers  ·  spot at expiry = 203</text>
+
+        <!-- moneyness bands (drawn first, under everything) -->
+        <rect x="149" y="110" width="102" height="168" fill="#e3f3e8"/>
+        <rect x="149" y="278" width="102" height="28"  fill="#fbf3e0"/>
+        <rect x="149" y="306" width="102" height="168" fill="#f7e2de"/>
+        <rect x="349" y="110" width="102" height="168" fill="#f7e2de"/>
+        <rect x="349" y="278" width="102" height="28"  fill="#fbf3e0"/>
+        <rect x="349" y="306" width="102" height="168" fill="#e3f3e8"/>
+
+        <!-- outer card + column dividers -->
+        <rect x="40" y="62" width="520" height="412" rx="12" fill="none" stroke="#cfc9ba" stroke-width="1.6"/>
+        <g stroke="#cfc9ba" stroke-width="1.2">
+          <line x1="148" y1="62" x2="148" y2="474"/>
+          <line x1="252" y1="62" x2="252" y2="474"/>
+          <line x1="348" y1="62" x2="348" y2="474"/>
+          <line x1="452" y1="62" x2="452" y2="474"/>
+        </g>
+        <line x1="40" y1="110" x2="560" y2="110" stroke="#cfc9ba" stroke-width="1.4"/>
+
+        <!-- faint row separators in the number columns only (keeps the bands looking merged) -->
+        <g stroke="#e7e3d8" stroke-width="0.8">
+          <line x1="44" y1="138" x2="148" y2="138"/><line x1="252" y1="138" x2="348" y2="138"/><line x1="452" y1="138" x2="556" y2="138"/>
+          <line x1="44" y1="166" x2="148" y2="166"/><line x1="252" y1="166" x2="348" y2="166"/><line x1="452" y1="166" x2="556" y2="166"/>
+          <line x1="44" y1="194" x2="148" y2="194"/><line x1="252" y1="194" x2="348" y2="194"/><line x1="452" y1="194" x2="556" y2="194"/>
+          <line x1="44" y1="222" x2="148" y2="222"/><line x1="252" y1="222" x2="348" y2="222"/><line x1="452" y1="222" x2="556" y2="222"/>
+          <line x1="44" y1="250" x2="148" y2="250"/><line x1="252" y1="250" x2="348" y2="250"/><line x1="452" y1="250" x2="556" y2="250"/>
+          <line x1="44" y1="334" x2="148" y2="334"/><line x1="252" y1="334" x2="348" y2="334"/><line x1="452" y1="334" x2="556" y2="334"/>
+          <line x1="44" y1="362" x2="148" y2="362"/><line x1="252" y1="362" x2="348" y2="362"/><line x1="452" y1="362" x2="556" y2="362"/>
+          <line x1="44" y1="390" x2="148" y2="390"/><line x1="252" y1="390" x2="348" y2="390"/><line x1="452" y1="390" x2="556" y2="390"/>
+          <line x1="44" y1="418" x2="148" y2="418"/><line x1="252" y1="418" x2="348" y2="418"/><line x1="452" y1="418" x2="556" y2="418"/>
+          <line x1="44" y1="446" x2="148" y2="446"/><line x1="252" y1="446" x2="348" y2="446"/><line x1="452" y1="446" x2="556" y2="446"/>
+        </g>
+
+        <!-- headers -->
+        <text class="dg-t" text-anchor="middle" x="146" y="80" style="fill:#0b6e6e">CALLS  (CE)</text>
+        <text class="dg-t" text-anchor="middle" x="454" y="80" style="fill:#c0392b">PUTS  (PE)</text>
+        <text class="dg-t" text-anchor="middle" x="300" y="89">STRIKE</text>
+        <text class="dg-xs" text-anchor="middle" x="94"  y="102">value at expiry</text>
+        <text class="dg-xs" text-anchor="middle" x="200" y="102">moneyness</text>
+        <text class="dg-xs" text-anchor="middle" x="400" y="102">moneyness</text>
+        <text class="dg-xs" text-anchor="middle" x="506" y="102">value at expiry</text>
+
+        <!-- band labels (merged-cell style) -->
+        <text class="dg-t" text-anchor="middle" x="200" y="198" style="fill:#1a7f37">ITM</text>
+        <text class="dg-t" text-anchor="middle" x="200" y="297" style="fill:#9a6700">ATM</text>
+        <text class="dg-t" text-anchor="middle" x="200" y="394" style="fill:#c0392b">OTM</text>
+        <text class="dg-t" text-anchor="middle" x="400" y="198" style="fill:#c0392b">OTM</text>
+        <text class="dg-t" text-anchor="middle" x="400" y="297" style="fill:#9a6700">ATM</text>
+        <text class="dg-t" text-anchor="middle" x="400" y="394" style="fill:#1a7f37">ITM</text>
+
+        <!-- strike ladder -->
+        <g class="dg-t" text-anchor="middle">
+          <text x="300" y="129">140</text><text x="300" y="157">150</text><text x="300" y="185">160</text>
+          <text x="300" y="213">170</text><text x="300" y="241">180</text><text x="300" y="269">190</text>
+          <text x="300" y="297">200</text><text x="300" y="325">210</text><text x="300" y="353">220</text>
+          <text x="300" y="381">230</text><text x="300" y="409">240</text><text x="300" y="437">250</text><text x="300" y="465">260</text>
+        </g>
+
+        <!-- call value at expiry -->
+        <g text-anchor="middle">
+          <text class="vN" x="94" y="129">63</text><text class="vN" x="94" y="157">53</text><text class="vN" x="94" y="185">43</text>
+          <text class="vN" x="94" y="213">33</text><text class="vN" x="94" y="241">23</text><text class="vN" x="94" y="269">13</text>
+          <text class="vN" x="94" y="297">3</text>
+          <text class="v0" x="94" y="325">0</text><text class="v0" x="94" y="353">0</text><text class="v0" x="94" y="381">0</text>
+          <text class="v0" x="94" y="409">0</text><text class="v0" x="94" y="437">0</text><text class="v0" x="94" y="465">0</text>
+        </g>
+
+        <!-- put value at expiry -->
+        <g text-anchor="middle">
+          <text class="v0" x="506" y="129">0</text><text class="v0" x="506" y="157">0</text><text class="v0" x="506" y="185">0</text>
+          <text class="v0" x="506" y="213">0</text><text class="v0" x="506" y="241">0</text><text class="v0" x="506" y="269">0</text>
+          <text class="v0" x="506" y="297">0</text>
+          <text class="vN" x="506" y="325">7</text><text class="vN" x="506" y="353">17</text><text class="vN" x="506" y="381">27</text>
+          <text class="vN" x="506" y="409">37</text><text class="vN" x="506" y="437">47</text><text class="vN" x="506" y="465">57</text>
+        </g>
+
+        <!-- spot line + pill -->
+        <line x1="40" y1="306" x2="560" y2="306" stroke="#0b6e6e" stroke-width="1.3" stroke-dasharray="5 4"/>
+        <rect x="267" y="298" width="66" height="16" rx="8" fill="#ffffff" stroke="#0b6e6e" stroke-width="1.2"/>
+        <text class="dg-xs" text-anchor="middle" x="300" y="309" style="fill:#0b6e6e;font-weight:700">spot 203</text>
+
+        <!-- the three takeaways -->
+        <rect x="110" y="492" width="380" height="30" rx="8" fill="#f3f6f6" stroke="#cfc9ba" stroke-width="1.2"/>
+        <text class="dg-t" text-anchor="middle" x="300" y="512">All <tspan style="fill:#c0392b">OTM</tspan> contracts expire worth <tspan style="fill:#c0392b">0</tspan></text>
+        <rect x="110" y="530" width="380" height="30" rx="8" fill="#f3f6f6" stroke="#cfc9ba" stroke-width="1.2"/>
+        <text class="dg-t" text-anchor="middle" x="300" y="550">Option price  =  <tspan style="fill:#1a7f37">intrinsic value</tspan>  +  <tspan style="fill:#9a6700">time value</tspan></text>
+        <rect x="110" y="568" width="380" height="30" rx="8" fill="#f3f6f6" stroke="#cfc9ba" stroke-width="1.2"/>
+        <text class="dg-t" text-anchor="middle" x="300" y="588"><tspan style="fill:#1a7f37">Intrinsic value</tspan>  =  the value at expiry (above)</text>
+      </svg>

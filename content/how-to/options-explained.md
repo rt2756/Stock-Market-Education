@@ -171,3 +171,21 @@ Every one of these is common enough to have a name. Read the list twice:
 > [!TIP] The zero-rupee apprenticeship
 >
 > Before any real money: **paper-trade one full expiry cycle**. On a Wednesday, pick a Nifty strike, write down its premium, and note it every day through to the next Tuesday's close — watch direction, time and drama tug at it exactly as section 5 promised. Do that for two or three weeks (a notebook is enough; apps like Sensibull also offer a virtual mode). It costs nothing, and it will teach you more than any thread, tip or video — including, very possibly, that you'd rather stay an investor. That's a perfectly good ending too. ☕
+
+## 12. Quick reference — the cheat sheet {#cheat-sheet}
+
+Three cards that hold the whole page in miniature. Screenshot them, print them, prop them by the screen — between them they settle most "wait, which way…?" moments. *(They use small round numbers for clarity, not the 23,500 example above.)*
+
+**The vocabulary** — every option on every screen is built from the same six words:
+
+![The six terms behind every contract — strike price, expiry, lot size, premium, strike type (CE = call, PE = put) and strike difference. "CE / PE" just mean "European": they settle at expiry.](../assets/img/diagrams/options-explained-8.svg)
+
+**Which way it moves** — a call profits from a rise, a put from a fall; the two are mirror images:
+
+![When the stock or index rises, a call (CE) premium rises while a put (PE) premium falls. When it falls, the call falls and the put rises.](../assets/img/diagrams/options-explained-9.svg)
+
+**The chain, decoded** — where each strike sits, and what it's worth the moment the bell rings:
+
+![With the spot at expiry at 203: call strikes below it are ITM, the 200 strike is ATM, strikes above are OTM — and the value at expiry counts down 63, 53, 43 … 3, then zero. Puts mirror it exactly, climbing 7, 17, 27 … upward. Every OTM contract expires at 0; option price = intrinsic value + time value; and intrinsic value is simply that value-at-expiry column.](../assets/img/diagrams/options-explained-10.svg)
+
+Read that last card top to bottom and the single most important truth about *buying* options falls out: the instant it expires, an option is worth only how far it finished in the money — and most strikes finish at exactly zero.

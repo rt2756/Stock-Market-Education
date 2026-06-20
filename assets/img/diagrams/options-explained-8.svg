@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 352" role="img" aria-label="A glossary card of the core option terms: strike price, expiry, lot size, premium, strike type (CE call, PE put) and strike difference">
+  <style>
+    text   { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .dg-t  { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .dg-s  { fill: #57606a; font-size: 12px; }
+    .dg-xs { fill: #57606a; font-size: 11px; }
+  </style>
+
+        <text class="dg-t" text-anchor="middle" x="300" y="26">Options vocabulary — the words behind every contract</text>
+        <rect x="24" y="44" width="552" height="264" rx="12" fill="#ffffff" stroke="#cfc9ba" stroke-width="1.6"/>
+        <line x1="212" y1="44" x2="212" y2="308" stroke="#e7e3d8" stroke-width="1"/>
+        <g stroke="#e7e3d8" stroke-width="1">
+          <line x1="24" y1="88"  x2="576" y2="88"/>
+          <line x1="24" y1="132" x2="576" y2="132"/>
+          <line x1="24" y1="176" x2="576" y2="176"/>
+          <line x1="24" y1="220" x2="576" y2="220"/>
+          <line x1="24" y1="264" x2="576" y2="264"/>
+        </g>
+
+        <text class="dg-t" x="40" y="71">Strike price</text>
+        <text class="dg-s" x="228" y="71">the fixed price the contract locks in</text>
+
+        <text class="dg-t" x="40" y="115">Expiry</text>
+        <text class="dg-s" x="228" y="115">the date it stops existing — weekly or monthly</text>
+
+        <text class="dg-t" x="40" y="159">Lot size</text>
+        <text class="dg-s" x="228" y="159">the fixed bundle traded as one (Nifty ≈ 75 units)</text>
+
+        <text class="dg-t" x="40" y="203">Premium (price)</text>
+        <text class="dg-s" x="228" y="203">what it costs, per unit — the number that flickers</text>
+
+        <text class="dg-t" x="40" y="247">Strike type</text>
+        <text class="dg-s" x="228" y="247"><tspan class="dg-t" style="fill:#0b6e6e">CE</tspan> = call (right to buy)   ·   <tspan class="dg-t" style="fill:#c0392b">PE</tspan> = put (right to sell)</text>
+
+        <text class="dg-t" x="40" y="291">Strike difference</text>
+        <text class="dg-s" x="228" y="291">the step between strikes on the ladder (e.g. 50 or 100)</text>
+
+        <text class="dg-xs" text-anchor="middle" x="300" y="334">“CE / PE” spell out as call / put “European” — it only means they settle at expiry.</text>
+      </svg>
